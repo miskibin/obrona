@@ -23,7 +23,6 @@ html_static_path = ["_static"]
 
 extensions = [
     "sphinx.ext.viewcode",
-    "sphinxcontrib.jquery",
     "sphinxcontrib.mermaid",
     "myst_parser",
 ]

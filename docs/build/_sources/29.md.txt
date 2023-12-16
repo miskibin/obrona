@@ -53,3 +53,8 @@ klasteryzacja - metoda analizy skupień, która grupuje zbiory obiektów w taki 
 
 
 **Redukcja wymiarowości PCA** - (NAJWIĘKSZA WARIANCJA) Polega ona na znalezieniu głównych składowych w danych, które wyjaśniają najwięcej zmienności w danych. PCA może być stosowany do danych wejściowych, aby uzyskać lepsze wyniki w procesie uczenia maszynowego. W tym celu PCA wyszukuje najsilniejsze korelacje między cechami i rezygnuje z mniej istotnych cech. Pozwala to na skompresowanie danych wejściowych do lepszej, bardziej zoptymalizowanej postaci. PCA może być również wykorzystana do wizualizacji bardziej skomplikowanych problemów uczenia maszynowego, poprzez zmniejszenie liczby cech do dwóch lub trzech, które można wizualizować na wykresie.
+
+
+**Uczenie przez wzmacnianie.**
+
+Uczenie maszynowe z wzmocnieniem (ang. Reinforcement Learning - RL) jest rodzajem uczenia maszynowego, w którym agent poszukuje optymalnego rozwiązania poprzez wybór właściwych działań w danej sytuacji. Agent otrzymuje informację zwrotną w postaci wynagrodzenia lub kary, która pozwala mu wybrać działania zapewniające najlepszy wynik. Jest to proces iteracyjny, w którym agent nauczy się określonych strategii poprzez wielokrotne próby i błędy. RL jest szeroko stosowany w sztucznej inteligencji do problemów takich jak planowanie, sterowanie, optymalizacja, przetwarzanie języka naturalnego i gry komputerowe.
