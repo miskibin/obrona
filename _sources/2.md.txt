@@ -1,0 +1,31 @@
+# 2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML
+*[source](https://guides.visual-paradigm.com/what-is-sysml/)*
+## Diagramy i ich rola w języku SysML
+
+```{note}
+SysMl - System Modeling Language
+```
+- Kluczowy element języka SysML, służącym do modelowania systemów.
+- różnorodne typy diagramów.
+- Opisywanie i analizowanie właściwości systemu oraz do projektowania i implementacji rozwiązań technicznych.
+- komunikacja pomysłów i koncepcji zespołowi.
+- przydatne do wizualizacji różnych aspektów systemu.
+- Ważne narzędzie do modelowania i projektowania systemów złożonych
+
+## Przykłady
+
+- `sequence diagram`
+- `use case diagram` - Graficzne przedstawienie przypadków użycia, aktorów oraz związków między nimi, występujących w danej dziedzinie przedmiotowej
+- `Block Definition Diagram (Diagram definicji bloków):` Opisuje strukturę systemu poprzez pokazanie jego bloków i relacji między nimi.
+
+## Różnice między SysML a UML
+
+- **Pochodzenie:** SysML jest rozszerzeniem UML (Unified Modeling Language), specjalizującym się w modelowaniu systemów złożonych, niekoniecznie oprogramowania.
+- **Zakres użycia:** SysML ma szerszy zakres zastosowania niż UML, obejmujący nie tylko oprogramowanie, ale również inne aspekty systemów inżynieryjnych, jak np. systemy mechaniczne, elektryczne czy procesy.
+- **Typy diagramów:** Niektóre typy diagramów w SysML są specyficzne dla tego języka i nie występują w UML, np. diagram wymagań (Requirement Diagram) czy Parametric Diagram.
+- **Złożoność i szczegółowość:** SysML pozwala na bardziej złożone i szczegółowe modelowanie systemów, biorąc pod uwagę różnorodne aspekty techniczne i inżynieryjne.
+- **Integracja z innymi standardami:** SysML jest często używany w połączeniu z innymi standardami inżynieryjnymi, co różni go od UML, który jest bardziej skoncentrowany na oprogramowaniu.
+
+### CO nowego
+![CO NOWEGO](
+https://guides.visual-paradigm.com/wp-content/uploads/2023/04/sysml-diagram-types.png)

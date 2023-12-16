@@ -1,0 +1,51 @@
+# 42 Definicje i własności grafów. Modele grafowe.
+
+[wyklad](https://byes.pl/wp-content/uploads/Sieci/SZ_W2_wielkosci_charakteryzujace_grafy.pdf)
+
+*Graf to zbiór wierzchołków (nazywanych również węzłami) połączonych krawędziami. W grafie nieskierowanym krawędzie nie mają kierunku, podczas gdy w grafie skierowanym każda krawędź wskazuje od jednego wierzchołka do drugiego.*
+
+
+### Pojęcia
+
+| Pojęcie             | Opis                                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| wierzchołek (węzeł) | Wraz ze zbiorem krawędzi tworzy graf.                                                        |
+| krawędź             | Łączy dwa wierzchołki.                                                                       |
+| stopień wierzchołka | Liczba krawędzi wychodzących z wierzchołka.                                                  |
+| bliskość            | odwrotność średniej odległości od innych wierzchołków                                        |
+| droga               | Ciąg kolejnych wierzchołków, takich że każde dwa kolejne wierzchołki są połączone krawędzią. |
+| droga prosta        | Droga, w której nie powtarzają się krawędzie.                                                |
+| ścieżka             | droga bez powtorzen wierzcholkow                                                             |
+| cykl                | droga o tym samym początku i końcu                                                           |
+| droga acykliczna    | ścieżka, w której żaden wierzchołek nie jest odwiedzany więcej niż raz                       |
+| najkrótsza scieżka  | algorytm Dijkstry; może ich być wiele                                                        |
+| drzewo              | graf spójny, acykliczny, nieskierowany                                                       |
+![drzewo](https://upload.wikimedia.org/wikipedia/commons/2/24/Tree_graph.svg)
+| las | graf nieskierowany, acykliczny |
+| drzewo rozpinające  | drzewo, które zawiera wszystkie wierzchołki grafu |
+| droga zamknięta     | droga, w której pierwszy i ostatni wierzchołek są takie same.                                |
+| most               | krawędź, której usunięcie powoduje rozspójnienie grafu                                      |
+| pętla              | krawędź, której oba końce są tym samym wierzchołkiem                                         |
+| rząd (stopien) grafu         | liczba wierzchołków grafu                                                                    |
+| rozmiar grafu      | liczba krawędzi grafu                                                                        |
+| srednica grafu     | najdłuższa najkrótsza ścieżka w grafie                                                        |
+| spójna składowa    | maksymalny podgraf spójny|
+| k-spojny           | usunięcie k-1 wierzchołków nie powoduje rozspójnienia grafu                     |
+| graf r-regularny   | graf, w którym każdy wierzchołek ma r krawędzi                                               |
+| macierz sąsiedztwa | wierszu i kolumnie odpowiadającej wierzchołkowi `i` znajduje się 1, jeśli wierzchołki `i` i `j` są połączone  |
+| macierz incydencji | wiersz odpowiadający wierzchołkowi `i` = 1, jeśli wierzchołek `i` jest początkiem krawędzi, -1, jeśli jest końcem, 0, jeśli wierzchołek `i` nie jest połączony z krawędzią |
+
+#### Rodzaje grafów:
+
+| Rodzaj grafu                                                                                    | Opis                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Drzewo                                                                                          | Spójny graf acykliczny                                                                                                                                      |
+| Graf acykliczny (skierowany)                                                                    | Graf niezawierający żadnej drogi zamkniętej                                                                                                                 |
+| ![acykliczny](https://upload.wikimedia.org/wikipedia/commons/3/39/Directed_acyclic_graph_3.svg) |
+| Graf cykliczny (skierowany)                                                                     | ![cyklicznby](https://study.com/cimages/multimages/16/cyclic_graphs.png)                                                                                    |
+| Graf dwudzielny                                                                                 | wierzchołki mogą być podzielone na dwa zbiory, tak by w obrębie jednego zbioru żaden wierzchołek nie był połączony                                          |
+| Graf pełny                                                                                      | -                                                                                                                                                           |
+| Graf planarny                                                                                   | można przedstawić na płaszczyźnie tak, by żadne krawędzie się nie przecinały                                                                                |
+| Graf prosty                                                                                     | Graf, niezawierający pętli ani krawędzi wielokrotnych                                                                                                       |
+| Graf spójny                                                                                     | dla każdego wierzchołka istnieje droga do każdego innego wierzchołka                                                                                        |
+| Koło                                                                                            | Graf o n wierzchołkach, utworzony z grafu cyklicznego o  n-1 wierzchołkach poprzez połączenie nowego wierzchołka z każdym wierzchołkiem w grafie cyklicznym |

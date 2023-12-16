@@ -1,0 +1,94 @@
+# 1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.
+
+## Definicja algorytmu
+
+Algorytm to skończony ciąg precyzyjnie określonych czynności, które w skończonej liczbie kroków prowadzą do rozwiązania pewnego problemu.
+
+### Najważniejsze cechy algorytmu:
+
+1. sekwencja insrukcji, które muszą być wykonane w określonej kolejności
+2. Obliczalny zestawa krorków prowadzących do osiągnięcia celu
+
+
+```{mermaid}
+graph LR
+A(Wejście) --> B[Algorytm]
+B --> C(Wyjście)
+```
+
+### 5 Warunków
+
+1. Określone dane wejściowe i wyjściowe.
+2. Określać sposób przetwarzania danych wejściowych  na wyjściowe.
+3. __Określność__ - każdy krok musi być jednoznacznie określony.
+4. Skuteczność - kroki algorytmu muszą być wykonalne i skuteczne.
+5. Skończoność - algorytm musi się zakończyć po skończonej liczbie kroków.
+
+### przedstawienie algorytmu
+```{mermaid}
+graph TB
+A(Opis słowny) 
+C(Lista kroków) 
+D(Schemat blokowy)
+E(Program komputerowy) 
+```
+
+### Typy algorytmów
+
+- Typy algorytmów:
+- Sortujące
+- Wyszukiwania
+- Haszowania
+- Programowania dynamicznego
+- Wykładniczego podnoszenia do kwadratu
+- Operacji na ciągach znaków
+- Testowania pierwszości liczb
+
+
+## Najważniejsze algorytmy
+
+1. Sortowanie bąbelkowe
+2. Sortowanie przez wstawianie
+3. Quicksort
+   
+4. BFS - przeszukiwanie wszerz
+5. DFS - przeszukiwanie wgłąb
+6. Algorytm Kruskala (minimalne drzewo rozpinające dla grafu `spójnego` `nieskierowanego` `ważonego`)
+
+7. Algorytm Euklidesa (NWD)
+
+### Przykłady algorytmów
+
+#### 1: Wyszukiwanie binarne
+Wyszukiwanie binarne to podstawowy algorytm wyszukiwania, który pobiera posortowaną tablicę i zwraca indeks szukanej wartości. Robimy to za pomocą następujących kroków:
+
+Kroki:
+1. Znajdź punkt środkowy posortowanej tablicy.
+2. Porównaj punkt środkowy z wartością zainteresowania.
+3. Jeśli punkt środkowy jest większy niż wartość, przeprowadź wyszukiwanie binarne na prawej połowie tablicy.
+4. Jeśli punkt środkowy jest mniejszy niż wartość, przeprowadź wyszukiwanie binarne na lewej połowie tablicy.
+5. Powtarzaj te kroki, aż wartość punktu środkowego będzie równa wartości będącej przedmiotem zainteresowania lub będziemy wiedzieć, że wartość nie znajduje się w tablicy.
+
+#### 2: Sortowanie przez scalanie
+Sortowanie przez scalanie wykorzystuje podobną metodologię „dziel i zwyciężaj” do wydajnego sortowania tablic. Zapoznaj się z poniższymi krokami, aby dowiedzieć się, jak zaimplementowano sortowanie przez scalanie.
+
+Kroki: 
+1. Zwróć jeżeli tablica ma tylko jeden element, ponieważ jest już posortowana.
+2. Podziel tablicę na dwie połowy, aż nie będzie można jej już podzielić.
+3. Scal mniejsze tablice w posortowanej kolejności, aż uzyskamy naszą oryginalną posortowaną tablicę.
+
+
+#### 3. Algorytm Kruskala
+
+```{mermaid}
+graph TD
+A[Start] --> B[Sortuj krawędzie w porządku rosnących wag]
+B --> C[Dla każdej krawędzi w porządku rosnących wag]
+C --> D[Czy dodanie tej krawędzi tworzy cykl?]
+D -- Nie --> E[Dodaj krawędź do drzewa]
+D -- Tak --> F[Nie dodawaj krawędzi do drzewa]
+E --> G[Czy drzewo jest rozpinające?]
+F --> G
+G -- Tak --> H[Stop]
+G -- Nie --> C
+```

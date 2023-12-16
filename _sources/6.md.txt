@@ -1,0 +1,36 @@
+# 6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.
+
+Pod pojęciem fuzji danych rozumie się wszelkie metody umożliwiające łączenie i przetwarzanie wiedzy o badanym obiekcie lub zjawisku, pochodzącej z wielu źródeł danych, w celu uzyskania stabilniejszej, dokładniejszej i użyteczniejszej informacji od tej dostarczonej przez jakiekolwiek pojedyncze źródło. Fuzja danych jest sposobem działania, za pomocą którego duża liczba danych, pochodzących z różnych źródeł może być połączona w spójną, dokładną i zrozumiałą całość.
+
+### Etapy procesu fuzji danych:
+1. porządkowanie i kojarzenie danych wejściowych z wielu czujników (czasami dotyczących różnych obiektów)
+2. działania korekcyjne, kompensujące wpływ czynników zewnętrznych 
+
+3. algorytmy realizujące łączenie danych.
+
+W zależności od relacji pomiędzy źródłami danych możemy sklasyfikować techniki fuzji danych w następujący sposób:
+
+1. Fuzja współpracy – informacje dostarczane przez źródła opisują różne części tej samej sceny, np. dwa lidary umieszczone jeden z przodu i drugi z tyłu pojazdu, pozwalają określić do okólne otoczenie pojazdu.
+
+2. Fuzja współzawodnictwa – gdy dwa lub więcej źródeł dostarczają tego samego typu informacji, np. dwa czujniki GPS pozwalają uzyskać dokładniejszą lokalizację.
+
+3. Fuzja uzupełniająca – gdy dwa lub więcej źródeł pozwalają wytworzyć nową informację, np. dwa czujniki GPS umieszczone w odpowiedniej odległości od siebie dają informację o orientacji. 
+
+
+## Ulepszone Obszary Wykorzystania Fuzji Danych
+
+Fuzja danych znajduje zastosowanie w różnych dziedzinach, gdzie integracja informacji z różnych źródeł jest kluczowa dla dokładności i efektywności. Niektóre z głównych obszarów wykorzystania to:
+
+2. **Medycyna i zdrowie publiczne:** Łączenie danych z różnych urządzeń medycznych i źródeł zdrowotnych dla lepszego diagnozowania chorób, monitorowania stanu zdrowia pacjentów i prowadzenia badań klinicznych.
+3. **Zarządzanie kryzysowe i reagowanie na klęski żywiołowe:** Integracja danych z różnych źródeł, takich jak satelity, drony, i media społecznościowe, do szybkiego oceniania sytuacji i koordynowania działań ratunkowych.
+4. **Nawigacja i transport:** Łączenie danych z GPS, czujników pojazdów, kamer i innych źródeł do tworzenia zaawansowanych systemów nawigacji i zarządzania ruchem.
+5. **Rolnictwo precyzyjne:** Używanie fuzji danych z satelitów, dronów i czujników terenowych do optymalizacji upraw, zarządzania zasobami wodnymi i monitorowania stanu roślin.
+
+## Przykłady Zastosowań Fuzji Danych
+
+1. **Monitorowanie Stanu Mostów:** Łączenie danych z sensorów wibracyjnych, pomiarów temperatury i obrazów z dronów do oceny stanu technicznego mostów i wczesnego wykrywania uszkodzeń.
+
+2. **Optymalizacja Trasy Dostaw w Logistyce:** Integracja danych GPS z pojazdów dostawczych, informacji o ruchu drogowym w czasie rzeczywistym i prognoz pogodowych, aby optymalizować trasy i harmonogramy dostaw.
+
+
+3. **Wczesne Wykrywanie Pożarów Lasów:** Integracja danych z sensorów detekcji dymu, obserwacji satelitarnych i czujników temperatury dla szybkiego wykrywania i reagowania na pożary lasów.

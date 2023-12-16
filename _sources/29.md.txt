@@ -1,0 +1,60 @@
+# 29 Metody maszynowego uczenia się
+
+_Uczenie maszynowe - gałąź sztucznej inteligencji i informatyki, która koncentruje się na wykorzystaniu danych i algorytmów do naśladowania sposobu, w jaki uczą się ludzie, stopniowo poprawiając dokładność._
+
+
+```{note}
+
+Sztuczna inteligencja (AI) to szeroka dziedzina, która obejmuje tworzenie maszyn zdolnych do wykonywania zadań wymagających inteligencji. Obejmuje to rozumienie języka, rozpoznawanie wzorców, uczenie się i rozwiązywanie problemów. Uczenie maszynowe (ML), jako poddziedzina AI, skupia się na algorytmach, które uczą się z danych i automatycznie poprawiają swoje działanie bez bezpośredniego programowania. Podczas gdy AI jest ogólnym pojęciem dotyczącym maszyn, które mogą naśladować inteligencję ludzką, ML jest konkretnym podejściem do realizacji tej inteligencji poprzez uczenie się i adaptację.
+```
+
+## 1. Uczenie nadzorowane.
+Sposób uczenia, w którym zbiór danych treningowych, na których uczy się algorytm, zawiera dołączone rozwiązanie problemu, tzw. etykiety albo klasy. W nadzorowanym algorytmie ML wyjście jest już znane.
+
+**Regresja liniowa** - Algorytm regresji liniowej jest to metoda statystyczna służąca do wyznaczania przybliżonych wartości wielu zmiennych w oparciu o uprzednio uzyskane dane. Polega on na dopasowaniu liniowej funkcji do danych, tak aby jak najlepiej odwzorowywała ona zależności między zmiennymi.  Służy do przewidywania przyszłych wartości.
+
+**Regresja wielomianowa** - jak wyżej, ale zamiast funkcji liniowej używamy wielomianu.
+
+**regresja logistyczna** - Regresja logistyczna jest wykorzystywana do przewidywania przynależności do jednej z dwóch grup (0 lub 1). (funkcja sigmoidalna)
+
+**sieci neuronowe** - sieć neuronowa to model matematyczny, który naśladuje sposób, w jaki działa ludzki mózg, aby wykonywać pewne zadania. Sieci neuronowe składają się z połączonych ze sobą neuronów, które przekazują sobie sygnały. Neurony przetwarzają te sygnały i reagują na nie, wysyłając sygnały do innych neuronów, do których są połączone.
+
+
+```{note}
+regresja a sieci neuronowe:
+sieci Mogą uczyć się z bardziej skomplikowanych i niestrukturyzowanych danych, jak obrazy czy dźwięk.
+Regresję można policzyć analitycznie, podczas gdy sieci neuronowe wymagają iteracyjnego procesu uczenia się.
+```
+
+**drzewo decyzyjne** - model predykcyjny, który jest mapą możliwych wyników wszystkich ścieżek wyboru, które zaczynają się od węzła decyzyjnego i kończą się na węźle końcowym. Drzewa decyzyjne są używane do podejmowania decyzji w warunkach niepewności. Algorytm drzewa decyzyjnego dąży do tego, aby każdy podział danych maksymalizował jednorodność klasy lub wartości w liściach.. glownie do klasyfikacji.
+
+
+**Metoda k-najbliższych sąsiadów** - metoda klasyfikacji, która przypisuje nowy punkt danych do klasy na podstawie najczęściej występującej klasy wśród k najbliższych punktów danych.
+
+**SVM (Metoda Wektorów Nośnych)** - Algorytm wykorzystuje funkcję nośną (konwersji danych nieliniowych do liniowych) do stworzenia wyraźnego granicznego podziału między różnymi klasami danych. W metodzie nadzorowanego nauczania SVM jest używany do przewidywania etykiet lub klas dla danych. Algorytm ten wykorzystuje dane treningowe do tworzenia granicy decyzyjnej między dwiema lub więcej grupami danych. Następnie algorytm jest w stanie wykrywać nowe dane i przypisywać je do odpowiednich grup.
+
+**Naive bayes** - 
+Naiwny klasyfikator Bayesa opiera się na teorii prawdopodobieństwa i statystyce Bayesowskiej. Działa na zasadzie przyjmowania naiwnego założenia o wzajemnej niezależności cech w danych. Klasyfikator najpierw uczy się rozkładów prawdopodobieństwa poszczególnych cech w danych uczących.  Na przykład, jeśli chce się przewidzieć, czy dana osoba jest mężczyzną czy kobietą, algorytm będzie wykorzystywać dane dotyczące wzrostu, wagi, wieku, itp., aby przewidzieć płeć. Algorytm wyliczy prawdopodobieństwo, że dana osoba jest mężczyzną lub kobietą, na podstawie wszystkich cech.
+
+
+## Uczenie nienadzorowane
+
+Uczenie maszynowe nienadzorowane to rodzaj uczenia maszynowego w którym algorytm uczenia maszynowego jest wykorzystywany do wykrywania struktur lub wzorców w danych bez użycia etykiet lub innego rodzaju oznaczenia. Algorytmy te są często używane do klasteryzacji danych, a także do redukcji wymiarowości. W przeciwieństwie do uczenia maszynowego nadzorowanego, nienadzorowane nie wymaga z góry określonych danych wejściowych ani oznaczeń, a algorytmy muszą same odnaleźć strukturę.
+
+```{note}
+klasteryzacja - metoda analizy skupień, która grupuje zbiory obiektów w taki sposób, aby obiekty w tej samej grupie (zwanej klastrami) były bardziej podobne do siebie niż do tych z innych grup (klastrów).
+```
+
+**metoda k-średnich** - algorytm klasteryzacji, który dzieli zbiór danych na k klastrów, w którym każdy punkt danych należy do klastra z najbliższym środkiem klastra. Klasteryzacja k-średnich jest często stosowana do klasteryzacji danych numerycznych.
+
+**Hierarchiczna analiza skupień** -   tworzeniu grup z danymi za pomocą algorytmu podziału i łączenia. Algorytm podziału i łączenia działa poprzez pogrupowanie rzeczywistych punktów danych w skupienia, a następnie przypisanie każdego skupienia do nadrzędnego skupienia. Ten proces powtarza się aż do momentu, w którym wszystkie punkty danych są przypisane do jednego skupienia. Ten algorytm może być używany do klasyfikowania danych, które nie mają wyraźnych etykiet, a także do tworzenia hierarchii skupień. 
+
+![IMG](https://images.datacamp.com/image/upload/v1674149819/Dendrogram_of_Agglomerative_Clustering_Approach_4eba3586ec.png)
+
+
+**Redukcja wymiarowości PCA** - (NAJWIĘKSZA WARIANCJA) Polega ona na znalezieniu głównych składowych w danych, które wyjaśniają najwięcej zmienności w danych. PCA może być stosowany do danych wejściowych, aby uzyskać lepsze wyniki w procesie uczenia maszynowego. W tym celu PCA wyszukuje najsilniejsze korelacje między cechami i rezygnuje z mniej istotnych cech. Pozwala to na skompresowanie danych wejściowych do lepszej, bardziej zoptymalizowanej postaci. PCA może być również wykorzystana do wizualizacji bardziej skomplikowanych problemów uczenia maszynowego, poprzez zmniejszenie liczby cech do dwóch lub trzech, które można wizualizować na wykresie.
+
+
+**Uczenie przez wzmacnianie.**
+
+Uczenie maszynowe z wzmocnieniem (ang. Reinforcement Learning - RL) jest rodzajem uczenia maszynowego, w którym agent poszukuje optymalnego rozwiązania poprzez wybór właściwych działań w danej sytuacji. Agent otrzymuje informację zwrotną w postaci wynagrodzenia lub kary, która pozwala mu wybrać działania zapewniające najlepszy wynik. Jest to proces iteracyjny, w którym agent nauczy się określonych strategii poprzez wielokrotne próby i błędy. RL jest szeroko stosowany w sztucznej inteligencji do problemów takich jak planowanie, sterowanie, optymalizacja, przetwarzanie języka naturalnego i gry komputerowe.
