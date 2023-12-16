@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="prev" title="2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML" href="2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-statyczny">Model statyczny</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rodzaje">Rodzaje</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-dynamiczny">Model dynamiczny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rozne-rodzaje-modeli">Różne rodzaje modeli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modele-w-przestrzeni-stanow">Modele w przestrzeni stanów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ocena-jakosci-modeli">Ocena jakości modeli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#przykladowe-wskazniki-oceny-jakosci-modelu">Przykładowe wskaźniki oceny jakości modelu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#porownanie-modeli">Porównanie modeli</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/3.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="modele-w-przestrzeni-stanow-ocena-jakosci-i-porownanie-modeli">
+<h1>3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli<a class="headerlink" href="#modele-w-przestrzeni-stanow-ocena-jakosci-i-porownanie-modeli" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=dC6WkYaHDb0">filmik yt</a></p>
+<div class="admonition danger">
+<p class="admonition-title">Niebezpieczeństwo</p>
+<p>DO OGARNIECIA JEST TEN TEMAT</p>
+</div>
+<section id="model-statyczny">
+<h2>Model statyczny<a class="headerlink" href="#model-statyczny" title="Permalink to this heading"></a></h2>
+<div class="math notranslate nohighlight">
+\[ y = F(u) \]</div>
+<section id="rodzaje">
+<h3>Rodzaje<a class="headerlink" href="#rodzaje" title="Permalink to this heading"></a></h3>
+<div class="mermaid">
+            graph TD
+
+A[Modele statyczne] --&gt; B[Funkcyjne]
+A --&gt; C[niefunkcyjne]
+B --&gt; D[Modele liniowe]
+B --&gt; E[Modele nieliniowe]
+
+        </div><div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Mogą być różnych odmian, np: MIMO (Model multiple input multiple output), SISO (Model single input single output), MISO itd</p>
+</div>
+</section>
+</section>
+<section id="model-dynamiczny">
+<h2>Model dynamiczny<a class="headerlink" href="#model-dynamiczny" title="Permalink to this heading"></a></h2>
+<p><strong>występuje czynnik czasu (t)</strong></p>
+<div class="math notranslate nohighlight">
+\[ y(t) = a * u(t) , t \in [0, \infty) \]</div>
+<p>gdzie: u(t) i y(t)  to sygnały.</p>
+<p>W modelu dynamicznym y(t) zależy nie tylko od u(t) ale także od wartości tego wejścia w poprzednich chwilach czasu.</p>
+</section>
+<section id="rozne-rodzaje-modeli">
+<h2>Różne rodzaje modeli<a class="headerlink" href="#rozne-rodzaje-modeli" title="Permalink to this heading"></a></h2>
+<p><strong>Model liniowy</strong> - W swojej najprostszej postaci model liniowy określa (liniowe) powiązanie pomiędzy zmienną zależną (lub odpowiedzią) Y, a zbiorem predyktorów (zmiennych objaśniających) X. Dzięki takiemu modelowi można na przykład ocenić (przewidzieć) wagę człowieka na podstawie jego wzrostu i płci.</p>
+<p><strong>Model nieliniowy</strong> - model o nieliniowych parametrach (hehe) czyli parametry nie są stałe, a zmienne. Ogólnie nieliniowość to cecha układu polegająca na tym, że wartość wyjściowa nie jest wprost proporcjonalna do danych wejściowych.</p>
+<p><strong>Model statyczny</strong> - stan modelu w danej chwili t jest zależny wyłącznie od wartości parametrów w chwili t.</p>
+<p><strong>Model dynamiczny</strong> - stan modelu w danej chwili t jest zależny nie tylko od wartości parametrów w chwili t, ale także od parametrów z przeszłości.</p>
+<p><strong>Model deterministyczny</strong> - to model matematyczny, który danemu na wejściu zdarzeniu jednoznacznie przypisuje konkretny stan. Opis modelu nie zawiera żadnego elementu losowości.Oznacza to, że ewolucja układu w modelu deterministycznym jest z góry przesądzona i zależy wyłącznie od parametrów początkowych lub ich wartości poprzednich.</p>
+<p><strong>Model niedeterministyczny</strong> - odwrotność deterministycznego</p>
+<p><strong>Model skupiony</strong> - umożliwia kategoryzowanie rekordów w określoną liczbę klastrów.
+Może to pomóc w zidentyfikowaniu naturalnych grup w danych. Modele grupowania koncentrują się na identyfikacji grup podobnych rekordów i oznaczaniu rekordów zgodnie z grupą, do której należą.</p>
+</section>
+<section id="modele-w-przestrzeni-stanow">
+<h2>Modele w przestrzeni stanów<a class="headerlink" href="#modele-w-przestrzeni-stanow" title="Permalink to this heading"></a></h2>
+<p><strong>Stan układu</strong>: zbiór liniowo zależnych wielkości <span class="math notranslate nohighlight">\(x_1,x_2,...,x_n\)</span> określających w pełni skutki przeszłych oddziaływań <span class="math notranslate nohighlight">\((t &lt; t_0)\)</span>, gdy znane są wymuszenia <span class="math notranslate nohighlight">\((u(t))\)</span> i parametry tego obwodu.</p>
+<p><strong>Model dynamiczny</strong> - taki, który ma pamięć - jego obecny stan nie zależy tylko od wejścia w danej chwili czasu ale też od przeszłych wejść.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Modele zmiennych stanu</p></th>
+<th class="head"><p>Modele typu wejście-wyjście</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Opis układów</p></td>
+<td><p>Opisują układy liniowe i nieliniowe</p></td>
+<td><p>Opisują obiekt w dziedzinie zmiennej zespolonej (G(s)=Y(s)/U(s)) - transmitancja operatorowa</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wymagania</p></td>
+<td><p>Wymagają dużo więcej wiedzy o modelowanym obiekcie</p></td>
+<td><p>Jeden model może odpowiadać nieskończenie wielu modelom w przestrzeni stanów</p></td>
+</tr>
+<tr class="row-even"><td><p>Informacje</p></td>
+<td><p>Dostarczają więcej informacji na temat dynamiki obiektu i procesów w nim zachodzących</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>Złożoność aparatu pojęciowego</p></td>
+<td><p>Posiadają bardziej złożony aparat pojęciowy</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>Dziedzina opisu</p></td>
+<td><p>Opisują obiekt w dziedzinie zmiennej rzeczywistej t</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ocena-jakosci-modeli">
+<h2>Ocena jakości modeli<a class="headerlink" href="#ocena-jakosci-modeli" title="Permalink to this heading"></a></h2>
+<p>Aby ocenić jakość modelu stosować można:</p>
+<ol class="arabic simple">
+<li><p>ocenę istotności modelu lub rozkładu statystycznego (testy parametryczne)</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Testy parametryczne - testy statystyczne, których wynikiem jest wartość parametru statystycznego, np. średniej, wariancji, korelacji, regresji, itd. (sa lepsze od nieparametrycznych)</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>ocenę dopasowania modelu do danych empirycznych (testy nieparametryczne)</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Testy nieparametryczne - testy statystyczne, których wynikiem jest wartość statystyki niezależnej od rozkładu populacji, np. testy rang, testy znaków, testy ilorazów szans, itd.</p>
+</div>
+<section id="przykladowe-wskazniki-oceny-jakosci-modelu">
+<h3>Przykładowe wskaźniki oceny jakości modelu<a class="headerlink" href="#przykladowe-wskazniki-oceny-jakosci-modelu" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Suma błędów</p></li>
+<li><p>Błąd średniokwadratowy</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Ważne</p>
+<p>Dlaczego mse?</p>
+<ol class="arabic simple">
+<li><p>Kwadratowanie Błędów: MSE kwadratuje różnice, co oznacza, że większe błędy mają proporcjonalnie większy wpływ na końcowy wynik. Dzięki temu model jest bardziej wrażliwy na duże błędy</p></li>
+<li><p>Unikanie Ujemnych Wartości: Prosta suma błędów może prowadzić do sytuacji, w której błędy o przeciwnych znakach się znoszą, dając mylące wyniki.</p></li>
+<li><p>Różniczkowalność: MSE jest funkcją ciągłą i różniczkowalną, co jest kluczowe w metodach optymalizacyjnych, takich jak gradient prosty, stosowanych w uczeniu maszynowym.</p></li>
+</ol>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Błąd maksymalny</p></li>
+<li><p>Suma różnicy błędów w warunkach probabilistycznych – ze względu na losowość modelu ważne jest uwzględnienie parametrów losowych również we wskaźniku</p></li>
+</ol>
+</section>
+</section>
+<section id="porownanie-modeli">
+<h2>Porównanie modeli<a class="headerlink" href="#porownanie-modeli" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Dokładność:</strong> Ocena, jak dobrze model odwzorowuje rzeczywiste zachowanie systemu. Można to osiągnąć przez porównanie przewidywań modelu z rzeczywistymi danymi.</p></li>
+<li><p><strong>Stabilność:</strong> Analiza, czy system opisany modelem pozostaje stabilny pod różnymi warunkami, co jest kluczowe dla systemów inżynieryjnych.</p></li>
+<li><p><strong>Złożoność vs Wydajność:</strong> Ocena, czy zwiększona złożoność modelu przekłada się na znaczącą poprawę wydajności lub dokładności.</p></li>
+<li><p><strong>Parametryzacja:</strong> Analiza, jak łatwo można dostosować model do zmieniających się warunków lub danych.</p></li>
+<li><p><strong>Odporność na Błędy i Szum:</strong> Ocena, jak model radzi sobie z błędami pomiarowymi lub niepewnościami w danych.</p></li>
+</ol>
+<p>Porównanie modeli często obejmuje również techniki symulacyjne i walidację krzyżową.</p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>walidacja krzyzowa -zbiór danych jest dzielony na mniejsze podzbiory. Model jest trenowany na jednym podzbiorze (zwanym zestawem treningowym) i testowany na innym (zwanym zestawem walidacyjnym).</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2.html" class="btn btn-neutral float-left" title="2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

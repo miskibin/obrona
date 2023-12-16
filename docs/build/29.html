@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>29 Metody maszynowego uczenia się &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="42 Definicje i własności grafów. Modele grafowe." href="42.html" />
+    <link rel="prev" title="6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania." href="6.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">29 Metody maszynowego uczenia się</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#uczenie-nadzorowane">1. Uczenie nadzorowane.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uczenie-nienadzorowane">Uczenie nienadzorowane</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">29 Metody maszynowego uczenia się</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/29.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="metody-maszynowego-uczenia-sie">
+<h1>29 Metody maszynowego uczenia się<a class="headerlink" href="#metody-maszynowego-uczenia-sie" title="Permalink to this heading"></a></h1>
+<p><em>Uczenie maszynowe - gałąź sztucznej inteligencji i informatyki, która koncentruje się na wykorzystaniu danych i algorytmów do naśladowania sposobu, w jaki uczą się ludzie, stopniowo poprawiając dokładność.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Sztuczna inteligencja (AI) to szeroka dziedzina, która obejmuje tworzenie maszyn zdolnych do wykonywania zadań wymagających inteligencji. Obejmuje to rozumienie języka, rozpoznawanie wzorców, uczenie się i rozwiązywanie problemów. Uczenie maszynowe (ML), jako poddziedzina AI, skupia się na algorytmach, które uczą się z danych i automatycznie poprawiają swoje działanie bez bezpośredniego programowania. Podczas gdy AI jest ogólnym pojęciem dotyczącym maszyn, które mogą naśladować inteligencję ludzką, ML jest konkretnym podejściem do realizacji tej inteligencji poprzez uczenie się i adaptację.</p>
+</div>
+<section id="uczenie-nadzorowane">
+<h2>1. Uczenie nadzorowane.<a class="headerlink" href="#uczenie-nadzorowane" title="Permalink to this heading"></a></h2>
+<p>Sposób uczenia, w którym zbiór danych treningowych, na których uczy się algorytm, zawiera dołączone rozwiązanie problemu, tzw. etykiety albo klasy. W nadzorowanym algorytmie ML wyjście jest już znane.</p>
+<p><strong>Regresja liniowa</strong> - Algorytm regresji liniowej jest to metoda statystyczna służąca do wyznaczania przybliżonych wartości wielu zmiennych w oparciu o uprzednio uzyskane dane. Polega on na dopasowaniu liniowej funkcji do danych, tak aby jak najlepiej odwzorowywała ona zależności między zmiennymi.  Służy do przewidywania przyszłych wartości.</p>
+<p><strong>Regresja wielomianowa</strong> - jak wyżej, ale zamiast funkcji liniowej używamy wielomianu.</p>
+<p><strong>regresja logistyczna</strong> - Regresja logistyczna jest wykorzystywana do przewidywania przynależności do jednej z dwóch grup (0 lub 1). (funkcja sigmoidalna)</p>
+<p><strong>sieci neuronowe</strong> - sieć neuronowa to model matematyczny, który naśladuje sposób, w jaki działa ludzki mózg, aby wykonywać pewne zadania. Sieci neuronowe składają się z połączonych ze sobą neuronów, które przekazują sobie sygnały. Neurony przetwarzają te sygnały i reagują na nie, wysyłając sygnały do innych neuronów, do których są połączone.</p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>regresja a sieci neuronowe:
+sieci Mogą uczyć się z bardziej skomplikowanych i niestrukturyzowanych danych, jak obrazy czy dźwięk.
+Regresję można policzyć analitycznie, podczas gdy sieci neuronowe wymagają iteracyjnego procesu uczenia się.</p>
+</div>
+<p><strong>drzewo decyzyjne</strong> - model predykcyjny, który jest mapą możliwych wyników wszystkich ścieżek wyboru, które zaczynają się od węzła decyzyjnego i kończą się na węźle końcowym. Drzewa decyzyjne są używane do podejmowania decyzji w warunkach niepewności. Algorytm drzewa decyzyjnego dąży do tego, aby każdy podział danych maksymalizował jednorodność klasy lub wartości w liściach.. glownie do klasyfikacji.</p>
+<p><strong>Metoda k-najbliższych sąsiadów</strong> - metoda klasyfikacji, która przypisuje nowy punkt danych do klasy na podstawie najczęściej występującej klasy wśród k najbliższych punktów danych.</p>
+<p><strong>SVM (Metoda Wektorów Nośnych)</strong> - Algorytm wykorzystuje funkcję nośną (konwersji danych nieliniowych do liniowych) do stworzenia wyraźnego granicznego podziału między różnymi klasami danych. W metodzie nadzorowanego nauczania SVM jest używany do przewidywania etykiet lub klas dla danych. Algorytm ten wykorzystuje dane treningowe do tworzenia granicy decyzyjnej między dwiema lub więcej grupami danych. Następnie algorytm jest w stanie wykrywać nowe dane i przypisywać je do odpowiednich grup.</p>
+<p><strong>Naive bayes</strong> -
+Naiwny klasyfikator Bayesa opiera się na teorii prawdopodobieństwa i statystyce Bayesowskiej. Działa na zasadzie przyjmowania naiwnego założenia o wzajemnej niezależności cech w danych. Klasyfikator najpierw uczy się rozkładów prawdopodobieństwa poszczególnych cech w danych uczących.  Na przykład, jeśli chce się przewidzieć, czy dana osoba jest mężczyzną czy kobietą, algorytm będzie wykorzystywać dane dotyczące wzrostu, wagi, wieku, itp., aby przewidzieć płeć. Algorytm wyliczy prawdopodobieństwo, że dana osoba jest mężczyzną lub kobietą, na podstawie wszystkich cech.</p>
+</section>
+<section id="uczenie-nienadzorowane">
+<h2>Uczenie nienadzorowane<a class="headerlink" href="#uczenie-nienadzorowane" title="Permalink to this heading"></a></h2>
+<p>Uczenie maszynowe nienadzorowane to rodzaj uczenia maszynowego w którym algorytm uczenia maszynowego jest wykorzystywany do wykrywania struktur lub wzorców w danych bez użycia etykiet lub innego rodzaju oznaczenia. Algorytmy te są często używane do klasteryzacji danych, a także do redukcji wymiarowości. W przeciwieństwie do uczenia maszynowego nadzorowanego, nienadzorowane nie wymaga z góry określonych danych wejściowych ani oznaczeń, a algorytmy muszą same odnaleźć strukturę.</p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>klasteryzacja - metoda analizy skupień, która grupuje zbiory obiektów w taki sposób, aby obiekty w tej samej grupie (zwanej klastrami) były bardziej podobne do siebie niż do tych z innych grup (klastrów).</p>
+</div>
+<p><strong>metoda k-średnich</strong> - algorytm klasteryzacji, który dzieli zbiór danych na k klastrów, w którym każdy punkt danych należy do klastra z najbliższym środkiem klastra. Klasteryzacja k-średnich jest często stosowana do klasteryzacji danych numerycznych.</p>
+<p><strong>Hierarchiczna analiza skupień</strong> -   tworzeniu grup z danymi za pomocą algorytmu podziału i łączenia. Algorytm podziału i łączenia działa poprzez pogrupowanie rzeczywistych punktów danych w skupienia, a następnie przypisanie każdego skupienia do nadrzędnego skupienia. Ten proces powtarza się aż do momentu, w którym wszystkie punkty danych są przypisane do jednego skupienia. Ten algorytm może być używany do klasyfikowania danych, które nie mają wyraźnych etykiet, a także do tworzenia hierarchii skupień.</p>
+<p><img alt="IMG" src="https://images.datacamp.com/image/upload/v1674149819/Dendrogram_of_Agglomerative_Clustering_Approach_4eba3586ec.png" /></p>
+<p><strong>Redukcja wymiarowości PCA</strong> - (NAJWIĘKSZA WARIANCJA) Polega ona na znalezieniu głównych składowych w danych, które wyjaśniają najwięcej zmienności w danych. PCA może być stosowany do danych wejściowych, aby uzyskać lepsze wyniki w procesie uczenia maszynowego. W tym celu PCA wyszukuje najsilniejsze korelacje między cechami i rezygnuje z mniej istotnych cech. Pozwala to na skompresowanie danych wejściowych do lepszej, bardziej zoptymalizowanej postaci. PCA może być również wykorzystana do wizualizacji bardziej skomplikowanych problemów uczenia maszynowego, poprzez zmniejszenie liczby cech do dwóch lub trzech, które można wizualizować na wykresie.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="6.html" class="btn btn-neutral float-left" title="6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="42.html" class="btn btn-neutral float-right" title="42 Definicje i własności grafów. Modele grafowe." accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

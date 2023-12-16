@@ -1,0 +1,126 @@
+# 3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli
+[filmik yt](https://www.youtube.com/watch?v=dC6WkYaHDb0)
+
+
+
+```{danger}
+DO OGARNIECIA JEST TEN TEMAT
+```
+
+
+## Model statyczny
+
+$$ y = F(u) $$
+
+### Rodzaje
+
+```{mermaid}
+
+graph TD
+
+A[Modele statyczne] --> B[Funkcyjne]
+A --> C[niefunkcyjne]
+B --> D[Modele liniowe]
+B --> E[Modele nieliniowe]
+
+```
+
+```{note}
+Mogą być różnych odmian, np: MIMO (Model multiple input multiple output), SISO (Model single input single output), MISO itd
+```
+
+## Model dynamiczny
+
+__występuje czynnik czasu (t)__
+
+$$ y(t) = a * u(t) , t \in [0, \infty) $$
+
+gdzie: u(t) i y(t)  to sygnały.
+
+W modelu dynamicznym y(t) zależy nie tylko od u(t) ale także od wartości tego wejścia w poprzednich chwilach czasu.
+
+## Różne rodzaje modeli
+
+**Model liniowy** - W swojej najprostszej postaci model liniowy określa (liniowe) powiązanie pomiędzy zmienną zależną (lub odpowiedzią) Y, a zbiorem predyktorów (zmiennych objaśniających) X. Dzięki takiemu modelowi można na przykład ocenić (przewidzieć) wagę człowieka na podstawie jego wzrostu i płci.
+
+**Model nieliniowy** - model o nieliniowych parametrach (hehe) czyli parametry nie są stałe, a zmienne. Ogólnie nieliniowość to cecha układu polegająca na tym, że wartość wyjściowa nie jest wprost proporcjonalna do danych wejściowych.
+
+**Model statyczny** - stan modelu w danej chwili t jest zależny wyłącznie od wartości parametrów w chwili t.
+
+**Model dynamiczny** - stan modelu w danej chwili t jest zależny nie tylko od wartości parametrów w chwili t, ale także od parametrów z przeszłości.
+
+**Model deterministyczny** - to model matematyczny, który danemu na wejściu zdarzeniu jednoznacznie przypisuje konkretny stan. Opis modelu nie zawiera żadnego elementu losowości.Oznacza to, że ewolucja układu w modelu deterministycznym jest z góry przesądzona i zależy wyłącznie od parametrów początkowych lub ich wartości poprzednich.
+
+**Model niedeterministyczny** - odwrotność deterministycznego
+
+**Model skupiony** - umożliwia kategoryzowanie rekordów w określoną liczbę klastrów. 
+Może to pomóc w zidentyfikowaniu naturalnych grup w danych. Modele grupowania koncentrują się na identyfikacji grup podobnych rekordów i oznaczaniu rekordów zgodnie z grupą, do której należą.
+
+
+## Modele w przestrzeni stanów
+
+**Stan układu**: zbiór liniowo zależnych wielkości $x_1,x_2,...,x_n$ określających w pełni skutki przeszłych oddziaływań $(t < t_0)$, gdy znane są wymuszenia $(u(t))$ i parametry tego obwodu. 
+
+**Model dynamiczny** - taki, który ma pamięć - jego obecny stan nie zależy tylko od wejścia w danej chwili czasu ale też od przeszłych wejść.
+
+|                               | Modele zmiennych stanu                                                                | Modele typu wejście-wyjście                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Opis układów                  | Opisują układy liniowe i nieliniowe                                                   | Opisują obiekt w dziedzinie zmiennej zespolonej (G(s)=Y(s)/U(s)) - transmitancja operatorowa |
+| Wymagania                     | Wymagają dużo więcej wiedzy o modelowanym obiekcie                                    | Jeden model może odpowiadać nieskończenie wielu modelom w przestrzeni stanów                 |
+| Informacje                    | Dostarczają więcej informacji na temat dynamiki obiektu i procesów w nim zachodzących | -                                                                                            |
+| Złożoność aparatu pojęciowego | Posiadają bardziej złożony aparat pojęciowy                                           | -                                                                                            |
+| Dziedzina opisu               | Opisują obiekt w dziedzinie zmiennej rzeczywistej t                                   | -                                                                                            |
+
+## Ocena jakości modeli
+Aby ocenić jakość modelu stosować można:
+
+1. ocenę istotności modelu lub rozkładu statystycznego (testy parametryczne)
+
+```{note}
+Testy parametryczne - testy statystyczne, których wynikiem jest wartość parametru statystycznego, np. średniej, wariancji, korelacji, regresji, itd. (sa lepsze od nieparametrycznych)
+```
+
+2. ocenę dopasowania modelu do danych empirycznych (testy nieparametryczne)
+
+```{note}
+Testy nieparametryczne - testy statystyczne, których wynikiem jest wartość statystyki niezależnej od rozkładu populacji, np. testy rang, testy znaków, testy ilorazów szans, itd.
+```
+
+
+### Przykładowe wskaźniki oceny jakości modelu
+
+1. Suma błędów
+2. Błąd średniokwadratowy
+
+```{important}
+Dlaczego mse?
+
+1. Kwadratowanie Błędów: MSE kwadratuje różnice, co oznacza, że większe błędy mają proporcjonalnie większy wpływ na końcowy wynik. Dzięki temu model jest bardziej wrażliwy na duże błędy
+
+2. Unikanie Ujemnych Wartości: Prosta suma błędów może prowadzić do sytuacji, w której błędy o przeciwnych znakach się znoszą, dając mylące wyniki. 
+
+3. Różniczkowalność: MSE jest funkcją ciągłą i różniczkowalną, co jest kluczowe w metodach optymalizacyjnych, takich jak gradient prosty, stosowanych w uczeniu maszynowym.
+
+```
+
+3. Błąd maksymalny
+4. Suma różnicy błędów w warunkach probabilistycznych – ze względu na losowość modelu ważne jest uwzględnienie parametrów losowych również we wskaźniku
+
+## Porównanie modeli
+
+
+1. **Dokładność:** Ocena, jak dobrze model odwzorowuje rzeczywiste zachowanie systemu. Można to osiągnąć przez porównanie przewidywań modelu z rzeczywistymi danymi.
+
+2. **Stabilność:** Analiza, czy system opisany modelem pozostaje stabilny pod różnymi warunkami, co jest kluczowe dla systemów inżynieryjnych.
+
+3. **Złożoność vs Wydajność:** Ocena, czy zwiększona złożoność modelu przekłada się na znaczącą poprawę wydajności lub dokładności.
+
+4. **Parametryzacja:** Analiza, jak łatwo można dostosować model do zmieniających się warunków lub danych.
+
+5. **Odporność na Błędy i Szum:** Ocena, jak model radzi sobie z błędami pomiarowymi lub niepewnościami w danych.
+
+Porównanie modeli często obejmuje również techniki symulacyjne i walidację krzyżową.
+
+```{note}
+walidacja krzyzowa -zbiór danych jest dzielony na mniejsze podzbiory. Model jest trenowany na jednym podzbiorze (zwanym zestawem treningowym) i testowany na innym (zwanym zestawem walidacyjnym). 
+```
