@@ -21,7 +21,9 @@
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="genindex.html" />
-    <link rel="search" title="Szukaj" href="search.html" /> 
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="29 Metody maszynowego uczenia się" href="29.html" />
+    <link rel="prev" title="6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania." href="6.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,12 +46,22 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zalozenia">Założenia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dzialanie">Działanie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rozszerzony-filtr-kalmana">Rozszerzony filtr Kalmana</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Założenia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Działanie</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
 <li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
 <li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
@@ -81,24 +93,73 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="metody-estymacji-parametrow-systemow-dynamicznych-estymacja-zmiennych-stanu-liniowy-i-rozszerzony-filtr-kalmana">
 <h1>7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.<a class="headerlink" href="#metody-estymacji-parametrow-systemow-dynamicznych-estymacja-zmiennych-stanu-liniowy-i-rozszerzony-filtr-kalmana" title="Permalink to this heading"></a></h1>
-<section id="car-example">
-<h2>Car example<a class="headerlink" href="#car-example" title="Permalink to this heading"></a></h2>
-<div class="math notranslate nohighlight">
-\[ x_0 = 0 km \]</div>
-<div class="math notranslate nohighlight">
-\[ {\dot x} = 60km/h \]</div>
-<p><strong>speedometr has some noise</strong></p>
+<p><a class="reference external" href="http://jtjt.pl/filtr-kalmana">link1</a>
+<a class="reference external" href="https://www.par.pl/content/download/14776/181501/file/PorownanieMetodEstymacjiStanu.pdf">link2</a>
+<a class="reference external" href="https://ucgosu.pl/2017/12/ekf-rozszerzony-filtr-kalmana/">link3</a></p>
+<p><em>Filtry Kalmana znajdują zastosowanie wszędzie tam, gdzie jest potrzeba sterowania obiektami w warunkach niepewności. Filtry Kalmana pozwalają na odszumianie danych np. z GPS, żyroskopu czy akcelerometru. Możemy również zrobić fuzję danych z wielu czujników jednocześnie w celu poprawy ostatecznej oceny stanu systemu np. do śledzenie obiektów na podstawie pomiarów z GPS i akcelerometru.</em></p>
+<p>Przykładowe zastosowania estymacji zmiennych stanu:</p>
+<ul class="simple">
+<li><p>sieci elektroenergetycznej</p></li>
+<li><p>napęd elektryczny</p></li>
+<li><p>loty robotów latających</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p><code class="docutils literal notranslate"><span class="pre">KF</span></code> stosuje się do obiektów danych równaniem różnicowym liniowym.</p>
+</div>
+<section id="zalozenia">
+<h2>Założenia<a class="headerlink" href="#zalozenia" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>wejścia i wyjścia układów muszą być dostępne pomiarowo</p></li>
+<li><p>zakłócenia oddziałujące na stan układu oraz szumy pomiarowe mają rozkład normalny o znanych wariancjach i zerowych wartościach oczekiwanych</p></li>
+<li><p>Wektory szumów wewnętrznych i pomiarowych muszą być wzajemnie niezależne</p></li>
+</ul>
 </section>
-<section id="p-perturbation">
-<h2><span class="math notranslate nohighlight">\(P\)</span> - Perturbation.<a class="headerlink" href="#p-perturbation" title="Permalink to this heading"></a></h2>
-<p>for example road is not flat, but has some bumps</p>
+<section id="dzialanie">
+<h2>Działanie<a class="headerlink" href="#dzialanie" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Predykcja</strong> - wyznaczenie stanu układu w chwili <span class="math notranslate nohighlight">\(k\)</span> na podstawie stanu w chwili <span class="math notranslate nohighlight">\(k-1\)</span> oraz wejścia <span class="math notranslate nohighlight">\(u_k\)</span>.
+bazując na poprzedniej wartości stanu x wyznaczana jest nowa wartość stanu x oraz jej kowariancja.
+Wartości te wyznaczane są bez korzystania z informacji ze świata zewnętrznego, tzn. w przypadku naszej łódki bez odniesienia do pomiaru z czujnika GPS. Są one więc niejako przewidywane na podstawie równań stanu x za pomocą których opisaliśmy nasz system. W przypadku naszej łódki były by tu wykorzystane równania fizyczne opisujące jej położenie i prędkość w zależności od czasu.</p></li>
+<li><p><strong>Korekcja</strong> - Na początek wyznaczana jest wartość wzmocnienia Kalmana K. Jeżeli zwrócimy uwagę na sposób w jaki jest wyznaczana, dojdziemy do wniosku, że im większe szumy pomiarowe, które są tu reprezentowane przez kowariancję R tym mniejsza wartość K, gdyż R znajduje się w mianowniku.
+W następnym równaniu uaktualniany jest wektor stanu x, jego wartość jest korygowana przy użyciu pomiarów z czujników (z). Duże znaczenie przy korekcji ma wzmocnienie Kalmana K.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Ważne</p>
+<p>będzie ono tym mniejsze im większe sumy pomiarowe, w więc w przypadku dużych szumów, nowa wartość x nie będzie się wiele różniła od tej wyliczonej w fazie predykcji.</p>
+</div>
+<p>Wniosek z tego jest następujący, za pomocą K określamy jak bardzo można polegać na danych z czujników, jeżeli szumy są duże, a więc K małe, to informacje z pomiarów będą miały niewielki wpływ na ostateczną wartość x, jeżeli natomiast szumy w układzie są małe, a więc K duże, oznacza to, że dane z pomiarów są o wiele bardziej wiarygodne i będą miały znaczny wpływ na ostateczną wartość x.</p>
+<ul class="simple">
+<li><p>etap predykcji (równania aktualizacji czasu) -</p></li>
+<li><p>etap filtracji (równania aktualizacji pomiarów)</p></li>
+</ul>
+</section>
+<section id="rozszerzony-filtr-kalmana">
+<h2>Rozszerzony filtr Kalmana<a class="headerlink" href="#rozszerzony-filtr-kalmana" title="Permalink to this heading"></a></h2>
+<p>dla nieliniowych układów dynamicznych</p>
+<section id="id1">
+<h3>Założenia<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Wektory szumów wewnętrznych i pomiarowych muszą być wzajemnie niezależne</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Działanie<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>etap predykcji (równania aktualizacji czasu)</p></li>
+<li><p>etap filtracji (równania aktualizacji pomiarów)</p></li>
+</ul>
+</section>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="6.html" class="btn btn-neutral float-left" title="6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="29.html" class="btn btn-neutral float-right" title="29 Metody maszynowego uczenia się" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
