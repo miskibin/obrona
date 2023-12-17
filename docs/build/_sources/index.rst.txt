@@ -3,7 +3,7 @@ Zagadnienia na obrone
 =====================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Spis tresci:
 
     wstep
@@ -14,6 +14,7 @@ Zagadnienia na obrone
     7
     9
     18
+    19
     29
     31
     42
