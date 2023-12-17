@@ -1,0 +1,49 @@
+# 10.  Zastosowania programowania liniowego.
+
+Programowanie liniowe – klasa problemów programowania matematycznego, w której wszystkie warunki ograniczające oraz funkcja celu mają postać liniową.
+
+## Dziedziny
+
+1. **Biznes i ekonomia**: Programowanie liniowe pomaga w optymalizacji kosztów, zarządzaniu zasobami i planowaniu produkcji. Na przykład, firma produkcyjna może użyć tej techniki do maksymalizacji zysków lub minimalizacji kosztów produkcji.
+
+2. **Transport i logistyka**: W tej branży programowanie liniowe służy do optymalizacji dystrybucji towarów. Na przykład, firma kurierska może użyć go do planowania tras przewozu towarów, minimalizując koszty.
+
+3. **Inżynieria i produkcja**: Tutaj programowanie liniowe jest używane do optymalizacji procesów produkcyjnych lub projektowania nowych produktów. Na przykład, producent samochodów może zastosować je do zoptymalizowania procesu produkcji i obniżenia kosztów.
+
+4. **Zarządzanie zasobami naturalnymi i ochrona środowiska**: Programowanie liniowe pomaga w efektywnym wykorzystaniu zasobów naturalnych, jak woda czy paliwo, i w ograniczaniu emisji szkodliwych substancji.
+
+## Przykłady problemów rozwiązywanych za pomocą programowania liniowego:
+
+- Optymalizacja kosztów produkcji lub dystrybucji.
+- Planowanie produkcji lub dystrybucji dla maksymalizacji zysku lub minimalizacji kosztów.
+- Optymalizacja wykorzystania zasobów (surowców, maszyn, pracowników).
+- Projektowanie nowych produktów lub procesów produkcyjnych.
+- Optymalizacja tras transportowych.
+- Ograniczanie emisji szkodliwych substancji.
+
+Programowanie liniowe rozwiązuje się za pomocą specjalnych programów, takich jak `linprog` w `Matlabie` czy solver w Excelu, z wykorzystaniem algorytmu simpleks.
+
+**Algorytm simpleks** to metoda iteracyjna, która przesuwa się po przestrzeni rozwiązań, wybierając i zmieniając zmienne decyzyjne, by osiągnąć rozwiązanie optymalne. Jest to jedna z najpopularniejszych metod rozwiązywania problemów programowania liniowego.
+
+**Przykład**: Firma produkcyjna chce maksymalizować 
+zysk z produkcji dwóch produktów:
+
+| Produkt | Cena sprzedaży (zł/szt.) | Koszt produkcji (zł/szt.) | Zużycie surowców |
+| ------- | ------------------------ | ------------------------- | ---------------- |
+| A       | 10                       | 8                         | X + Y            |
+| B       | 15                       | 12                        | 3X + 2Y          |
+
+Firma ma dostęp do surowców:
+- X (1000 jednostek) 
+- Y (2000 jednostek).
+
+
+**Cel**:  maksymalizacja zysku, przy ograniczeniach ilości surowców i całkowitych ilościach produktów A i B do produkcji. 
+
+Formalnie problem wygląda tak:
+
+-  $Y = MAX(10x + 15y)$, gdzie x i y to ilości produktów A i B.
+
+**Ograniczenia**: $2x + y ≤ 1000$, $3x + 2y ≤ 2000$, $x, y ≥ 0$ i są liczbami całkowitymi.
+
+Używając algorytmu simpleks, szukamy wartości x i y, które spełniają te warunki i maksymalizują zysk firmy.
