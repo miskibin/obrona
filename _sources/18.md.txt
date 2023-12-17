@@ -60,6 +60,14 @@ Badanie użyteczności to proces oceny, jak łatwo użytkownicy mogą korzystać
    - **Opis**: Porównywanie dwóch wersji oprogramowania, aby zobaczyć, która lepiej spełnia określone kryteria użyteczności.
    - **Cel**: Optymalizacja elementów interfejsu użytkownika i funkcjonalności.
 
+5. **Badania partyzanckie**
+    - Pytanie o zdanie randomowych ludzi na ulicy
+    - Losowy wybór respondentów
+    - Szybki test użyteczności wynagrodzony upominkiem
+    - Niski koszt i prostota
+    - Najlepiej stosować na wczesnych etapach procesu
+    - Czas testu jest ograniczony (5-10 min)
+
 
 ```{note}
 dodatkowe zasady w systemach webowych
