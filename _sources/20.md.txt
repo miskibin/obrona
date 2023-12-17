@@ -1,0 +1,74 @@
+# 20 Proces i architektura hurtowni danych, wielowymiarowy model danych.
+
+
+**Hurtownia danych** - baza danych, mająca służyć wspomaganiu procesu podejmowania decyzji, która jest:
+
+- Zorientowana na temat - Zbierane dane dotyczą tylko jednego tematu, np. sprzedaży, marketingu, finansów, itp.
+- Nieulotna - Dane są raz umieszczone w hurtowni i nie są modyfikowane.
+- Zintegrowana - Dane pochodzą z różnych źródeł i są zintegrowane w jednym miejscu.
+- Zróżnicowana czasowo - Gromadzone są dane historyczne. Prawie wszystkie zapytania kierowane do hurtowni wymagają prześledzenia jakiegoś odcinka czasu.  
+
+
+
+## Architektura hurtowni danych
+![grafika hurtowni](https://www.altexsoft.com/media/2019/10/1.png)
+
+```{note}
+narzędzia **ETL (Extract, Transform, Load)** służą do pobierania danych z różnych źródeł, ich transformacji i załadowania do hurtowni danych.
+
+```
+
+```{note}
+Repozytorium metadanych - baza danych, która przechowuje informacje z poziomu :
+1. pojęciowego (opis zawartości, opis procesu integracji pojęciowej itp.)
+2. logicznego (nazwy tabel i kolumn, typ danych, rodzaje związków między tabelami itd.) 
+3. fizycznego (definicja fizycznego rozmieszczania danych i ich przepływu, informacja o lokalizacji fragmentów), jakie narzędzia i technologie są używane do ich przechowywania. 
+4.  statystyki danych i uzycia oraz informacje administracyjne (zasady dostępu do danych
+5.  definicje użytkowników i ich grup, terminy wykonywania cyklicznych czynności). 
+
+```
+model logiczny danych skupia się na danych i ich znaczeniu, natomiast model fizyczny danych skupia się na tym, jak dane są przechowywane i udostępniane.
+
+
+## Wielowymiarowy model danych
+
+```{warning}
+kostka OLAP jest narzędziem do analizowania danych, a schemat gwiazdy jest sposobem organizacji danych w bazie danych.
+```
+
+### **schemat gwiazdy** 
+> Pozwala przedstawić dane w postaci wielowymiarowego modelu danych. W modelu tym występują dwie podstawowe tabele:
+1. tabela faktów (ang. fact table) - zawiera miary (ang. measures) i klucze obce do tabel wymiarów (ang. dimension tables). Jest znormalizowana, a klucz główny jest złożony z kluczy obcych do tabel wymiarów. Kolumny `niekluczowe muszą być miarami` i być sumowalne.
+2. tabele wymiarów (ang. dimension tables) - zawierają atrybuty opisujące encje biznesowe. Brak normalizacji. Np. w tabeli produkt znajdują się wszystkie potrzebne z punktu widzenia przyszłej analizy informacje o produkcie, łącznie z informacjami o kategorii produktu. 
+```{warning}
+Szczególnym wymiarem analizy jest wymiar czasu. Wymiary często mają strukturę hierarchiczną np. produkt-kategoria, data-miesiąc-kwartał-rok, klient-miasto-kraj. 
+```
+
+   
+![gwiazda](https://learn.microsoft.com/pl-pl/power-bi/guidance/media/star-schema/star-schema-example1.png)
+
+```{note}
+- W tabela faktów są zawarte miary (kolumny) mające w swoich definicjach wbudowane agregacje. Przykładem kolumn miar są "Przychód" i "Jednostki".
+- W tabelach wymiarów są zawarte atrybuty opisujące encje biznesowe.
+
+![tab](https://edu.pjwstk.edu.pl/wyklady/hur/scb/wyklad3/gwiazda.png)
+```
+
+### schemat płatka śniegu
+_kategoria produktu (i wszystkie dotyczące jej atrybuty) stanowi tu oddzielną tabelę._
+![platek](https://edu.pjwstk.edu.pl/wyklady/wspbd/scb/W14/Image8.gif)
+
+
+### Schemat konstelacji
+_Jeśli mamy więcej niż jeden temat, wokół którego koncentruje się nasze przedsiębiorstwo, możemy stworzyć tak zwany schemat konstelacyjny, w którym niektóre wymiary są współdzielone._
+
+![konstelacja](https://edu.pjwstk.edu.pl/wyklady/wspbd/scb/W14/Image9.gif)
+
+
+Zadania wykraczające poza zakres przewidziany w ramach hurtowni tematycznej wykonywane są na centralnej hurtowni danych (np. zapytania ad hoc, sformułowane przez użytkownika w języku SQL). Jednym z kierunków optymalizacji systemu hurtowni tematycznych jest minimalizacja potrzeby zadawania tego typu zapytań - wszystko, co może być obliczone w hurtowni tematycznej, powinno być tam liczone.
+
+
+
+```{important}
+Typowe zapytania podsumowujące to takie, które w języku SQL zapisuje się za pomocą klauzuli GROUP BY i agregacji (np. SUM, COUNT). Aby takie zapytania nie wymagały przejrzenia całych (wieloterabajtowych) danych źródłowych, część agregacji może być policzona zawczasu i przechowywana w postaci wielowymiarowych tabel, tzw. kostek danych. 
+```

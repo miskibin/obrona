@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20 Proces i architektura hurtowni danych, wielowymiarowy model danych. &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9893e7ba"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=a186e9ce"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="29 Metody maszynowego uczenia się" href="29.html" />
+    <link rel="prev" title="19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence." href="19.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18.html">18 Typy testów oprogramowania. Definicja i metody badania użyteczności.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19.html">19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">20 Proces i architektura hurtowni danych, wielowymiarowy model danych.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#architektura-hurtowni-danych">Architektura hurtowni danych</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wielowymiarowy-model-danych">Wielowymiarowy model danych</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schemat-gwiazdy"><strong>schemat gwiazdy</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemat-platka-sniegu">schemat płatka śniegu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemat-konstelacji">Schemat konstelacji</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">20 Proces i architektura hurtowni danych, wielowymiarowy model danych.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/20.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="proces-i-architektura-hurtowni-danych-wielowymiarowy-model-danych">
+<h1>20 Proces i architektura hurtowni danych, wielowymiarowy model danych.<a class="headerlink" href="#proces-i-architektura-hurtowni-danych-wielowymiarowy-model-danych" title="Link to this heading"></a></h1>
+<p><strong>Hurtownia danych</strong> - baza danych, mająca służyć wspomaganiu procesu podejmowania decyzji, która jest:</p>
+<ul class="simple">
+<li><p>Zorientowana na temat - Zbierane dane dotyczą tylko jednego tematu, np. sprzedaży, marketingu, finansów, itp.</p></li>
+<li><p>Nieulotna - Dane są raz umieszczone w hurtowni i nie są modyfikowane.</p></li>
+<li><p>Zintegrowana - Dane pochodzą z różnych źródeł i są zintegrowane w jednym miejscu.</p></li>
+<li><p>Zróżnicowana czasowo - Gromadzone są dane historyczne. Prawie wszystkie zapytania kierowane do hurtowni wymagają prześledzenia jakiegoś odcinka czasu.</p></li>
+</ul>
+<section id="architektura-hurtowni-danych">
+<h2>Architektura hurtowni danych<a class="headerlink" href="#architektura-hurtowni-danych" title="Link to this heading"></a></h2>
+<p><img alt="grafika hurtowni" src="https://www.altexsoft.com/media/2019/10/1.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>narzędzia <strong>ETL (Extract, Transform, Load)</strong> służą do pobierania danych z różnych źródeł, ich transformacji i załadowania do hurtowni danych.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Repozytorium metadanych - baza danych, która przechowuje informacje z poziomu :</p>
+<ol class="arabic simple">
+<li><p>pojęciowego (opis zawartości, opis procesu integracji pojęciowej itp.)</p></li>
+<li><p>logicznego (nazwy tabel i kolumn, typ danych, rodzaje związków między tabelami itd.)</p></li>
+<li><p>fizycznego (definicja fizycznego rozmieszczania danych i ich przepływu, informacja o lokalizacji fragmentów), jakie narzędzia i technologie są używane do ich przechowywania.</p></li>
+<li><p>statystyki danych i uzycia oraz informacje administracyjne (zasady dostępu do danych</p></li>
+<li><p>definicje użytkowników i ich grup, terminy wykonywania cyklicznych czynności).</p></li>
+</ol>
+</div>
+<p>model logiczny danych skupia się na danych i ich znaczeniu, natomiast model fizyczny danych skupia się na tym, jak dane są przechowywane i udostępniane.</p>
+</section>
+<section id="wielowymiarowy-model-danych">
+<h2>Wielowymiarowy model danych<a class="headerlink" href="#wielowymiarowy-model-danych" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>kostka OLAP jest narzędziem do analizowania danych, a schemat gwiazdy jest sposobem organizacji danych w bazie danych.</p>
+</div>
+<section id="schemat-gwiazdy">
+<h3><strong>schemat gwiazdy</strong><a class="headerlink" href="#schemat-gwiazdy" title="Link to this heading"></a></h3>
+<blockquote>
+<div><p>Pozwala przedstawić dane w postaci wielowymiarowego modelu danych. W modelu tym występują dwie podstawowe tabele:</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>tabela faktów (ang. fact table) - zawiera miary (ang. measures) i klucze obce do tabel wymiarów (ang. dimension tables). Jest znormalizowana, a klucz główny jest złożony z kluczy obcych do tabel wymiarów. Kolumny <code class="docutils literal notranslate"><span class="pre">niekluczowe</span> <span class="pre">muszą</span> <span class="pre">być</span> <span class="pre">miarami</span></code> i być sumowalne.</p></li>
+<li><p>tabele wymiarów (ang. dimension tables) - zawierają atrybuty opisujące encje biznesowe. Brak normalizacji. Np. w tabeli produkt znajdują się wszystkie potrzebne z punktu widzenia przyszłej analizy informacje o produkcie, łącznie z informacjami o kategorii produktu.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Ostrzeżenie</p>
+<p>Szczególnym wymiarem analizy jest wymiar czasu. Wymiary często mają strukturę hierarchiczną np. produkt-kategoria, data-miesiąc-kwartał-rok, klient-miasto-kraj.</p>
+</div>
+<p><img alt="gwiazda" src="https://learn.microsoft.com/pl-pl/power-bi/guidance/media/star-schema/star-schema-example1.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<ul class="simple">
+<li><p>W tabela faktów są zawarte miary (kolumny) mające w swoich definicjach wbudowane agregacje. Przykładem kolumn miar są „Przychód” i „Jednostki”.</p></li>
+<li><p>W tabelach wymiarów są zawarte atrybuty opisujące encje biznesowe.</p></li>
+</ul>
+<p><img alt="tab" src="https://edu.pjwstk.edu.pl/wyklady/hur/scb/wyklad3/gwiazda.png" /></p>
+</div>
+</section>
+<section id="schemat-platka-sniegu">
+<h3>schemat płatka śniegu<a class="headerlink" href="#schemat-platka-sniegu" title="Link to this heading"></a></h3>
+<p><em>kategoria produktu (i wszystkie dotyczące jej atrybuty) stanowi tu oddzielną tabelę.</em>
+<img alt="platek" src="https://edu.pjwstk.edu.pl/wyklady/wspbd/scb/W14/Image8.gif" /></p>
+</section>
+<section id="schemat-konstelacji">
+<h3>Schemat konstelacji<a class="headerlink" href="#schemat-konstelacji" title="Link to this heading"></a></h3>
+<p><em>Jeśli mamy więcej niż jeden temat, wokół którego koncentruje się nasze przedsiębiorstwo, możemy stworzyć tak zwany schemat konstelacyjny, w którym niektóre wymiary są współdzielone.</em></p>
+<p><img alt="konstelacja" src="https://edu.pjwstk.edu.pl/wyklady/wspbd/scb/W14/Image9.gif" /></p>
+<p>Zadania wykraczające poza zakres przewidziany w ramach hurtowni tematycznej wykonywane są na centralnej hurtowni danych (np. zapytania ad hoc, sformułowane przez użytkownika w języku SQL). Jednym z kierunków optymalizacji systemu hurtowni tematycznych jest minimalizacja potrzeby zadawania tego typu zapytań - wszystko, co może być obliczone w hurtowni tematycznej, powinno być tam liczone.</p>
+<div class="admonition important">
+<p class="admonition-title">Ważne</p>
+<p>Typowe zapytania podsumowujące to takie, które w języku SQL zapisuje się za pomocą klauzuli GROUP BY i agregacji (np. SUM, COUNT). Aby takie zapytania nie wymagały przejrzenia całych (wieloterabajtowych) danych źródłowych, część agregacji może być policzona zawczasu i przechowywana w postaci wielowymiarowych tabel, tzw. kostek danych.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="19.html" class="btn btn-neutral float-left" title="19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="29.html" class="btn btn-neutral float-right" title="29 Metody maszynowego uczenia się" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
