@@ -11,6 +11,7 @@ Zagadnienia na obrone
     2
     3
     6
+    7
     29
     31
     42

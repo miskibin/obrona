@@ -1,14 +1,53 @@
 # 7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.
 
+[link1](http://jtjt.pl/filtr-kalmana) 
+[link2](https://www.par.pl/content/download/14776/181501/file/PorownanieMetodEstymacjiStanu.pdf)
+[link3](https://ucgosu.pl/2017/12/ekf-rozszerzony-filtr-kalmana/)
 
-## Car example
+*Filtry Kalmana znajdują zastosowanie wszędzie tam, gdzie jest potrzeba sterowania obiektami w warunkach niepewności. Filtry Kalmana pozwalają na odszumianie danych np. z GPS, żyroskopu czy akcelerometru. Możemy również zrobić fuzję danych z wielu czujników jednocześnie w celu poprawy ostatecznej oceny stanu systemu np. do śledzenie obiektów na podstawie pomiarów z GPS i akcelerometru.*
+
+Przykładowe zastosowania estymacji zmiennych stanu:
+- sieci elektroenergetycznej
+- napęd elektryczny
+- loty robotów latających
+
+```{note}
+`KF` stosuje się do obiektów danych równaniem różnicowym liniowym.
+```
+
+### Założenia
+- wejścia i wyjścia układów muszą być dostępne pomiarowo
+- zakłócenia oddziałujące na stan układu oraz szumy pomiarowe mają rozkład normalny o znanych wariancjach i zerowych wartościach oczekiwanych
+- Wektory szumów wewnętrznych i pomiarowych muszą być wzajemnie niezależne
+
+### Działanie
+
+1. **Predykcja** - wyznaczenie stanu układu w chwili $k$ na podstawie stanu w chwili $k-1$ oraz wejścia $u_k$. 
+bazując na poprzedniej wartości stanu x wyznaczana jest nowa wartość stanu x oraz jej kowariancja.
+Wartości te wyznaczane są bez korzystania z informacji ze świata zewnętrznego, tzn. w przypadku naszej łódki bez odniesienia do pomiaru z czujnika GPS. Są one więc niejako przewidywane na podstawie równań stanu x za pomocą których opisaliśmy nasz system. W przypadku naszej łódki były by tu wykorzystane równania fizyczne opisujące jej położenie i prędkość w zależności od czasu.
+
+2. **Korekcja** - Na początek wyznaczana jest wartość wzmocnienia Kalmana K. Jeżeli zwrócimy uwagę na sposób w jaki jest wyznaczana, dojdziemy do wniosku, że im większe szumy pomiarowe, które są tu reprezentowane przez kowariancję R tym mniejsza wartość K, gdyż R znajduje się w mianowniku.
+W następnym równaniu uaktualniany jest wektor stanu x, jego wartość jest korygowana przy użyciu pomiarów z czujników (z). Duże znaczenie przy korekcji ma wzmocnienie Kalmana K.
+
+```{important}
+będzie ono tym mniejsze im większe sumy pomiarowe, w więc w przypadku dużych szumów, nowa wartość x nie będzie się wiele różniła od tej wyliczonej w fazie predykcji.
+```
+
+Wniosek z tego jest następujący, za pomocą K określamy jak bardzo można polegać na danych z czujników, jeżeli szumy są duże, a więc K małe, to informacje z pomiarów będą miały niewielki wpływ na ostateczną wartość x, jeżeli natomiast szumy w układzie są małe, a więc K duże, oznacza to, że dane z pomiarów są o wiele bardziej wiarygodne i będą miały znaczny wpływ na ostateczną wartość x.
 
 
-$$ x_0 = 0 km $$
+- etap predykcji (równania aktualizacji czasu) - 
+- etap filtracji (równania aktualizacji pomiarów)
 
-$$ {\dot x} = 60km/h $$
-__speedometr has some noise__
+## Rozszerzony filtr Kalmana 
 
+dla nieliniowych układów dynamicznych
 
-## $P$ - Perturbation. 
-for example road is not flat, but has some bumps
+### Założenia
+
+- Wektory szumów wewnętrznych i pomiarowych muszą być wzajemnie niezależne
+
+### Działanie
+
+- etap predykcji (równania aktualizacji czasu)
+- etap filtracji (równania aktualizacji pomiarów)
