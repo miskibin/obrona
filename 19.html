@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence. &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9893e7ba"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=a186e9ce"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="29 Metody maszynowego uczenia się" href="29.html" />
+    <link rel="prev" title="Typy testów oprogramowania. Definicja i metody badania użyteczności." href="18.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18.html">Typy testów oprogramowania. Definicja i metody badania użyteczności.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#oltp-online-transaction-processing">OLTP (Online Transaction Processing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olap-online-analytical-processing">OLAP (Online Analytical Processing)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eksploatacja-danych-data-mining">Eksploatacja danych (Data Mining)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metody">metody:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prezentacja-danych">Prezentacja danych</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/19.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="specyfika-przetwarzania-operacyjnego-oltp-oraz-strategicznego-olap-proces-eksploracji-oraz-prezentacji-danych-w-systemach-business-intelligence">
+<h1>19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.<a class="headerlink" href="#specyfika-przetwarzania-operacyjnego-oltp-oraz-strategicznego-olap-proces-eksploracji-oraz-prezentacji-danych-w-systemach-business-intelligence" title="Link to this heading"></a></h1>
+<section id="oltp-online-transaction-processing">
+<h2>OLTP (Online Transaction Processing)<a class="headerlink" href="#oltp-online-transaction-processing" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Rodzaj przetwarzania danych zorientowany na szybkie przetwarzanie transakcji związanych
+z bieżącymi operacjami biznesowymi.</p></li>
+<li><p>Używany do obsługi transakcji IRL, np, zakupy w sklepie internetowym.</p></li>
+<li><p>Dane są przechowywane w bazach danych relacyjnych.</p></li>
+<li><p>wykorzystuje normalizację. Jest to ważne, ponieważ odbywa się w systemach o dużym obciążeniu.</p></li>
+</ol>
+</section>
+<section id="olap-online-analytical-processing">
+<h2>OLAP (Online Analytical Processing)<a class="headerlink" href="#olap-online-analytical-processing" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Rodzaj przetwarzania danych zorientowany na analizę danych historycznych.</p></li>
+<li><p>Umożliwia szybkie i łatwe przeglądanie danych historycznych.</p></li>
+<li><p>Wykorzystuje kostki OLAP i szybkie przetwarzanie agregatów.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Ważne</p>
+<p>kostka olap - wielowymiarowa struktura danych np. kostka w systemie sprzedaży:
+<img alt="kostka" src="https://www.kyvosinsights.com/wp-content/uploads/2022/07/Figure-4-What-is-OLAP.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<ul class="simple">
+<li><p>W tabela faktów są zawarte miary (kolumny) mające w swoich definicjach wbudowane agregacje. Przykładem kolumn miar są „Przychód” i „Jednostki”.</p></li>
+<li><p>W tabelach wymiarów są zawarte atrybuty opisujące encje biznesowe.</p></li>
+</ul>
+<p><img alt="tab" src="https://edu.pjwstk.edu.pl/wyklady/hur/scb/wyklad3/gwiazda.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p><strong>Szybkie przetwarzanie agregatów</strong>
+Technika, która pozwala na szybkie obliczanie średnich, sum, minimum i maksimum dla dużych ilości danych historycznych. Na przykład, jeśli chcesz obliczyć średnią cenę produktu w poszczególnych krajach w ciągu ostatnich 12 miesięcy, można obliczyć tę statystykę dla każdego kraju na podstawie danych z kostki OLAP.</p>
+</div>
+</section>
+<section id="eksploatacja-danych-data-mining">
+<h2>Eksploatacja danych (Data Mining)<a class="headerlink" href="#eksploatacja-danych-data-mining" title="Link to this heading"></a></h2>
+<p>Eksploracja danych (ang. data exploration) to proces polegający na zbieraniu, przetwarzaniu i
+analizowaniu danych w celu zrozumienia ich struktury, trendów, wzorców i zależności.
+Jest często pierwszym krokiem w procesie analizy danych i ma na celu poznanie danych
+zanim zostaną one wykorzystane do celów biznesowych lub naukowych.</p>
+<p><strong>Proces:</strong></p>
+<div class="mermaid">
+            graph TD
+Z[Zbieranie danych] --&gt; A[Przygotowanie danych]
+A --&gt; B[Analiza danych]
+B --&gt; C[Odkrywanie wzorców, interpretacja wyników]
+        </div><section id="metody">
+<h3>metody:<a class="headerlink" href="#metody" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Klastrowanie</strong>: Jest to technika grupowania obiektów podobnych do siebie w klastry.
+np. w analizie koszykowej w sklepach detalicznych, może pomóc w identyfikacji grup klientów o podobnych preferencjach.</p></li>
+<li><p><strong>Odkrywanie asocjacji</strong>: skupia się na identyfikacji interesujących zależności i wzorców między różnymi obiektami w danych.
+np. w analizie koszykowej , może pomóc w odkryciu, które produkty są często kupowane razem. (np. chleb i masło -&gt; mleko)</p></li>
+<li><p><strong>Odkrywanie wzorców sekwencji</strong>: np. notowanie na giełdzie, w sklepie produkty, które są często kupowane razem w określonej kolejności.</p></li>
+<li><p><strong>Wykrywanie zmian i odchyleń</strong>: Metoda ta skupia się na odkrywaniu zmian w trendach lub odchyleń od normy, które mogą wskazywać na anomalie.
+np. w monitorowaniu sieci, oszustwach finansowych czy awariach systemów.</p></li>
+<li><p><strong>Odkrywanie zbliżoności w przebiegach czasowych</strong>: Dotyczy analizy i modelowania danych czasowych w celu rozpoznania wzorców i przewidywania przyszłych zachowań. Może być stosowane w prognozowaniu
+finansowym, prognozowaniu pogody, czy analizie rynku.</p></li>
+<li><p><strong>Odkrywanie klasyfikacji</strong>: To proces przypisania obiektów do określonych kategorii lub klas. Metoda ta stosowana jest,
+gdy znane są kategorie i chce się przypisać nowe obiekty do jednej z nich, na podstawie ich cech. stosowana w rozpoznawaniu wzorców,
+diagnozie medycznej i decyzjach kredytowych.</p></li>
+</ol>
+</section>
+</section>
+<section id="prezentacja-danych">
+<h2>Prezentacja danych<a class="headerlink" href="#prezentacja-danych" title="Link to this heading"></a></h2>
+<div class="mermaid">
+            graph LR
+A[1 Selekcja danych] --&gt; B[2 Wizualizacja danych]
+B --&gt; C[3 Analiza danych]
+C --&gt; D[4 Prezentacja wyników]
+        </div><ol class="arabic simple">
+<li><p>Wybór danych w zależności od celu prezentacji</p></li>
+<li><p>tworzenie wykresów map diagramów etc. aby dane były jak najbardziej czytelne</p></li>
+<li><p>Obliczanie statystyk, formowanie wniosków</p></li>
+<li><p>Przedstawienie wyników w formie raportu, prezentacji, infografiki</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="18.html" class="btn btn-neutral float-left" title="Typy testów oprogramowania. Definicja i metody badania użyteczności." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="29.html" class="btn btn-neutral float-right" title="29 Metody maszynowego uczenia się" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

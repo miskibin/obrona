@@ -1,5 +1,14 @@
 # Typy testów oprogramowania. Definicja i metody badania użyteczności.
 
+![typy testów](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*dDhK8OrVNpCPUR1hK5Zgcg.png)
+
+```{note}
+Testy funkcjonalne a niefunkcjonalne
+- funkcjonalne - Skupiają się na badaniu funkcji i funkcjonalności systemu.
+Testują, czy system robi to, co ma robić, zgodnie ze specyfikacjami.
+- niefunkcjonalne - Skupiają się na aspektach oprogramowania niezwiązanych bezpośrednio z konkretnymi funkcjami. Testują "jak" system działa.
+```
+
 ### Typy Testów Oprogramowania
 
 1. **Testy Jednostkowe (Unit Testing)**: 
