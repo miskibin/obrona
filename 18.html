@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typy testów oprogramowania. Definicja i metody badania użyteczności. &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9893e7ba"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=a186e9ce"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="29 Metody maszynowego uczenia się" href="29.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="9.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Typy testów oprogramowania. Definicja i metody badania użyteczności.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#typy-testow-oprogramowania">Typy Testów Oprogramowania</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#badanie-uzytecznosci">Badanie Użyteczności</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#definicja">Definicja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metody">Metody</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Typy testów oprogramowania. Definicja i metody badania użyteczności.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/18.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="typy-testow-oprogramowania-definicja-i-metody-badania-uzytecznosci">
+<h1>Typy testów oprogramowania. Definicja i metody badania użyteczności.<a class="headerlink" href="#typy-testow-oprogramowania-definicja-i-metody-badania-uzytecznosci" title="Link to this heading"></a></h1>
+<section id="typy-testow-oprogramowania">
+<h2>Typy Testów Oprogramowania<a class="headerlink" href="#typy-testow-oprogramowania" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Testy Jednostkowe (Unit Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie poszczególnych komponentów lub modułów oprogramowania w izolacji od reszty systemu.</p></li>
+<li><p><strong>Cel</strong>: Upewnienie się, że każda jednostka kodu działa poprawnie.</p></li>
+<li><p><strong>Narzędzia</strong>: JUnit, NUnit, Mockito.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Integracyjne (Integration Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie połączeń między modułami lub systemami.</p></li>
+<li><p><strong>Cel</strong>: Sprawdzenie, czy moduły lub systemy współpracują zgodnie z oczekiwaniami.</p></li>
+<li><p><strong>Narzędzia</strong>: Postman, SoapUI.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Systemowe (System Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie kompletnego i zintegrowanego systemu.</p></li>
+<li><p><strong>Cel</strong>: Zapewnienie, że cały system spełnia wymagania specyfikacji.</p></li>
+<li><p><strong>Narzędzia</strong>: Selenium, QTP.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Akceptacyjne (Acceptance Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie z perspektywy użytkownika końcowego. weryfikujące, czy system spełnia wymagania biznesowe.</p></li>
+<li><p><strong>Cel</strong>: Upewnienie się, że system jest gotowy do użycia w rzeczywistym środowisku.</p></li>
+<li><p><strong>Narzędzia</strong>: Cucumber, FitNesse.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Wydajności (Performance Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie wydajności systemu pod kątem szybkości, skalowalności i stabilności.</p></li>
+<li><p><strong>Cel</strong>: Zapewnienie, że system działa szybko i stabilnie pod obciążeniem.</p></li>
+<li><p><strong>Narzędzia</strong>: JMeter, LoadRunner.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Bezpieczeństwa (Security Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Testowanie podatności na ataki zewnętrzne.</p></li>
+<li><p><strong>Cel</strong>: Zapewnienie ochrony danych i zasobów przed nieautoryzowanym dostępem.</p></li>
+<li><p><strong>Narzędzia</strong>: OWASP ZAP, Burp Suite.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="badanie-uzytecznosci">
+<h2>Badanie Użyteczności<a class="headerlink" href="#badanie-uzytecznosci" title="Link to this heading"></a></h2>
+<section id="definicja">
+<h3>Definicja<a class="headerlink" href="#definicja" title="Link to this heading"></a></h3>
+<p>Badanie użyteczności to proces oceny, jak łatwo użytkownicy mogą korzystać z danego oprogramowania. Skupia się na zrozumieniu, jak realni użytkownicy wchodzą w interakcje z oprogramowaniem i jakie są ich doświadczenia.</p>
+</section>
+<section id="metody">
+<h3>Metody<a class="headerlink" href="#metody" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Ocena heurystyczna (Heuristic Evaluation)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Opis</strong>: Ocena interfejsu użytkownika przez ekspertów, którzy sprawdzają, czy interfejs spełnia określone kryteria użyteczności. (np. 10 zasad Nielsona)</p></li>
+<li><p><strong>Cel</strong>: Zidentyfikowanie problemów użyteczności i zaleceń dotyczących poprawy interfejsu użytkownika.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy Użyteczności (Usability Testing)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Opis</strong>: Obserwacja rzeczywistych użytkowników korzystających z oprogramowania w kontrolowanych warunkach. (eye-tracking, nagrywanie ekranu, analiza zachowania użytkownika)</p></li>
+<li><p><strong>Cel</strong>: Zidentyfikowanie problemów użyteczności i zrozumienie doświadczeń użytkowników.</p></li>
+</ul>
+</li>
+<li><p><strong>Ankiety i Kwestionariusze</strong>:</p>
+<ul class="simple">
+<li><p><strong>Opis</strong>: Zbieranie informacji zwrotnych od użytkowników za pomocą ankiet.</p></li>
+<li><p><strong>Cel</strong>: Pozyskanie opinii użytkowników o aspektach użyteczności.</p></li>
+</ul>
+</li>
+<li><p><strong>Analiza Zadań (Task Analysis)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Opis</strong>: Analiza kroków, które użytkownicy muszą wykonać, aby osiągnąć określone cele w oprogramowaniu.</p></li>
+<li><p><strong>Cel</strong>: Zrozumienie i usprawnienie procesu interakcji użytkownika z oprogramowaniem.</p></li>
+</ul>
+</li>
+<li><p><strong>Testy A/B</strong>:</p>
+<ul class="simple">
+<li><p><strong>Opis</strong>: Porównywanie dwóch wersji oprogramowania, aby zobaczyć, która lepiej spełnia określone kryteria użyteczności.</p></li>
+<li><p><strong>Cel</strong>: Optymalizacja elementów interfejsu użytkownika i funkcjonalności.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>dodatkowe zasady w systemach webowych</p>
+<ul class="simple">
+<li><p>dzielenie</p></li>
+<li><p>pisz w stylu odwróconej piramidy</p></li>
+<li><p>najważniejsze informacje umieszczaj na górze strony</p></li>
+<li><p>unikaj zbędnych nowinek technologicznych</p></li>
+<li><p>czytelność stron – skanowanie</p></li>
+<li><p>czas odpowiedzi i ładowania</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="9.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="29.html" class="btn btn-neutral float-right" title="29 Metody maszynowego uczenia się" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
