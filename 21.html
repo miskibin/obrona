@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9893e7ba"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=a186e9ce"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="29 Metody maszynowego uczenia się" href="29.html" />
+    <link rel="prev" title="20 Proces i architektura hurtowni danych, wielowymiarowy model danych." href="20.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18.html">18 Typy testów oprogramowania. Definicja i metody badania użyteczności.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19.html">19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20.html">20 Proces i architektura hurtowni danych, wielowymiarowy model danych.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#zarzadzanie-ryzykiem">Zarządzanie Ryzykiem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#metody-ochrony">Metody Ochrony</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bezpieczenstwo-fizyczne">Bezpieczeństwo Fizyczne:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bezpieczenstwo-cybernetyczne">Bezpieczeństwo Cybernetyczne:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gotowosc-na-sytuacje-kryzysowe">Gotowość na Sytuacje Kryzysowe:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#odpornosc-i-redundancja">Odporność i Redundancja:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/21.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="zagrozenia-i-zarzadzanie-ryzykiem-w-procesie-ochrony-infrastruktury-krytycznej-oraz-metody-ochrony-infrastruktury-krytycznej">
+<h1>21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej<a class="headerlink" href="#zagrozenia-i-zarzadzanie-ryzykiem-w-procesie-ochrony-infrastruktury-krytycznej-oraz-metody-ochrony-infrastruktury-krytycznej" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Infrastruktura krytyczna to systemy i usługi, których zakłócenie lub zniszczenie może mieć poważne konsekwencje dla funkcjonowania społeczeństwa i gospodarki.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Klęski Żywiołowe</strong>: Powodzie, trzęsienia ziemi, huragany mogą niszczyć fizyczną infrastrukturę.</p></li>
+<li><p><strong>Wypadki</strong>: Awaria techniczna lub ludzki błąd może prowadzić do katastrof technologicznych.</p></li>
+<li><p><strong>Cyberataki</strong>: Hakerzy mogą zakłócać działanie systemów krytycznych, kradnąc dane lub wyłączając ważne usługi.</p></li>
+<li><p><strong>Terroryzm</strong>: Ataki celowe mogą powodować rozległe szkody i chaos.</p></li>
+</ul>
+</section>
+<section id="zarzadzanie-ryzykiem">
+<h1>Zarządzanie Ryzykiem<a class="headerlink" href="#zarzadzanie-ryzykiem" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>Analiza Ryzyka</strong>: Systematyczne określanie i ocena potencjalnych zagrożeń.</p></li>
+<li><p><strong>Planowanie Odpowiedzi</strong>: Opracowanie procedur postępowania na wypadek wystąpienia zagrożenia.</p></li>
+<li><p><strong>Szkolenia i Ćwiczenia</strong>: Przygotowanie personelu do efektywnego reagowania w sytuacji kryzysowej.</p></li>
+</ul>
+</section>
+<section id="metody-ochrony">
+<h1>Metody Ochrony<a class="headerlink" href="#metody-ochrony" title="Link to this heading"></a></h1>
+<section id="bezpieczenstwo-fizyczne">
+<h2>Bezpieczeństwo Fizyczne:<a class="headerlink" href="#bezpieczenstwo-fizyczne" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Zapory</strong>: Ogrodzenia, bariery antyterrorystyczne.</p></li>
+<li><p><strong>Monitoring</strong>: Kamery CCTV, systemy alarmowe.</p></li>
+<li><p><strong>Kontrola Dostępu</strong>: Systemy identyfikacji, bramki bezpieczeństwa.</p></li>
+</ul>
+</section>
+<section id="bezpieczenstwo-cybernetyczne">
+<h2>Bezpieczeństwo Cybernetyczne:<a class="headerlink" href="#bezpieczenstwo-cybernetyczne" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Firewalle</strong>: Zapory sieciowe chroniące przed nieautoryzowanym dostępem.</p></li>
+<li><p><strong>Antywirusy</strong>: Oprogramowanie do wykrywania i eliminowania złośliwego oprogramowania.</p></li>
+<li><p><strong>Autentykacja</strong>: Wielopoziomowe systemy uwierzytelniania użytkowników.</p></li>
+</ul>
+</section>
+<section id="gotowosc-na-sytuacje-kryzysowe">
+<h2>Gotowość na Sytuacje Kryzysowe:<a class="headerlink" href="#gotowosc-na-sytuacje-kryzysowe" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Plany Awaryjne</strong>: Procedury postępowania w sytuacjach kryzysowych.</p></li>
+<li><p><strong>Szkolenia Kryzysowe</strong>: Programy przygotowujące personel do działania w awariach.</p></li>
+</ul>
+</section>
+<section id="odpornosc-i-redundancja">
+<h2>Odporność i Redundancja:<a class="headerlink" href="#odpornosc-i-redundancja" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Redundancja Systemów</strong>: Duplikacja kluczowych komponentów infrastruktury.</p></li>
+<li><p><strong>Elastyczność Operacyjna</strong>: Możliwość szybkiego przekierowania lub dostosowania operacji.</p></li>
+<li><p><strong>Zapasowe Źródła Zasilania</strong>: Generatory, alternatywne źródła energii.</p></li>
+</ul>
+<p>Efektywne zarządzanie ryzykiem i metody ochrony są niezbędne do minimalizowania skutków zakłóceń w infrastrukturze krytycznej, co jest kluczowe dla stabilności społecznej i ekonomicznej.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="20.html" class="btn btn-neutral float-left" title="20 Proces i architektura hurtowni danych, wielowymiarowy model danych." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="29.html" class="btn btn-neutral float-right" title="29 Metody maszynowego uczenia się" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

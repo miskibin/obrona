@@ -15,7 +15,8 @@ z bieżącymi operacjami biznesowymi.
 3. Wykorzystuje kostki OLAP i szybkie przetwarzanie agregatów.
 
 ```{important}
-kostka olap - wielowymiarowa struktura danych np. kostka w systemie sprzedaży:
+kostka olap - wielowymiarowa struktura danych. zawiera dane historyczne, które są zorganizowane w wymiary i miary.
+ np. kostka w systemie sprzedaży:
 ![kostka](https://www.kyvosinsights.com/wp-content/uploads/2022/07/Figure-4-What-is-OLAP.png)
 ```
 

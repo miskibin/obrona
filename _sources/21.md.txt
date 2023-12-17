@@ -1,0 +1,39 @@
+### 21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej
+
+```{note}
+Infrastruktura krytyczna to systemy i usługi, których zakłócenie lub zniszczenie może mieć poważne konsekwencje dla funkcjonowania społeczeństwa i gospodarki.
+```
+
+- **Klęski Żywiołowe**: Powodzie, trzęsienia ziemi, huragany mogą niszczyć fizyczną infrastrukturę.
+- **Wypadki**: Awaria techniczna lub ludzki błąd może prowadzić do katastrof technologicznych.
+- **Cyberataki**: Hakerzy mogą zakłócać działanie systemów krytycznych, kradnąc dane lub wyłączając ważne usługi.
+- **Terroryzm**: Ataki celowe mogą powodować rozległe szkody i chaos.
+
+### Zarządzanie Ryzykiem
+
+- **Analiza Ryzyka**: Systematyczne określanie i ocena potencjalnych zagrożeń.
+- **Planowanie Odpowiedzi**: Opracowanie procedur postępowania na wypadek wystąpienia zagrożenia.
+- **Szkolenia i Ćwiczenia**: Przygotowanie personelu do efektywnego reagowania w sytuacji kryzysowej.
+
+### Metody Ochrony
+
+#### Bezpieczeństwo Fizyczne:
+- **Zapory**: Ogrodzenia, bariery antyterrorystyczne.
+- **Monitoring**: Kamery CCTV, systemy alarmowe.
+- **Kontrola Dostępu**: Systemy identyfikacji, bramki bezpieczeństwa.
+
+#### Bezpieczeństwo Cybernetyczne:
+- **Firewalle**: Zapory sieciowe chroniące przed nieautoryzowanym dostępem.
+- **Antywirusy**: Oprogramowanie do wykrywania i eliminowania złośliwego oprogramowania.
+- **Autentykacja**: Wielopoziomowe systemy uwierzytelniania użytkowników.
+
+#### Gotowość na Sytuacje Kryzysowe:
+- **Plany Awaryjne**: Procedury postępowania w sytuacjach kryzysowych.
+- **Szkolenia Kryzysowe**: Programy przygotowujące personel do działania w awariach.
+
+#### Odporność i Redundancja:
+- **Redundancja Systemów**: Duplikacja kluczowych komponentów infrastruktury.
+- **Elastyczność Operacyjna**: Możliwość szybkiego przekierowania lub dostosowania operacji.
+- **Zapasowe Źródła Zasilania**: Generatory, alternatywne źródła energii.
+
+Efektywne zarządzanie ryzykiem i metody ochrony są niezbędne do minimalizowania skutków zakłóceń w infrastrukturze krytycznej, co jest kluczowe dla stabilności społecznej i ekonomicznej.
