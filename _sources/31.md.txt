@@ -1,5 +1,7 @@
 # 31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne
 
+*[artykuł big-O](https://medium.com/@danzawadzki/z%C5%82o%C5%BCono%C5%9B%C4%87-obliczeniowa-oraz-notacja-big-o-w-2-minuty-9d022a756008)*
+
 ## Złożoność obliczeniowa algorytmu –
  ilość zasobów komputerowych potrzebnych do jego wykonania:
 1. Złożoność czasowa – to ilość czasu potrzebnego do wykonania zadania, wyrażona jako funkcja ilości danych.
@@ -7,7 +9,62 @@
 
 ### Rozdzaje:
 
-1. złożoność pesymistyczna O(f(n)) - określa ilość zasobów (czasu lub pamięci) potrzebnych do wykonania algorytmu przy założeniu wystąpienia „złośliwych” lub najgorszych danych.
-2. złożoność oczekiwana Θ(f(n)) - określa ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „typowych” lub oczekiwanych danych
-3. złożoność optymistyczna Ω(f(n)) - ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia "najlepszych" danych.
+1. złożoność pesymistyczna $O(f(n))$ - określa ilość zasobów (czasu lub pamięci) potrzebnych do wykonania algorytmu przy założeniu wystąpienia „złośliwych” lub najgorszych danych.
+2. złożoność oczekiwana $\Theta(f(n))$ - określa ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „typowych” lub oczekiwanych danych
+3. złożoność optymistyczna $\Omega(f(n))$  - ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia "najlepszych" danych.
 
+### Złożoność obliczeniowa 
+
+1. szacowanie od dołu stwierdzając, iż złożoność obliczeniowa jest nie mniejsza niż pewna klasa funkcji $\Omega(f(n))$ 
+
+2. szacowanie od góry stwierdzając, iż złożoność obliczeniowa jest nie większa niż pewna klasa funkcji $O(f(n))$
+
+3. szac. Asymptotyczne, szacujące złożoność obliczeniową algorytmu w granicach pewnej klasy funkcji $\Theta(f(n))$
+
+
+### Główne klasy złożoności obliczeniowej:
+
+1. $O(1)$ - stała
+2. $O(n)$ - liniowa
+3. $O(log(n))$ - logarytmiczna
+4. $O(nlog(n))$ - liniowo-logarytmiczna
+5. $O(n^2)$ - kwadratowa
+6. $O(n^3)$ - sześcienna
+7. $O(2^n)$ - wykładnicza
+8. $O(n!)$ - silnia
+
+
+![image.png](https://static.wikia.nocookie.net/programowanie/images/6/6e/Main-qimg-95eba275e86a62b3d29a80514631bccc.png/revision/latest?cb=20170611092411)
+
+
+```{note}
+Algorytmy o złożoności nie wiekszej niz wielomianowej pozwalają na rozwiązanie zadania w realnym czasie. Natomiast algorytmy o złożoności ponadwielomianowej dla dużych danych są niepraktyczne, gdyż ich wykonanie (dla duzej ilosci danych) mogłoby trwać dłużej niż istnienie Wszechświata.
+```
+
+
+## Klasy złożoności algorytmów
+
+1. łatwe (P - polynomial) - algorytmy wielomianowe, które mogą być rozwiązane w czasie wielomianowym
+2. trudne (NP - non-deterministic polynomial) - algorytmy dla których nie istnieje (znany) algorytm wielomianowy rozwiązujący problem
+    - NP-zupełne (NP-complete) - nie udowodniono braku algorytmu wielomianowego
+
+
+---
+
+**operacje dominujące** - takie, których łączna liczba jest proporcjonalna do liczby wykonań wszystkich operacji jednostkowych w dowolnej komputerowej realizacji algorytmu
+
+**jednostka czasowa** - przyjmuje się wykonanie jednej operacji dominującej.
+
+**złożoność pamieciowa** - To ilość dodatkowych jednostek pamięci (najczęściej bajtów lub bitów) potrzebnych do rozwiązania problemu danym algorytmem. Złożoność pamięciową wyrażamy również jako funkcję rozmiaru danych.
+
+**Badanie efektywności algorytmu** -Polega na oszacowaniu ich złożoności czasowej i pamięciowej. Poszczególne części algorytmu badane są pod kątem ilości operacji dominujących (porównań, operacji arytmetycznych, przestawień itp.) W zależności od zastosowania oraz rodzaju i rozmiaru przetwarzanych struktur danych można wyróżnić różne operacje dominujące. 
+
+## Algorytmy dokładne, aproksymacyjne i heurystyczne
+
+1. **Dokładne** - zwracają rozwiązanie optymalne, najlepsze
+2. **Aproksymacyjne** - zwracają rozwiązanie bliskie optymalnemu, z zadaną dokładnością
+3. **Heurystyczne** - zwracają rozwiązanie bliskie optymalnemu, bez gwarancji dokładności, ale w gwarantowanym czasie
+
+```{note}
+W przypadku dowolnych problemów przeszukiwania metoda heurystyczna może nie zwrócić żadnego rozwiązania, jeśli nie znajdzie dopuszczalnego. Może także (w zależności od potrzeby) naruszyć ograniczenie na dopuszczalność rozwiązania. Powinna wtedy dążyć do wygenerowania rozwiązania jak najbardziej podobnego do rozwiązania dopuszczalnego (np. jak najdłuższa prosta ścieżka w grafie zamiast ścieżki Hamiltona)
+```

@@ -19,6 +19,8 @@
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/translations.js?v=a186e9ce"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="genindex.html" />
     <link rel="search" title="Szukaj" href="search.html" />
@@ -56,8 +58,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#zlozonosc-obliczeniowa-algorytmu">Złożoność obliczeniowa algorytmu –</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#rozdzaje">Rozdzaje:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zlozonosc-obliczeniowa">Złożoność obliczeniowa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glowne-klasy-zlozonosci-obliczeniowej">Główne klasy złożoności obliczeniowej:</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#klasy-zlozonosci-algorytmow">Klasy złożoności algorytmów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algorytmy-dokladne-aproksymacyjne-i-heurystyczne">Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
@@ -89,6 +95,7 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="zlozonosc-obliczeniowa-algorytmy-dokladne-aproksymacyjne-i-heurystyczne">
 <h1>31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne<a class="headerlink" href="#zlozonosc-obliczeniowa-algorytmy-dokladne-aproksymacyjne-i-heurystyczne" title="Link to this heading"></a></h1>
+<p><em><a class="reference external" href="https://medium.com/&#64;danzawadzki/z%C5%82o%C5%BCono%C5%9B%C4%87-obliczeniowa-oraz-notacja-big-o-w-2-minuty-9d022a756008">artykuł big-O</a></em></p>
 <section id="zlozonosc-obliczeniowa-algorytmu">
 <h2>Złożoność obliczeniowa algorytmu –<a class="headerlink" href="#zlozonosc-obliczeniowa-algorytmu" title="Link to this heading"></a></h2>
 <p>ilość zasobów komputerowych potrzebnych do jego wykonania:</p>
@@ -99,11 +106,65 @@
 <section id="rozdzaje">
 <h3>Rozdzaje:<a class="headerlink" href="#rozdzaje" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>złożoność pesymistyczna O(f(n)) - określa ilość zasobów (czasu lub pamięci) potrzebnych do wykonania algorytmu przy założeniu wystąpienia „złośliwych” lub najgorszych danych.</p></li>
-<li><p>złożoność oczekiwana Θ(f(n)) - określa ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „typowych” lub oczekiwanych danych</p></li>
-<li><p>złożoność optymistyczna Ω(f(n)) - ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „najlepszych” danych.</p></li>
+<li><p>złożoność pesymistyczna <span class="math notranslate nohighlight">\(O(f(n))\)</span> - określa ilość zasobów (czasu lub pamięci) potrzebnych do wykonania algorytmu przy założeniu wystąpienia „złośliwych” lub najgorszych danych.</p></li>
+<li><p>złożoność oczekiwana <span class="math notranslate nohighlight">\(\Theta(f(n))\)</span> - określa ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „typowych” lub oczekiwanych danych</p></li>
+<li><p>złożoność optymistyczna <span class="math notranslate nohighlight">\(\Omega(f(n))\)</span>  - ilość zasobów potrzebnych do wykonania algorytmu przy założeniu wystąpienia „najlepszych” danych.</p></li>
 </ol>
 </section>
+<section id="zlozonosc-obliczeniowa">
+<h3>Złożoność obliczeniowa<a class="headerlink" href="#zlozonosc-obliczeniowa" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>szacowanie od dołu stwierdzając, iż złożoność obliczeniowa jest nie mniejsza niż pewna klasa funkcji <span class="math notranslate nohighlight">\(\Omega(f(n))\)</span></p></li>
+<li><p>szacowanie od góry stwierdzając, iż złożoność obliczeniowa jest nie większa niż pewna klasa funkcji <span class="math notranslate nohighlight">\(O(f(n))\)</span></p></li>
+<li><p>szac. Asymptotyczne, szacujące złożoność obliczeniową algorytmu w granicach pewnej klasy funkcji <span class="math notranslate nohighlight">\(\Theta(f(n))\)</span></p></li>
+</ol>
+</section>
+<section id="glowne-klasy-zlozonosci-obliczeniowej">
+<h3>Główne klasy złożoności obliczeniowej:<a class="headerlink" href="#glowne-klasy-zlozonosci-obliczeniowej" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(O(1)\)</span> - stała</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(n)\)</span> - liniowa</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(log(n))\)</span> - logarytmiczna</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(nlog(n))\)</span> - liniowo-logarytmiczna</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(n^2)\)</span> - kwadratowa</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(n^3)\)</span> - sześcienna</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(2^n)\)</span> - wykładnicza</p></li>
+<li><p><span class="math notranslate nohighlight">\(O(n!)\)</span> - silnia</p></li>
+</ol>
+<p><img alt="image.png" src="https://static.wikia.nocookie.net/programowanie/images/6/6e/Main-qimg-95eba275e86a62b3d29a80514631bccc.png/revision/latest?cb=20170611092411" /></p>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Algorytmy o złożoności nie wiekszej niz wielomianowej pozwalają na rozwiązanie zadania w realnym czasie. Natomiast algorytmy o złożoności ponadwielomianowej dla dużych danych są niepraktyczne, gdyż ich wykonanie (dla duzej ilosci danych) mogłoby trwać dłużej niż istnienie Wszechświata.</p>
+</div>
+</section>
+</section>
+<section id="klasy-zlozonosci-algorytmow">
+<h2>Klasy złożoności algorytmów<a class="headerlink" href="#klasy-zlozonosci-algorytmow" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>łatwe (P - polynomial) - algorytmy wielomianowe, które mogą być rozwiązane w czasie wielomianowym</p></li>
+<li><p>trudne (NP - non-deterministic polynomial) - algorytmy dla których nie istnieje (znany) algorytm wielomianowy rozwiązujący problem</p>
+<ul class="simple">
+<li><p>NP-zupełne (NP-complete) - nie udowodniono braku algorytmu wielomianowego</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>operacje dominujące</strong> - takie, których łączna liczba jest proporcjonalna do liczby wykonań wszystkich operacji jednostkowych w dowolnej komputerowej realizacji algorytmu</p>
+<p><strong>jednostka czasowa</strong> - przyjmuje się wykonanie jednej operacji dominującej.</p>
+<p><strong>złożoność pamieciowa</strong> - To ilość dodatkowych jednostek pamięci (najczęściej bajtów lub bitów) potrzebnych do rozwiązania problemu danym algorytmem. Złożoność pamięciową wyrażamy również jako funkcję rozmiaru danych.</p>
+<p><strong>Badanie efektywności algorytmu</strong> -Polega na oszacowaniu ich złożoności czasowej i pamięciowej. Poszczególne części algorytmu badane są pod kątem ilości operacji dominujących (porównań, operacji arytmetycznych, przestawień itp.) W zależności od zastosowania oraz rodzaju i rozmiaru przetwarzanych struktur danych można wyróżnić różne operacje dominujące.</p>
+</section>
+<section id="algorytmy-dokladne-aproksymacyjne-i-heurystyczne">
+<h2>Algorytmy dokładne, aproksymacyjne i heurystyczne<a class="headerlink" href="#algorytmy-dokladne-aproksymacyjne-i-heurystyczne" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Dokładne</strong> - zwracają rozwiązanie optymalne, najlepsze</p></li>
+<li><p><strong>Aproksymacyjne</strong> - zwracają rozwiązanie bliskie optymalnemu, z zadaną dokładnością</p></li>
+<li><p><strong>Heurystyczne</strong> - zwracają rozwiązanie bliskie optymalnemu, bez gwarancji dokładności, ale w gwarantowanym czasie</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>W przypadku dowolnych problemów przeszukiwania metoda heurystyczna może nie zwrócić żadnego rozwiązania, jeśli nie znajdzie dopuszczalnego. Może także (w zależności od potrzeby) naruszyć ograniczenie na dopuszczalność rozwiązania. Powinna wtedy dążyć do wygenerowania rozwiązania jak najbardziej podobnego do rozwiązania dopuszczalnego (np. jak najdłuższa prosta ścieżka w grafie zamiast ścieżki Hamiltona)</p>
+</div>
 </section>
 </section>
 
