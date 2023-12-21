@@ -1,0 +1,86 @@
+# 11. Systemy podejmowania i wspomagania decyzji  definicje, metody i algorytmy wyznaczania decyzji, zastosowania.
+
+
+```{note}
+**Podejmowanie decyzji** – proces polegający na zbieraniu i przetwarzaniu informacji o przyszłym działaniu (wg Koźmińskiego). Wyróżniamy przedmiot, którego decyzja dotyczy (przedmiot decyzji/ obiekt decyzyjny -DP), oraz podmiot podejmujący decyzje (decydent - DM).
+```
+
+## Obiekt decyzyjny (DP)
+
+```{mermaid}
+graph LR
+subgraph System podejmowania decyzji DS
+D(("D(u)")) --> B[DP]
+O(("O(z)")) --> B[DP]
+
+B --> R(("R(y)"))
+end
+```
+
+- D - Decyzja
+- O - Obserwacja
+- R - Skutek decyzji
+
+```{note}
+Możemy dołączyć jeszcze decydenta który podejmuje decyzję
+na podstawie wiedzy apriori i obserwacji.
+```
+
+
+## System wspomagania decyzji (DSS)
+
+```{note}
+DSS - Decyzje generowane przez system DS podlegają akceptacji użytkownika.
+```
+
+
+## Sformułowanie problemu decyzyjnego
+
+1. Dane: model obiektu podejmowania decyzji oraz wymaganie na wyjście (np. minimalne rozwiązanie w jakimś przedziale)
+2. Funkcja celu: utworzenie funkcji celu , będącej modelem  obiektu optymalizacji
+3. Wyznaczyć: taką decyzję ze zbioru decyzji dopuszczalnych, dla której wymaganie na wyjście jest spełnione
+
+O optymalnym podejmowaniu decyzji, mówimy wtedy gdy wyznaczamy minimum/maksimum, a o zadowalającym, gdy nasze rozwiązanie jest/mieści się w  zbiorze dopuszczalnym.
+
+**Problem optymalizacyjny** – szukamy ekstremalnej wartości funkcji celu.
+
+**Problem decyzyjny** – udzielamy odpowiedzi „tak” albo „nie” na zadane pytanie o istnienie rozwiązania
+
+
+## Metody i algorytmy podejmowania i wspomagania decyzji
+
+### Symulowane wyżarzanie
+- Heurystyczna metoda optymalizacji, która polega na losowym przeszukiwaniu przestrzeni rozwiązań z uwzględnieniem temperatury, która stopniowo maleje.
+- Wyżarzanie wzięło się stąd, że metoda ta naśladuje proces fizyczny, w której ciało w którym ciało poddane wysokiej temperaturze osiąga stan równowagi termodynamicznej.
+- Metoda ta pozwala na znalezienie rozwiązania optymalnego lub bliskiego optymalnemu, nawet jeśli przestrzeń rozwiązań jest złożona lub nieciągła. Dokładniej metoda polega na inicjalizacji poprzez wybranie losowego rozwiązania i pewnej wartości temperatury. Następnie generowania nowego rozwiązania poprzez niewielkie zmiany do aktualnego rozwiązania (zmiana tym większa im wyższa jest temperatura). Jeżeli nowe rozwiązanie jest lepsze to je przyjmujemy, wpp. możemy je przyjąć z pewnym prawdopodobieństwem zależnym od temperatury i różnicy od najlepszego rozwiązania. Powtarzamy aż do warunku stopu
+
+### Tabu search
+- Heurystyczna metoda optymalizacji, która polega na przeszukiwaniu lokalnego sąsiedztwa aktualnego rozwiązania i wyborze najlepszego z nich, z wyjątkiem tych, które są zakazane (tabu).
+
+W metodzie Tabu Search, na listę tabu są dodawane elementy, które mają na celu zapobieganie powrotom do wcześniej odwiedzanych rozwiązań, co pomaga uniknąć zapętlania się w lokalnych minimum. Oto niektóre typowe elementy dodawane do listy tabu:
+
+1. Ruchy (Moves): Najczęściej na listę tabu dodaje się poszczególne ruchy, które prowadziły do aktualnego rozwiązania. Przykładem ruchu może być zamiana dwóch elementów w sekwencji lub zmiana wartości decyzyjnej w problemie optymalizacji.
+
+1. Rozwiązania (Solutions): Czasami na listę tabu dodaje się całe rozwiązania, zwłaszcza w przypadku problemów, gdzie ruchy są trudne do zdefiniowania lub gdy jest ich zbyt wiele.
+
+1. Atrybuty Rozwiązania: Zamiast całych rozwiązań lub pojedynczych ruchów, na listę tabu można również dodać pewne atrybuty rozwiązania, takie jak wartości określonych zmiennych decyzyjnych.
+
+1. Kryteria Aspiracji: Choć to nie są bezpośrednio elementy dodawane do listy tabu, kryteria aspiracji decydują o usunięciu pozycji z listy tabu. Na przykład, ruch może zostać usunięty z listy tabu, jeśli prowadzi do rozwiązania lepszego niż dotychczasowe najlepsze.
+
+1. Kadencja (Tabu Tenure): Kadencja określa, jak długo dany element pozostaje na liście tabu. Długość kadencji jest dynamicznie dostosowywana w zależności od kontekstu problemu i przebiegu wyszukiwania.
+
+
+### Kryterum jednorodne
+
+- Klasyczna metoda wielokryterialnego podejmowania decyzji, która polega na agregacji ocen poszczególnych kryteriów za pomocą wag, które odzwierciedlają ich znaczenie. W skrócie, zamienienie ocen z wielu kryteriów na jedno.
+- Metoda ta zakłada, że kryteria są niezależne i porównywalne. Tzn. nie ma zależności pomiędzy oceną dla kryterium 1 i 2, ale jesteśmy w stanie porównać na czym nam bardziej zależy.
+
+### ELECTRE, AHP, TOPSIS
+
+## Zastosowanie systemów podejmowania/wspomagania decyzji
+
+Tego typu systemy można zastosować do jakiegokolwiek problemu, gdzie mamy do podjęcia jakąś decyzję. Niektóre mogą się sprawdzić lepiej lub gorzej ale wszystkie mają ten sam cel więc powinny działać. Ale jakbym miał wymyślić parę przykładów to np. :
+1. Streamingi wykorzystujące systemy rekomendacyjne
+2. Wspomaganie wyboru kierunku studiów
+3. Diagnozowanie chorób na podstawie objawów.
+

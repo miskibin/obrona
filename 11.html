@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11. Systemy podejmowania i wspomagania decyzji definicje, metody i algorytmy wyznaczania decyzji, zastosowania. &mdash; Obrona  - dokumentacja</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9893e7ba"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=a186e9ce"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="18 Typy testów oprogramowania. Definicja i metody badania użyteczności." href="18.html" />
+    <link rel="prev" title="10. Zastosowania programowania liniowego." href="10.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Obrona
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Spis tresci:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="wstep.html">Pojęcia wstępne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.html">1. Pojęcie algorytmu; typy, własności i przykłady algorytmów.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">2. Diagramy i ich rola w języku SysML; różnice w językach SysML i UML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.html">5. Statystyczna analiza wyników symulacji</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.html">6. Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.html">7. Metody estymacji parametrów systemów dynamicznych. Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8.html">8. Metody identyfikacji obiektów statycznych w warunkach probabilistycznych. Identyfikacja parametryczna i nieparametryczna.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10.html">10.  Zastosowania programowania liniowego.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Systemy podejmowania i wspomagania decyzji  definicje, metody i algorytmy wyznaczania decyzji, zastosowania.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obiekt-decyzyjny-dp">Obiekt decyzyjny (DP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-wspomagania-decyzji-dss">System wspomagania decyzji (DSS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sformulowanie-problemu-decyzyjnego">Sformułowanie problemu decyzyjnego</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metody-i-algorytmy-podejmowania-i-wspomagania-decyzji">Metody i algorytmy podejmowania i wspomagania decyzji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#symulowane-wyzarzanie">Symulowane wyżarzanie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabu-search">Tabu search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kryterum-jednorodne">Kryterum jednorodne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electre-ahp-topsis">ELECTRE, AHP, TOPSIS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#zastosowanie-systemow-podejmowania-wspomagania-decyzji">Zastosowanie systemów podejmowania/wspomagania decyzji</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="18.html">18 Typy testów oprogramowania. Definicja i metody badania użyteczności.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19.html">19 Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20.html">20 Proces i architektura hurtowni danych, wielowymiarowy model danych.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21.html">21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22.html">22.  Cykl życia przedsiębiorstwa.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23.html">23   Cele i funkcje zarządzania.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29.html">29 Metody maszynowego uczenia się</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31.html">31. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne</a></li>
+<li class="toctree-l1"><a class="reference internal" href="42.html">42 Definicje i własności grafów. Modele grafowe.</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Obrona</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">11. Systemy podejmowania i wspomagania decyzji  definicje, metody i algorytmy wyznaczania decyzji, zastosowania.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/11.md.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="systemy-podejmowania-i-wspomagania-decyzji-definicje-metody-i-algorytmy-wyznaczania-decyzji-zastosowania">
+<h1>11. Systemy podejmowania i wspomagania decyzji  definicje, metody i algorytmy wyznaczania decyzji, zastosowania.<a class="headerlink" href="#systemy-podejmowania-i-wspomagania-decyzji-definicje-metody-i-algorytmy-wyznaczania-decyzji-zastosowania" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p><strong>Podejmowanie decyzji</strong> – proces polegający na zbieraniu i przetwarzaniu informacji o przyszłym działaniu (wg Koźmińskiego). Wyróżniamy przedmiot, którego decyzja dotyczy (przedmiot decyzji/ obiekt decyzyjny -DP), oraz podmiot podejmujący decyzje (decydent - DM).</p>
+</div>
+<section id="obiekt-decyzyjny-dp">
+<h2>Obiekt decyzyjny (DP)<a class="headerlink" href="#obiekt-decyzyjny-dp" title="Link to this heading"></a></h2>
+<div class="mermaid">
+            graph LR
+subgraph System podejmowania decyzji DS
+D((&quot;D(u)&quot;)) --&gt; B[DP]
+O((&quot;O(z)&quot;)) --&gt; B[DP]
+
+B --&gt; R((&quot;R(y)&quot;))
+end
+        </div><ul class="simple">
+<li><p>D - Decyzja</p></li>
+<li><p>O - Obserwacja</p></li>
+<li><p>R - Skutek decyzji</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>Możemy dołączyć jeszcze decydenta który podejmuje decyzję
+na podstawie wiedzy apriori i obserwacji.</p>
+</div>
+</section>
+<section id="system-wspomagania-decyzji-dss">
+<h2>System wspomagania decyzji (DSS)<a class="headerlink" href="#system-wspomagania-decyzji-dss" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Informacja</p>
+<p>DSS - Decyzje generowane przez system DS podlegają akceptacji użytkownika.</p>
+</div>
+</section>
+<section id="sformulowanie-problemu-decyzyjnego">
+<h2>Sformułowanie problemu decyzyjnego<a class="headerlink" href="#sformulowanie-problemu-decyzyjnego" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Dane: model obiektu podejmowania decyzji oraz wymaganie na wyjście (np. minimalne rozwiązanie w jakimś przedziale)</p></li>
+<li><p>Funkcja celu: utworzenie funkcji celu , będącej modelem  obiektu optymalizacji</p></li>
+<li><p>Wyznaczyć: taką decyzję ze zbioru decyzji dopuszczalnych, dla której wymaganie na wyjście jest spełnione</p></li>
+</ol>
+<p>O optymalnym podejmowaniu decyzji, mówimy wtedy gdy wyznaczamy minimum/maksimum, a o zadowalającym, gdy nasze rozwiązanie jest/mieści się w  zbiorze dopuszczalnym.</p>
+<p><strong>Problem optymalizacyjny</strong> – szukamy ekstremalnej wartości funkcji celu.</p>
+<p><strong>Problem decyzyjny</strong> – udzielamy odpowiedzi „tak” albo „nie” na zadane pytanie o istnienie rozwiązania</p>
+</section>
+<section id="metody-i-algorytmy-podejmowania-i-wspomagania-decyzji">
+<h2>Metody i algorytmy podejmowania i wspomagania decyzji<a class="headerlink" href="#metody-i-algorytmy-podejmowania-i-wspomagania-decyzji" title="Link to this heading"></a></h2>
+<section id="symulowane-wyzarzanie">
+<h3>Symulowane wyżarzanie<a class="headerlink" href="#symulowane-wyzarzanie" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Heurystyczna metoda optymalizacji, która polega na losowym przeszukiwaniu przestrzeni rozwiązań z uwzględnieniem temperatury, która stopniowo maleje.</p></li>
+<li><p>Wyżarzanie wzięło się stąd, że metoda ta naśladuje proces fizyczny, w której ciało w którym ciało poddane wysokiej temperaturze osiąga stan równowagi termodynamicznej.</p></li>
+<li><p>Metoda ta pozwala na znalezienie rozwiązania optymalnego lub bliskiego optymalnemu, nawet jeśli przestrzeń rozwiązań jest złożona lub nieciągła. Dokładniej metoda polega na inicjalizacji poprzez wybranie losowego rozwiązania i pewnej wartości temperatury. Następnie generowania nowego rozwiązania poprzez niewielkie zmiany do aktualnego rozwiązania (zmiana tym większa im wyższa jest temperatura). Jeżeli nowe rozwiązanie jest lepsze to je przyjmujemy, wpp. możemy je przyjąć z pewnym prawdopodobieństwem zależnym od temperatury i różnicy od najlepszego rozwiązania. Powtarzamy aż do warunku stopu</p></li>
+</ul>
+</section>
+<section id="tabu-search">
+<h3>Tabu search<a class="headerlink" href="#tabu-search" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Heurystyczna metoda optymalizacji, która polega na przeszukiwaniu lokalnego sąsiedztwa aktualnego rozwiązania i wyborze najlepszego z nich, z wyjątkiem tych, które są zakazane (tabu).</p></li>
+</ul>
+<p>W metodzie Tabu Search, na listę tabu są dodawane elementy, które mają na celu zapobieganie powrotom do wcześniej odwiedzanych rozwiązań, co pomaga uniknąć zapętlania się w lokalnych minimum. Oto niektóre typowe elementy dodawane do listy tabu:</p>
+<ol class="arabic simple">
+<li><p>Ruchy (Moves): Najczęściej na listę tabu dodaje się poszczególne ruchy, które prowadziły do aktualnego rozwiązania. Przykładem ruchu może być zamiana dwóch elementów w sekwencji lub zmiana wartości decyzyjnej w problemie optymalizacji.</p></li>
+<li><p>Rozwiązania (Solutions): Czasami na listę tabu dodaje się całe rozwiązania, zwłaszcza w przypadku problemów, gdzie ruchy są trudne do zdefiniowania lub gdy jest ich zbyt wiele.</p></li>
+<li><p>Atrybuty Rozwiązania: Zamiast całych rozwiązań lub pojedynczych ruchów, na listę tabu można również dodać pewne atrybuty rozwiązania, takie jak wartości określonych zmiennych decyzyjnych.</p></li>
+<li><p>Kryteria Aspiracji: Choć to nie są bezpośrednio elementy dodawane do listy tabu, kryteria aspiracji decydują o usunięciu pozycji z listy tabu. Na przykład, ruch może zostać usunięty z listy tabu, jeśli prowadzi do rozwiązania lepszego niż dotychczasowe najlepsze.</p></li>
+<li><p>Kadencja (Tabu Tenure): Kadencja określa, jak długo dany element pozostaje na liście tabu. Długość kadencji jest dynamicznie dostosowywana w zależności od kontekstu problemu i przebiegu wyszukiwania.</p></li>
+</ol>
+</section>
+<section id="kryterum-jednorodne">
+<h3>Kryterum jednorodne<a class="headerlink" href="#kryterum-jednorodne" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Klasyczna metoda wielokryterialnego podejmowania decyzji, która polega na agregacji ocen poszczególnych kryteriów za pomocą wag, które odzwierciedlają ich znaczenie. W skrócie, zamienienie ocen z wielu kryteriów na jedno.</p></li>
+<li><p>Metoda ta zakłada, że kryteria są niezależne i porównywalne. Tzn. nie ma zależności pomiędzy oceną dla kryterium 1 i 2, ale jesteśmy w stanie porównać na czym nam bardziej zależy.</p></li>
+</ul>
+</section>
+<section id="electre-ahp-topsis">
+<h3>ELECTRE, AHP, TOPSIS<a class="headerlink" href="#electre-ahp-topsis" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="zastosowanie-systemow-podejmowania-wspomagania-decyzji">
+<h2>Zastosowanie systemów podejmowania/wspomagania decyzji<a class="headerlink" href="#zastosowanie-systemow-podejmowania-wspomagania-decyzji" title="Link to this heading"></a></h2>
+<p>Tego typu systemy można zastosować do jakiegokolwiek problemu, gdzie mamy do podjęcia jakąś decyzję. Niektóre mogą się sprawdzić lepiej lub gorzej ale wszystkie mają ten sam cel więc powinny działać. Ale jakbym miał wymyślić parę przykładów to np. :</p>
+<ol class="arabic simple">
+<li><p>Streamingi wykorzystujące systemy rekomendacyjne</p></li>
+<li><p>Wspomaganie wyboru kierunku studiów</p></li>
+<li><p>Diagnozowanie chorób na podstawie objawów.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="10.html" class="btn btn-neutral float-left" title="10. Zastosowania programowania liniowego." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="18.html" class="btn btn-neutral float-right" title="18 Typy testów oprogramowania. Definicja i metody badania użyteczności." accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Prawa zastrzeżone 2023, Michał Skibiński.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
