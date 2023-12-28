@@ -10,7 +10,8 @@ Zagadnienia na obrone
 .. toctree::
     :maxdepth: 1
     :caption: Spis tresci:
-
+    
+    streszczenie
     wstep
     1
     2
