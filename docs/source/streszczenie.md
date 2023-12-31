@@ -23,10 +23,49 @@
 3. Stan równowagi: System pozostający stabilny lub wracający do pierwotnego stanu po zaburzeniu.
 4. Ocena modeli: różne metody, w tym najmniejsze kwadraty, maksymalna wiarygodność, i metoda Bayesa, służące do oceny jakości i dopasowania modelu.
 
-##  Metody modelowania systemów dyskretnych. 
+## 4 Metody modelowania systemów dyskretnych. 
 1. Rownania stanu, wektor stanu
 2. rownania roznicowe 
 3. transmitancja
+
+## 5. Statystyczna analiza wyników symulacji. 
+
+!!! NIE ROZUMIEM
+1. Kluczowy element symulacji
+2. 
+
+## [6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs)
+
+1. Są to metody umożliwiające łączenie i przetwarzanie danych z różnych źródeł
+2. Etapy: porządkowanie i kojarzenie danych, działania korekcyjne, algorytym realizujący fuzję danych
+3. typy: fuzja współpracy, współzawodnictwa, uzupełniająca
+4. obszary wykorzystania: 
+   - medycyna: diagnoza chorób, monitorowanie stanu zdrowia
+   - rolnictwo: dane z satelitów, dronów i czujników terenowych do zarządzania zasobami wodnymi, nawożeniem, ochroną roślin
+5. przykłady zastosowań: monitorownanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.
+
+
+## 7. Metody estymacji parametrów systemów dynamicznych Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana. 
+
+1. Techniki wykorzystywane do oceny i przewidywania stanu dynamicznych systemów w czasie rzeczywistym.
+2. zalozenia: wejscie i wyjscie dostepne pomiarowo, zaklucenia maja rozklad normalny, wektroy szumow i pomiarow sa niezalezne
+3. filtr kalmana: Etapy: predykcja, korekcja
+4. Typy: Liniowy i Rozszerzony dla systemów nieliniowych.
+5. Obszary wykorzystania:
+    - nawigacja i śledzenie: precyzyjne śledzenie pozycji i orientacji w przestrzeni,
+    - robotyka: estymacja trajektorii ruchu robotów,
+    - finanse: prognozowanie trendów rynkowych i ocena ryzyka.
+
+## 9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami. 
+
+1. def:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
+2. charakterystyka: przybliżone rozw. , gdy nie ma rozw. analitycznego.
+3. metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek
+
+## [10. Zastosowania programowania liniowego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.9uges9gkw738) 
+
+...
+
 
 ## [9. Systemy wieloagentowe. Architektura agenta. Komunikacja, koordynacja, kooperacja i konkurencja.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.e4a6x4j90auy) 
 
