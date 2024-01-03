@@ -35,6 +35,51 @@
 - typy agentow: logiczny, reakcyjny BDI, warstwowy
 - architektura: sensory, modul percepcji, modul planowania, modul komunikacji, modul wykonawczy
 - srodowiska: dostepne/niedostepne, statyczne/dynamiczne, deterministyczne/niedeterministyczne, epizodyczne/nieepizodyczne 
+
+## [10. Zastosowania programowania liniowego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.9uges9gkw738) 
+
+- Metoda matematyczna do optymalizacji modelu z liniowymi relacjami, służąca do uzyskania najlepszego wyniku, np. maksymalnego zysku lub minimalnego kosztu.
+- Funkcja celu, ograniczenia, zmienne decyzyjne
+1. Minimalizacja kosztów transportu w firmie logistycznej poprzez optymalizację tras dostaw.
+2. Maksymalizacja zysków w fabryce poprzez efektywne zarządzanie czasem pracy maszyn i surowców.
+3. Zarządzanie zapasami w sklepie detalicznym, aby zminimalizować koszty magazynowania przy jednoczesnym zaspokajaniu popytu klientów.
+4. Planowanie upraw w gospodarstwie rolnym w celu maksymalizacji wydajności przy ograniczonych zasobach.
+
+## [11. Systemy podejmowania i wspomagania decyzji ? definicje, metody i algorytmy wyznaczania decyzji, zastosowania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.oqirun7nbv2q) 
+
+...
+
+## 12. Reprezentacje wiedzy i wnioskowanie w warunkach niepewności.
+
+1. reprezentacja wiedzy (logiki, grafów, drzew, reguł.)
+2. Logiczna reprezentacja wiedzy - sposób reprezentacji wiedzy w postaci formuł logicznych. (o różnych rzędach)
+3. rzędy (zerowy, 1, 2, wyższe)
+4. formuła logiczna - ( prosta(atomowa), złożona)
+5. zdanie logiczne - daje wynik 1/0
+6. systemy ekpertowe.
+7. ZA, ZD, ZPD
+8. Wnioskowanie w war. niepewności - decyzje gdy brakuje dolkadnych danych lub sa niepewne.
+9. teoria bayesa, logika rozmyta
+
+
+## algorytmy sztucznej inteligencji
+modele, algorytmy i narzędzia służące do formułowania i rozwiązywania trudnych problemów, wymagających wiedzy i inteligencji
+
+Algorytmy sztucznej inteligencji:
+
+1. Skupiają się na symulowaniu ludzkiego rozumowania i uczenia się.
+2. Wykorzystują techniki takie jak uczenie maszynowe, głębokie uczenie, sieci neuronowe.
+3. Stosowane w rozpoznawaniu wzorców, przetwarzaniu języka naturalnego, robotyce.
+4. Uczą się z danych, dostosowując swoje działania do nowych informacji.
+
+typy: 
+
+1. Uczenie nadzorowane: Algorytmy uczące się na podstawie etykietowanych danych.
+2. Uczenie nienadzorowane: Analiza i klasteryzacja danych bez uprzednich etykiet.
+3. Uczenie ze wzmocnieniem: Algorytmy uczące się poprzez interakcję z otoczeniem i otrzymywanie nagród.
+4. Sieci neuronowe: Symulacja procesów mózgu, stosowana w głębokim uczeniu.
+5. Algorytmy ewolucyjne: Naśladują procesy ewolucyjne do optymalizacji i rozwiązywania problemów.
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
