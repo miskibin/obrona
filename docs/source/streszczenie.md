@@ -119,6 +119,31 @@ typy:
 4. Sieci neuronowe: Symulacja procesów mózgu, stosowana w głębokim uczeniu.
 5. Algorytmy ewolucyjne: Naśladują procesy ewolucyjne do optymalizacji i rozwiązywania problemów.
 
+## 14. ...
+
+## 15. Sieci usług, sieci sensorowe, systemy Internetu rzeczy ? analiza wydajności, zarządzanie, bezpieczeństwo i zastosowania
+
+1. Sys internetu rzeczy analiza wydajności
+- prędkość internetu (5g)
+- w 2020 25-50 mld urządzeń w sieci
+- domy ze smart iot zuzywaja 14-22% mniej energii
+
+2. Procesy zarządzania Iot: instalacja, konfiguracja, monitorowanie, aktualizacja, naprawa, utylizacja
+3. technologie: Prot komunikacjyne eg. (mqqt), platforma zarządzania (AWS), narzędzia do analiz danych, firewalle/szyfrowanie danych.
+4. Zastosowania: wearables, smart houses, pompy insulinowe, stacje metorologiczne etc.
+
+
+
+
+## 17. Style interakcji człowiek-komputer. Continuum Miligrama (Środowisko Realne - Środowisko Wirtualne). Cechy wirtualnej rzeczywistości (VR). 
+
+- interakcja człowiek komputer: sposób w jaki użytkownik komunikuje się z komputerem
+- kluczowo modalny (np vim.)
+- bezposredniej manipulacji, np upuszczanie plikow w eksploratorze (graficznie)
+- lingwistyczny np siri
+- NUI - naturalny interfejs użytkownika, np gesty, mowa, mimika
+- wirtualna rzeczywistosc
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
@@ -146,3 +171,4 @@ typy:
 1. wierzchołek (węzeł), krawędź, stopień wierzchołka, bliskość, droga, droga prosta, ścieżka, cykl, droga acykliczna, najkrótsza ścieżka, drzewo
 2. las, drzewo rozpinające, droga zamknięta, most, pętla, rząd (stopien) grafu, rozmiar grafu, srednica grafu, spójna składowa, k-spojny, graf r-regularny, macierz sąsiedztwa, macierz incydencji
 3. Drzewo Spójny graf acyklicznyGraf acykliczny (skierowany)acyklicznyGraf cykliczny (skierowany)Graf dwudzielnyGraf pełnyGraf planarnyGraf prosty Graf spójnyKoło
+
