@@ -206,11 +206,23 @@ typy:
 
 ## 25. Analiza popytu i podaży; rodzaje działalności gospodarczej; koszty w przedsiębiorstwie.
 
-- **Analiza popytu**: Badanie czynników wpływających na ilość dóbr lub usług, jakie konsumenci chcą kupić. Wyróżniamy indywidualną i rynkową krzywą popytu. Prawo popytu mówi, że przy innych czynnikach niezmienionych wielkość zapotrzebowania na określone dobro maleje w miarę wzrostu ceny. Przesunięcie krzywej popytu może być spowodowane zmianą cen dóbr komplementarnych, substytutów, zmianą dochodów konsumentów, gustów, wypadkami losowymi, zmianami prawnymi.
-- **Analiza podaży**: Badanie czynników wpływających na ilość dóbr lub usług, jakie producenci są w stanie dostarczyć na rynek. Wyróżniamy indywidualną i rynkową krzywą podaży. Prawo podaży mówi, że przy innych czynnikach stałych wzrost ceny zachęca producentów do zwiększenia oferowanej ilości dobra, a spadek ceny powoduje zmniejszenie oferowanej ilości. Przesunięcie krzywej podaży może być spowodowane zmianą technologii produkcji, cen czynników produkcji, struktury rynku, polityką państwa.
-- **Rodzaje działalności gospodarczej**: Jednoosobowa działalność gospodarcza, spółka cywilna, spółki kapitałowe (z ograniczoną odpowiedzialnością, akcyjna), spółki osobowe (jawna, partnerska, komandytowa, komandytowo-akcyjna). Wybór formy działalności zależy od pożądanych form opodatkowania, rodzaju działalności, rozmiaru planowanej działalności, źródeł kapitału, łatwości i możliwości późniejszych przekształceń, sposobu dysponowania środkami, rodzaju prowadzonej księgowości.
-- **Koszty w przedsiębiorstwie**: Koszt całkowity (TC) to wartość zużytych czynników produkcji. Koszty stałe (FC) nie zmieniają się, nie zależą od wielkości produkcji. Koszty zmienne (VC) zależą od wielkości produkcji. Koszt przeciętny (AC) to część kosztu całkowitego przypadająca na jednostkę produktu. Koszt krańcowy (MC) to przyrost kosztu całkowitego spowodowany zwiększeniem się produkcji o jednostkę.
+1. **Analiza popytu**: Bada wpływ różnych czynników na ilość żądanych dóbr przez konsumentów. Wzrost ceny zwykle zmniejsza popyt, a jego zmiana może wynikać ze zmian cen dóbr powiązanych, dochodów, gustów, czy zmian prawnych.
+2. **Analiza podaży**: Ocenia, jak różne czynniki wpływają na ilość dóbr, które producenci mogą dostarczyć. Zwykle wzrost ceny zwiększa podaż, a jej zmiana może być efektem zmian w technologii, kosztach produkcji czy polityce państwa.
+3. **Rodzaje działalności gospodarczej**: Obejmuje jednoosobową działalność, spółki cywilne, kapitałowe i osobowe. Wybór formy zależy od opodatkowania, rodzaju i rozmiaru działalności, kapitału, możliwości przekształceń oraz prowadzenia księgowości.
+4. **Koszty w przedsiębiorstwie**: Koszt całkowity obejmuje wartość zużytych zasobów. Koszty stałe nie zależą od produkcji, zmienne rosną z produkcją. Koszt przeciętny to koszt na jednostkę produktu, a koszt krańcowy to koszt zwiększenia produkcji o jednostkę.
 
+## [26. Prawne i podatkowe aspekty prowadzenia działalności gospodarczej. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.63objqhxecc)
+
+1. spółki osobowe: spółka jawna, spółka partnerska, spółka komandytowa, spółka komandytowo-akcyjna
+2. spółki kapitałowe: spółka z ograniczoną odpowiedzialnością, spółka akcyjna
+3. Koncesja, zezwolenie
+4. prawa: pracy, konsumenckie, handlowe
+5. podatatki pośrednie (vat, akcyza), pośrednie (dochodowy, od czynności cywilnoprawnych, od spadków i darowizn)
+
+
+## 27. Inicjowanie i definiowanie projektów. Ocena wykonalności projektów. Analiza ryzyka projektów. Określanie struktury projektów. 
+
+## 28. Planowanie przebiegu i zasobów projektu. Budżetowanie projektu. Sterowanie przebiegiem projektu. Organizacja zespołu projektowego.
 
 
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
