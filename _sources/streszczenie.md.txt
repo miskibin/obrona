@@ -204,6 +204,27 @@ typy:
 - **Współczesne struktury organizacji**: Zarządzanie kreujące wiedzę, lean management, organizacja skoncentrowana na procesach, organizacja ucząca się, organizacja wirtualna.
 - **Kierunki ewolucji**: Nowe formy organizacyjne, wsparcie dla innowacyjności i elastyczności przedsiębiorstwa, zawężanie specjalizacji, wzrost pracy zespołowej, niska standaryzacja, ograniczanie formalizacji do minimum, rozwój struktury sieciowej.
 
+## 25. Analiza popytu i podaży; rodzaje działalności gospodarczej; koszty w przedsiębiorstwie.
+
+1. **Analiza popytu**: Bada wpływ różnych czynników na ilość żądanych dóbr przez konsumentów. Wzrost ceny zwykle zmniejsza popyt, a jego zmiana może wynikać ze zmian cen dóbr powiązanych, dochodów, gustów, czy zmian prawnych.
+2. **Analiza podaży**: Ocenia, jak różne czynniki wpływają na ilość dóbr, które producenci mogą dostarczyć. Zwykle wzrost ceny zwiększa podaż, a jej zmiana może być efektem zmian w technologii, kosztach produkcji czy polityce państwa.
+3. **Rodzaje działalności gospodarczej**: Obejmuje jednoosobową działalność, spółki cywilne, kapitałowe i osobowe. Wybór formy zależy od opodatkowania, rodzaju i rozmiaru działalności, kapitału, możliwości przekształceń oraz prowadzenia księgowości.
+4. **Koszty w przedsiębiorstwie**: Koszt całkowity obejmuje wartość zużytych zasobów. Koszty stałe nie zależą od produkcji, zmienne rosną z produkcją. Koszt przeciętny to koszt na jednostkę produktu, a koszt krańcowy to koszt zwiększenia produkcji o jednostkę.
+
+## [26. Prawne i podatkowe aspekty prowadzenia działalności gospodarczej. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.63objqhxecc)
+
+1. spółki osobowe: spółka jawna, spółka partnerska, spółka komandytowa, spółka komandytowo-akcyjna
+2. spółki kapitałowe: spółka z ograniczoną odpowiedzialnością, spółka akcyjna
+3. Koncesja, zezwolenie
+4. prawa: pracy, konsumenckie, handlowe
+5. podatatki pośrednie (vat, akcyza), pośrednie (dochodowy, od czynności cywilnoprawnych, od spadków i darowizn)
+
+
+## 27. Inicjowanie i definiowanie projektów. Ocena wykonalności projektów. Analiza ryzyka projektów. Określanie struktury projektów. 
+
+## 28. Planowanie przebiegu i zasobów projektu. Budżetowanie projektu. Sterowanie przebiegiem projektu. Organizacja zespołu projektowego.
+
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
