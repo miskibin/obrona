@@ -29,20 +29,20 @@
 3. transmitancja
 
 ## 5. Statystyczna analiza wyników symulacji. 
-
-!!! NIE ROZUMIEM
-1. Kluczowy element symulacji
-2. 
+1. Każde odpalenie symulacji odbywa się dla innych realizacji zmiennych losowych.
+2. Dla 2 uruchomień sym. Zmienne $y_p$ są niezależne, ale pochodzą z tego samego rozkładu. ( $y_{p1}$ i $y_{p2}$) możemy określić średnią, wariancję i przedział ufności dla średniej.
+3. trudność: *określenie kiedy model jest "rozgrzany"* 
+4. Testy statystyczne, wizualizacje etc.
 
 ## [6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs)
 
 1. Są to metody umożliwiające łączenie i przetwarzanie danych z różnych źródeł
-2. Etapy: porządkowanie i kojarzenie danych, działania korekcyjne, algorytym realizujący fuzję danych
+2. Etapy: porządkowanie i kojarzenie danych, działania korekcyjne, algorytm realizujący fuzję danych
 3. typy: fuzja współpracy, współzawodnictwa, uzupełniająca
 4. obszary wykorzystania: 
    - medycyna: diagnoza chorób, monitorowanie stanu zdrowia
    - rolnictwo: dane z satelitów, dronów i czujników terenowych do zarządzania zasobami wodnymi, nawożeniem, ochroną roślin
-5. przykłady zastosowań: monitorownanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.
+5. przykłady zastosowań: monitorowanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.
 
 
 ## 7. Metody estymacji parametrów systemów dynamicznych Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana. 
@@ -56,11 +56,20 @@
     - robotyka: estymacja trajektorii ruchu robotów,
     - finanse: prognozowanie trendów rynkowych i ocena ryzyka.
 
-## 9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami. 
 
-1. def:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
-2. charakterystyka: przybliżone rozw. , gdy nie ma rozw. analitycznego.
-3. metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek
+## [8. Metody identyfikacji obiektów statycznych w warunkach probabilistycznych. Identyfikacja parametryczna i nieparametryczna.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qei58dcu7gr7) 
+
+1. Monte carlo (losowo)
+2. bayes
+3. metody regresji (liniowa, wielomianowa, wykladnicza, logarytmiczna)
+4. identyfikacja parametryczna: modele zdefiniowane przez określone parametry, np. model liniowy
+5. id. nieparametryczna: modele niezdefiniowane przez parametry, np. sieci neuronowe. bardziej elastyczne, ale trudniejsze do interpretacji.
+
+
+## 9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami. 
+1. analityczne:  met. lagrangea, met. karusha-kahna-tuckera, met. podzialu i ograniczen
+1. numeryczne:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
+2. metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek
 
 ## [10. Zastosowania programowania liniowego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.9uges9gkw738) 
 
@@ -133,8 +142,16 @@ typy:
 4. Zastosowania: wearables, smart houses, pompy insulinowe, stacje metorologiczne etc.
 
 
+## [16. Modele cyklu życia oprogramowania. Metody zbierania wymagań w projektowaniu systemów informatycznych.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.knhu879ppg9x) 
 
+- model kaskadowy: planowanie, analiza, projektowanie, implementacja, testowanie, konserwacja. Zaklada poprawnosc wyniku (nie wraca sie do poprzednich faz). Uzywany gdy wymagania sa jasne i niezmienne.
+- model V: rozszerzenie modelu kaskadowego, które podkreśla znaczenie testowania. Fazy: wymagania uzytkowe, wymagania systemowe, projekt architektury, projekt szczegółowy, implementacja | test jednostkowy, test integracyjny, testowanie systemu i testy akceptacyjne. Uzywany gdy ryzyko jest wyższe i testowanie jest wazne.
+- model szybkiego prototypownia: ten model polega na tworzeniu prototypów systemu w celu zrozumienia wymagań użytkowników i szybkiego uzyskania informacji zwrotnej. Fazy: identyfikacja wymagań, szybkie projektowanie, budowa prototypu, ewaluacja klienta, ulepszanie prototypu. Jest to iteracyjny proces, który kończy się, gdy klient jest zadowolony z prototypu.
 
+- wymagania: ogólne, funkcjonalne, niefunkcjonalne, ograniczenia srodowiska systemu
+- zbieranie wymagan: analiza istniejacych rozwian, kwestionariusze, demonstracja prototypow by zebrac opinie, wywiady.
+- problemy przy zbieraniu wymagań: niejasne lub niekompletne wymagania od klienta, zmieniające się wymagania, trudności w komunikacji między zespołem a klientem, brak zrozumienia kontekstu biznesowego
+  
 ## 17. Style interakcji człowiek-komputer. Continuum Miligrama (Środowisko Realne - Środowisko Wirtualne). Cechy wirtualnej rzeczywistości (VR). 
 
 - interakcja człowiek komputer: sposób w jaki użytkownik komunikuje się z komputerem
@@ -144,6 +161,49 @@ typy:
 - NUI - naturalny interfejs użytkownika, np gesty, mowa, mimika
 - wirtualna rzeczywistosc
 
+## 18. Typy testów oprogramowania. Definicja i metody badania użyteczności. 
+
+- testy: jednostkowe, integracyjne, systemowe, akceptacyjne, wydajności, bezpieczeństwa
+- badanie uzytecznosci: ocena heurystyczna, testy uzytecznosci, badania partyzanckie
+
+## [19. Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.o47lmdsjttjn)
+
+- OLTP: szybkie przetwarzanie transakcji bieżących
+- OLAP: przetwarzanie danych historycznych, analiza danych, raportowanie
+- eksploracja danych: odkrywanie ukrytych wzorców w danych (klastrowanie, odkrywanie asocjacji, wykrywanie zmian i odchyleń, odkrywanie klasyfikacji)
+- prezentacja: Selekcja danych, Wizualizacja danych, Analiza danych, Prezentacja wyników (raporty, wykresy, tabele)
+
+## 20 Proces i architektura hurtowni danych, wielowymiarowy model danych.
+- hurtownia danych: zorienatowana na temat, nieulotna, zintegrowana, zroznicowana czasowo
+- proces: ekstrakcja danych, transformacja danych, ładowanie danych
+- architektura: warstwa prezentacji, warstwa integracji, warstwa magazynu danych
+- model danych: wymiar, fakty, hierarchia, poziom agregacji
+  - gwiazda: wymiary wokol faktu
+  - platek śniegu: fakty w srodku, wymiary do wymiarow.
+  - konstelacja: polaczone platki sniegu.
+
+## 21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej
+
+- **Infrastruktura krytyczna**: Systemy i usługi, których zakłócenie lub zniszczenie może mieć poważne konsekwencje dla funkcjonowania społeczeństwa i gospodarki.
+- **Zagrożenia**: Klęski żywiołowe, wypadki, cyberataki, terroryzm.
+- **Zarządzanie ryzykiem**: Analiza ryzyka, planowanie odpowiedzi, szkolenia i ćwiczenia.
+- **Metody ochrony**: Bezpieczeństwo fizyczne (zapory, monitoring, kontrola dostępu), bezpieczeństwo cybernetyczne (firewalle, antywirusy, autentykacja), gotowość na sytuacje kryzysowe (plany awaryjne, szkolenia kryzysowe), odporność i redundancja (redundancja systemów, elastyczność operacyjna, zapasowe źródła zasilania).
+ 
+## 22. Cykl życia przedsiębiorstwa
+- Powstawanie Wzrost Dojrzałość Spadek Przekształcenie
+
+## 23 Cele i funkcje zarządzania.
+- cele: Osiągnięcie celów organizacji, Efektywne wykorzystanie zasobów i ludzi, tworzenie srodowiska pracy
+- funkcje: Planowanie, Organizowanie, Zatrudnianie , Kontrolowanie, koordynowanie
+  
+## 24. Struktura organizacyjna - uwarunkowania i kierunki ewolucji. 
+
+- **Definicja**: Struktura organizacyjna to zbiór reguł minimalizujących dowolność i nieprzewidywalność zachowań ludzi w organizacji. Wynika z konieczności podziału pracy.
+- **Analiza budowy organizacji**: Składa się z ustalenia elementów organizacji, wielkości poszczególnych części, podstawy organizacyjnego zróżnicowania, relacji hierarchicznych między elementami organizacji.
+- **Uwarunkowania struktury organizacji**: Czynniki wewnętrzne (cele i strategia organizacji, wielkość organizacji, technologia organizacji) i czynniki zewnętrzne (ekonomiczne warunki działania organizacji, cechy psychospołeczne, prawo i regulacje, konkurencja i otoczenie organizacji).
+- **Współczesne struktury organizacji**: Zarządzanie kreujące wiedzę, lean management, organizacja skoncentrowana na procesach, organizacja ucząca się, organizacja wirtualna.
+- **Kierunki ewolucji**: Nowe formy organizacyjne, wsparcie dla innowacyjności i elastyczności przedsiębiorstwa, zawężanie specjalizacji, wzrost pracy zespołowej, niska standaryzacja, ograniczanie formalizacji do minimum, rozwój struktury sieciowej.
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
@@ -151,7 +211,7 @@ typy:
 3. Systemy niepewne definicja, zastosowania
 4. niepewnosc Epistemiczna, Stochastyczna
 5. metody radzenia z niepewnoscia
-6. 
+
 ### [11. Modele chmur i mgieł obliczeniowych. Rozwiązania hybrydowe. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.kistf3nqciy0)
 
 1. Definicja, zastosowania

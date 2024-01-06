@@ -19,6 +19,8 @@
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/translations.js?v=a186e9ce"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="genindex.html" />
     <link rel="search" title="Szukaj" href="search.html" />
@@ -55,6 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#statystyczna-analiza-wynikow-symulacji">5. Statystyczna analiza wyników symulacji.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pojecie-fuzji-danych-oraz-glowne-obszary-jej-wykorzystania">6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#metody-estymacji-parametrow-systemow-dynamicznych-estymacja-zmiennych-stanu-liniowy-i-rozszerzony-filtr-kalmana">7. Metody estymacji parametrów systemów dynamicznych Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metody-identyfikacji-obiektow-statycznych-w-warunkach-probabilistycznych-identyfikacja-parametryczna-i-nieparametryczna">8. Metody identyfikacji obiektów statycznych w warunkach probabilistycznych. Identyfikacja parametryczna i nieparametryczna.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#analityczne-metody-optymalizacji-z-ograniczeniami-numeryczne-metody-optymalizacji-bez-i-z-ograniczeniami">9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#zastosowania-programowania-liniowego">10. Zastosowania programowania liniowego.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#systemy-wieloagentowe-architektura-agenta-komunikacja-koordynacja-kooperacja-i-konkurencja">9. Systemy wieloagentowe. Architektura agenta. Komunikacja, koordynacja, kooperacja i konkurencja.</a></li>
@@ -64,7 +67,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#algorytmy-sztucznej-inteligencji">algorytmy sztucznej inteligencji</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">14. …</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sieci-uslug-sieci-sensorowe-systemy-internetu-rzeczy-analiza-wydajnosci-zarzadzanie-bezpieczenstwo-i-zastosowania">15. Sieci usług, sieci sensorowe, systemy Internetu rzeczy ? analiza wydajności, zarządzanie, bezpieczeństwo i zastosowania</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modele-cyklu-zycia-oprogramowania-metody-zbierania-wymagan-w-projektowaniu-systemow-informatycznych">16. Modele cyklu życia oprogramowania. Metody zbierania wymagań w projektowaniu systemów informatycznych.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#style-interakcji-czlowiek-komputer-continuum-miligrama-srodowisko-realne-srodowisko-wirtualne-cechy-wirtualnej-rzeczywistosci-vr">17. Style interakcji człowiek-komputer. Continuum Miligrama (Środowisko Realne - Środowisko Wirtualne). Cechy wirtualnej rzeczywistości (VR).</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#typy-testow-oprogramowania-definicja-i-metody-badania-uzytecznosci">18. Typy testów oprogramowania. Definicja i metody badania użyteczności.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specyfika-przetwarzania-operacyjnego-oltp-oraz-strategicznego-olap-proces-eksploracji-oraz-prezentacji-danych-w-systemach-business-intelligence">19. Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence. </a></li>
+<li class="toctree-l2"><a class="reference internal" href="#proces-i-architektura-hurtowni-danych-wielowymiarowy-model-danych">20 Proces i architektura hurtowni danych, wielowymiarowy model danych.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zagrozenia-i-zarzadzanie-ryzykiem-w-procesie-ochrony-infrastruktury-krytycznej-oraz-metody-ochrony-infrastruktury-krytycznej">21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cykl-zycia-przedsiebiorstwa">22. Cykl życia przedsiębiorstwa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cele-i-funkcje-zarzadzania">23 Cele i funkcje zarządzania.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#struktura-organizacyjna-uwarunkowania-i-kierunki-ewolucji">24. Struktura organizacyjna - uwarunkowania i kierunki ewolucji.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#obliczenia-miekkie-systemy-niepewne">10. Obliczenia miękkie, systemy niepewne. </a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modele-chmur-i-mgiel-obliczeniowych-rozwiazania-hybrydowe">11. Modele chmur i mgieł obliczeniowych. Rozwiązania hybrydowe. </a></li>
 <li class="toctree-l3"><a class="reference internal" href="#systemy-rozproszone-i-wirtualne">13. Systemy rozproszone i wirtualne.</a></li>
@@ -159,17 +170,18 @@
 </section>
 <section id="statystyczna-analiza-wynikow-symulacji">
 <h2>5. Statystyczna analiza wyników symulacji.<a class="headerlink" href="#statystyczna-analiza-wynikow-symulacji" title="Link to this heading"></a></h2>
-<p>!!! NIE ROZUMIEM</p>
 <ol class="arabic simple">
-<li><p>Kluczowy element symulacji</p></li>
-<li></li>
+<li><p>Każde odpalenie symulacji odbywa się dla innych realizacji zmiennych losowych.</p></li>
+<li><p>Dla 2 uruchomień sym. Zmienne <span class="math notranslate nohighlight">\(y_p\)</span> są niezależne, ale pochodzą z tego samego rozkładu. ( <span class="math notranslate nohighlight">\(y_{p1}\)</span> i <span class="math notranslate nohighlight">\(y_{p2}\)</span>) możemy określić średnią, wariancję i przedział ufności dla średniej.</p></li>
+<li><p>trudność: <em>określenie kiedy model jest „rozgrzany”</em></p></li>
+<li><p>Testy statystyczne, wizualizacje etc.</p></li>
 </ol>
 </section>
 <section id="pojecie-fuzji-danych-oraz-glowne-obszary-jej-wykorzystania">
 <h2><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs">6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.</a><a class="headerlink" href="#pojecie-fuzji-danych-oraz-glowne-obszary-jej-wykorzystania" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Są to metody umożliwiające łączenie i przetwarzanie danych z różnych źródeł</p></li>
-<li><p>Etapy: porządkowanie i kojarzenie danych, działania korekcyjne, algorytym realizujący fuzję danych</p></li>
+<li><p>Etapy: porządkowanie i kojarzenie danych, działania korekcyjne, algorytm realizujący fuzję danych</p></li>
 <li><p>typy: fuzja współpracy, współzawodnictwa, uzupełniająca</p></li>
 <li><p>obszary wykorzystania:</p>
 <ul class="simple">
@@ -177,7 +189,7 @@
 <li><p>rolnictwo: dane z satelitów, dronów i czujników terenowych do zarządzania zasobami wodnymi, nawożeniem, ochroną roślin</p></li>
 </ul>
 </li>
-<li><p>przykłady zastosowań: monitorownanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.</p></li>
+<li><p>przykłady zastosowań: monitorowanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.</p></li>
 </ol>
 </section>
 <section id="metody-estymacji-parametrow-systemow-dynamicznych-estymacja-zmiennych-stanu-liniowy-i-rozszerzony-filtr-kalmana">
@@ -196,11 +208,21 @@
 </li>
 </ol>
 </section>
+<section id="metody-identyfikacji-obiektow-statycznych-w-warunkach-probabilistycznych-identyfikacja-parametryczna-i-nieparametryczna">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qei58dcu7gr7">8. Metody identyfikacji obiektów statycznych w warunkach probabilistycznych. Identyfikacja parametryczna i nieparametryczna.</a><a class="headerlink" href="#metody-identyfikacji-obiektow-statycznych-w-warunkach-probabilistycznych-identyfikacja-parametryczna-i-nieparametryczna" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Monte carlo (losowo)</p></li>
+<li><p>bayes</p></li>
+<li><p>metody regresji (liniowa, wielomianowa, wykladnicza, logarytmiczna)</p></li>
+<li><p>identyfikacja parametryczna: modele zdefiniowane przez określone parametry, np. model liniowy</p></li>
+<li><p>id. nieparametryczna: modele niezdefiniowane przez parametry, np. sieci neuronowe. bardziej elastyczne, ale trudniejsze do interpretacji.</p></li>
+</ol>
+</section>
 <section id="analityczne-metody-optymalizacji-z-ograniczeniami-numeryczne-metody-optymalizacji-bez-i-z-ograniczeniami">
 <h2>9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami.<a class="headerlink" href="#analityczne-metody-optymalizacji-z-ograniczeniami-numeryczne-metody-optymalizacji-bez-i-z-ograniczeniami" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>def:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie</p></li>
-<li><p>charakterystyka: przybliżone rozw. , gdy nie ma rozw. analitycznego.</p></li>
+<li><p>analityczne:  met. lagrangea, met. karusha-kahna-tuckera, met. podzialu i ograniczen</p></li>
+<li><p>numeryczne:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie</p></li>
 <li><p>metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek</p></li>
 </ol>
 </section>
@@ -287,6 +309,17 @@
 <li><p>Zastosowania: wearables, smart houses, pompy insulinowe, stacje metorologiczne etc.</p></li>
 </ol>
 </section>
+<section id="modele-cyklu-zycia-oprogramowania-metody-zbierania-wymagan-w-projektowaniu-systemow-informatycznych">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.knhu879ppg9x">16. Modele cyklu życia oprogramowania. Metody zbierania wymagań w projektowaniu systemów informatycznych.</a><a class="headerlink" href="#modele-cyklu-zycia-oprogramowania-metody-zbierania-wymagan-w-projektowaniu-systemow-informatycznych" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>model kaskadowy: planowanie, analiza, projektowanie, implementacja, testowanie, konserwacja. Zaklada poprawnosc wyniku (nie wraca sie do poprzednich faz). Uzywany gdy wymagania sa jasne i niezmienne.</p></li>
+<li><p>model V: rozszerzenie modelu kaskadowego, które podkreśla znaczenie testowania. Fazy: wymagania uzytkowe, wymagania systemowe, projekt architektury, projekt szczegółowy, implementacja | test jednostkowy, test integracyjny, testowanie systemu i testy akceptacyjne. Uzywany gdy ryzyko jest wyższe i testowanie jest wazne.</p></li>
+<li><p>model szybkiego prototypownia: ten model polega na tworzeniu prototypów systemu w celu zrozumienia wymagań użytkowników i szybkiego uzyskania informacji zwrotnej. Fazy: identyfikacja wymagań, szybkie projektowanie, budowa prototypu, ewaluacja klienta, ulepszanie prototypu. Jest to iteracyjny proces, który kończy się, gdy klient jest zadowolony z prototypu.</p></li>
+<li><p>wymagania: ogólne, funkcjonalne, niefunkcjonalne, ograniczenia srodowiska systemu</p></li>
+<li><p>zbieranie wymagan: analiza istniejacych rozwian, kwestionariusze, demonstracja prototypow by zebrac opinie, wywiady.</p></li>
+<li><p>problemy przy zbieraniu wymagań: niejasne lub niekompletne wymagania od klienta, zmieniające się wymagania, trudności w komunikacji między zespołem a klientem, brak zrozumienia kontekstu biznesowego</p></li>
+</ul>
+</section>
 <section id="style-interakcji-czlowiek-komputer-continuum-miligrama-srodowisko-realne-srodowisko-wirtualne-cechy-wirtualnej-rzeczywistosci-vr">
 <h2>17. Style interakcji człowiek-komputer. Continuum Miligrama (Środowisko Realne - Środowisko Wirtualne). Cechy wirtualnej rzeczywistości (VR).<a class="headerlink" href="#style-interakcji-czlowiek-komputer-continuum-miligrama-srodowisko-realne-srodowisko-wirtualne-cechy-wirtualnej-rzeczywistosci-vr" title="Link to this heading"></a></h2>
 <ul class="simple">
@@ -298,6 +331,69 @@
 <li><p>wirtualna rzeczywistosc</p></li>
 </ul>
 </section>
+<section id="typy-testow-oprogramowania-definicja-i-metody-badania-uzytecznosci">
+<h2>18. Typy testów oprogramowania. Definicja i metody badania użyteczności.<a class="headerlink" href="#typy-testow-oprogramowania-definicja-i-metody-badania-uzytecznosci" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>testy: jednostkowe, integracyjne, systemowe, akceptacyjne, wydajności, bezpieczeństwa</p></li>
+<li><p>badanie uzytecznosci: ocena heurystyczna, testy uzytecznosci, badania partyzanckie</p></li>
+</ul>
+</section>
+<section id="specyfika-przetwarzania-operacyjnego-oltp-oraz-strategicznego-olap-proces-eksploracji-oraz-prezentacji-danych-w-systemach-business-intelligence">
+<h2><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.o47lmdsjttjn">19. Specyfika przetwarzania operacyjnego (OLTP) oraz strategicznego (OLAP), proces eksploracji oraz prezentacji danych w systemach Business Intelligence. </a><a class="headerlink" href="#specyfika-przetwarzania-operacyjnego-oltp-oraz-strategicznego-olap-proces-eksploracji-oraz-prezentacji-danych-w-systemach-business-intelligence" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>OLTP: szybkie przetwarzanie transakcji bieżących</p></li>
+<li><p>OLAP: przetwarzanie danych historycznych, analiza danych, raportowanie</p></li>
+<li><p>eksploracja danych: odkrywanie ukrytych wzorców w danych (klastrowanie, odkrywanie asocjacji, wykrywanie zmian i odchyleń, odkrywanie klasyfikacji)</p></li>
+<li><p>prezentacja: Selekcja danych, Wizualizacja danych, Analiza danych, Prezentacja wyników (raporty, wykresy, tabele)</p></li>
+</ul>
+</section>
+<section id="proces-i-architektura-hurtowni-danych-wielowymiarowy-model-danych">
+<h2>20 Proces i architektura hurtowni danych, wielowymiarowy model danych.<a class="headerlink" href="#proces-i-architektura-hurtowni-danych-wielowymiarowy-model-danych" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>hurtownia danych: zorienatowana na temat, nieulotna, zintegrowana, zroznicowana czasowo</p></li>
+<li><p>proces: ekstrakcja danych, transformacja danych, ładowanie danych</p></li>
+<li><p>architektura: warstwa prezentacji, warstwa integracji, warstwa magazynu danych</p></li>
+<li><p>model danych: wymiar, fakty, hierarchia, poziom agregacji</p>
+<ul>
+<li><p>gwiazda: wymiary wokol faktu</p></li>
+<li><p>platek śniegu: fakty w srodku, wymiary do wymiarow.</p></li>
+<li><p>konstelacja: polaczone platki sniegu.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="zagrozenia-i-zarzadzanie-ryzykiem-w-procesie-ochrony-infrastruktury-krytycznej-oraz-metody-ochrony-infrastruktury-krytycznej">
+<h2>21. Zagrożenia i zarządzanie ryzykiem w procesie ochrony infrastruktury krytycznej oraz metody ochrony infrastruktury krytycznej<a class="headerlink" href="#zagrozenia-i-zarzadzanie-ryzykiem-w-procesie-ochrony-infrastruktury-krytycznej-oraz-metody-ochrony-infrastruktury-krytycznej" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Infrastruktura krytyczna</strong>: Systemy i usługi, których zakłócenie lub zniszczenie może mieć poważne konsekwencje dla funkcjonowania społeczeństwa i gospodarki.</p></li>
+<li><p><strong>Zagrożenia</strong>: Klęski żywiołowe, wypadki, cyberataki, terroryzm.</p></li>
+<li><p><strong>Zarządzanie ryzykiem</strong>: Analiza ryzyka, planowanie odpowiedzi, szkolenia i ćwiczenia.</p></li>
+<li><p><strong>Metody ochrony</strong>: Bezpieczeństwo fizyczne (zapory, monitoring, kontrola dostępu), bezpieczeństwo cybernetyczne (firewalle, antywirusy, autentykacja), gotowość na sytuacje kryzysowe (plany awaryjne, szkolenia kryzysowe), odporność i redundancja (redundancja systemów, elastyczność operacyjna, zapasowe źródła zasilania).</p></li>
+</ul>
+</section>
+<section id="cykl-zycia-przedsiebiorstwa">
+<h2>22. Cykl życia przedsiębiorstwa<a class="headerlink" href="#cykl-zycia-przedsiebiorstwa" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Powstawanie Wzrost Dojrzałość Spadek Przekształcenie</p></li>
+</ul>
+</section>
+<section id="cele-i-funkcje-zarzadzania">
+<h2>23 Cele i funkcje zarządzania.<a class="headerlink" href="#cele-i-funkcje-zarzadzania" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>cele: Osiągnięcie celów organizacji, Efektywne wykorzystanie zasobów i ludzi, tworzenie srodowiska pracy</p></li>
+<li><p>funkcje: Planowanie, Organizowanie, Zatrudnianie , Kontrolowanie, koordynowanie</p></li>
+</ul>
+</section>
+<section id="struktura-organizacyjna-uwarunkowania-i-kierunki-ewolucji">
+<h2>24. Struktura organizacyjna - uwarunkowania i kierunki ewolucji.<a class="headerlink" href="#struktura-organizacyjna-uwarunkowania-i-kierunki-ewolucji" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Definicja</strong>: Struktura organizacyjna to zbiór reguł minimalizujących dowolność i nieprzewidywalność zachowań ludzi w organizacji. Wynika z konieczności podziału pracy.</p></li>
+<li><p><strong>Analiza budowy organizacji</strong>: Składa się z ustalenia elementów organizacji, wielkości poszczególnych części, podstawy organizacyjnego zróżnicowania, relacji hierarchicznych między elementami organizacji.</p></li>
+<li><p><strong>Uwarunkowania struktury organizacji</strong>: Czynniki wewnętrzne (cele i strategia organizacji, wielkość organizacji, technologia organizacji) i czynniki zewnętrzne (ekonomiczne warunki działania organizacji, cechy psychospołeczne, prawo i regulacje, konkurencja i otoczenie organizacji).</p></li>
+<li><p><strong>Współczesne struktury organizacji</strong>: Zarządzanie kreujące wiedzę, lean management, organizacja skoncentrowana na procesach, organizacja ucząca się, organizacja wirtualna.</p></li>
+<li><p><strong>Kierunki ewolucji</strong>: Nowe formy organizacyjne, wsparcie dla innowacyjności i elastyczności przedsiębiorstwa, zawężanie specjalizacji, wzrost pracy zespołowej, niska standaryzacja, ograniczanie formalizacji do minimum, rozwój struktury sieciowej.</p></li>
+</ul>
+</section>
 <section id="obliczenia-miekkie-systemy-niepewne">
 <h2><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1">10. Obliczenia miękkie, systemy niepewne. </a><a class="headerlink" href="#obliczenia-miekkie-systemy-niepewne" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
@@ -306,7 +402,6 @@
 <li><p>Systemy niepewne definicja, zastosowania</p></li>
 <li><p>niepewnosc Epistemiczna, Stochastyczna</p></li>
 <li><p>metody radzenia z niepewnoscia</p></li>
-<li></li>
 </ol>
 <section id="modele-chmur-i-mgiel-obliczeniowych-rozwiazania-hybrydowe">
 <h3><a class="reference external" href="https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.kistf3nqciy0">11. Modele chmur i mgieł obliczeniowych. Rozwiązania hybrydowe. </a><a class="headerlink" href="#modele-chmur-i-mgiel-obliczeniowych-rozwiazania-hybrydowe" title="Link to this heading"></a></h3>
