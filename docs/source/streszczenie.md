@@ -204,6 +204,15 @@ typy:
 - **Współczesne struktury organizacji**: Zarządzanie kreujące wiedzę, lean management, organizacja skoncentrowana na procesach, organizacja ucząca się, organizacja wirtualna.
 - **Kierunki ewolucji**: Nowe formy organizacyjne, wsparcie dla innowacyjności i elastyczności przedsiębiorstwa, zawężanie specjalizacji, wzrost pracy zespołowej, niska standaryzacja, ograniczanie formalizacji do minimum, rozwój struktury sieciowej.
 
+## 25. Analiza popytu i podaży; rodzaje działalności gospodarczej; koszty w przedsiębiorstwie.
+
+- **Analiza popytu**: Badanie czynników wpływających na ilość dóbr lub usług, jakie konsumenci chcą kupić. Wyróżniamy indywidualną i rynkową krzywą popytu. Prawo popytu mówi, że przy innych czynnikach niezmienionych wielkość zapotrzebowania na określone dobro maleje w miarę wzrostu ceny. Przesunięcie krzywej popytu może być spowodowane zmianą cen dóbr komplementarnych, substytutów, zmianą dochodów konsumentów, gustów, wypadkami losowymi, zmianami prawnymi.
+- **Analiza podaży**: Badanie czynników wpływających na ilość dóbr lub usług, jakie producenci są w stanie dostarczyć na rynek. Wyróżniamy indywidualną i rynkową krzywą podaży. Prawo podaży mówi, że przy innych czynnikach stałych wzrost ceny zachęca producentów do zwiększenia oferowanej ilości dobra, a spadek ceny powoduje zmniejszenie oferowanej ilości. Przesunięcie krzywej podaży może być spowodowane zmianą technologii produkcji, cen czynników produkcji, struktury rynku, polityką państwa.
+- **Rodzaje działalności gospodarczej**: Jednoosobowa działalność gospodarcza, spółka cywilna, spółki kapitałowe (z ograniczoną odpowiedzialnością, akcyjna), spółki osobowe (jawna, partnerska, komandytowa, komandytowo-akcyjna). Wybór formy działalności zależy od pożądanych form opodatkowania, rodzaju działalności, rozmiaru planowanej działalności, źródeł kapitału, łatwości i możliwości późniejszych przekształceń, sposobu dysponowania środkami, rodzaju prowadzonej księgowości.
+- **Koszty w przedsiębiorstwie**: Koszt całkowity (TC) to wartość zużytych czynników produkcji. Koszty stałe (FC) nie zmieniają się, nie zależą od wielkości produkcji. Koszty zmienne (VC) zależą od wielkości produkcji. Koszt przeciętny (AC) to część kosztu całkowitego przypadająca na jednostkę produktu. Koszt krańcowy (MC) to przyrost kosztu całkowitego spowodowany zwiększeniem się produkcji o jednostkę.
+
+
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
