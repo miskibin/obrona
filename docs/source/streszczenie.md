@@ -29,10 +29,10 @@
 3. transmitancja
 
 ## 5. Statystyczna analiza wyników symulacji. 
-
-!!! NIE ROZUMIEM
-1. Kluczowy element symulacji
-2. 
+1. Każde odpalenie symulacji odbywa się dla innych realizacji zmiennych losowych.
+2. Dla 2 uruchomień sym. Zmienne $y_p$ są niezależne, ale pochodzą z tego samego rozkładu. ( $y_{p1}$ i $y_{p2}$) możemy określić średnią, wariancję i przedział ufności dla średniej.
+3. trudność: *określenie kiedy model jest "rozgrzany"* 
+4. Testy statystyczne, wizualizacje etc.
 
 ## [6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs)
 
@@ -42,7 +42,7 @@
 4. obszary wykorzystania: 
    - medycyna: diagnoza chorób, monitorowanie stanu zdrowia
    - rolnictwo: dane z satelitów, dronów i czujników terenowych do zarządzania zasobami wodnymi, nawożeniem, ochroną roślin
-5. przykłady zastosowań: monitorownanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.
+5. przykłady zastosowań: monitorowanie stanów mostów, optymalizacja tras w logistyce, wykrywanie pożarów lasów.
 
 
 ## 7. Metody estymacji parametrów systemów dynamicznych Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana. 
