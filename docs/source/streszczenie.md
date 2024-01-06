@@ -228,7 +228,7 @@ typy:
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
-2. Obliczenia miekkie, definicja, skladniki, zastosowania
+2. Obliczenia miekkie, definicja, składniki, zastosowania
 3. Systemy niepewne definicja, zastosowania
 4. niepewnosc Epistemiczna, Stochastyczna
 5. metody radzenia z niepewnoscia

@@ -1,43 +1,46 @@
-from questions import QUESTIONS, get_question_url
-from pydantic import BaseModel, AnyHttpUrl, validator
-from typing import Generator, Optional
+from typing import Generator
 import random
+from question_model import Question, read_questions_from_db, SESSION
+from loguru import logger
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 
-class QuestionModel(BaseModel):
-    id: int
-    question: str
-    answer_url: Optional[AnyHttpUrl] = None
-
-    @validator("answer_url", always=True)
-    def set_answer_url(cls, v, values):
-        if "id" in values:
-            return get_question_url(values["id"])
-        return v
-
-
-class ExamGenerator:
-    empty_question = QuestionModel(
+class Examiner:
+    empty_question = Question(
         id=0, question="Empty", answer_url="https://michalskibinski109.github.io/obrona"
     )
 
     def __init__(self):
-        self.questions = list(QUESTIONS.items())
+        self.done_ids = set()
+        self.questions = read_questions_from_db()
 
     @property
     def questions_left(self):
-        return len(self.questions)
+        return len(self.questions) - len(self.done_ids)
 
-    def generate_exam(self) -> Generator[list[QuestionModel], None, None]:
-        while self.questions_left > 0:
-            if self.questions_left < 3:
-                self.questions += [self.empty_question * (3 - self.questions_left)]
-            ids = random.sample(range(len(self.questions)), 3)
+    def generate_exam(self) -> Generator[list[Question], None, None]:
+        while True:
+            questions = read_questions_from_db()
+            questions = [q for q in questions if q.id not in self.done_ids]
+            if len(questions) < 3:
+                questions += [self.empty_question] * (3 - len(questions))
+            ids = random.sample(range(len(questions)), 3)
 
-            questions = [
-                QuestionModel(id=self.questions[id][0], question=self.questions[id][1])
-                for id in ids
-            ]
-            # remove questions from list
-            self.questions = [q for i, q in enumerate(self.questions) if i not in ids]
-            yield questions
+            selected_questions = [questions[id] for id in ids]
+            self.done_ids.update(q.id for q in selected_questions)
+            yield selected_questions
+
+            # Reset done_ids if all questions have been asked
+            if len(self.done_ids) == len(self.questions):
+                self.done_ids = set()
+
+    def add_tries(self, question_id: int, correct: bool):
+        with SESSION() as session:
+            question = session.query(Question).get(question_id)
+            question.total_tries += 1
+            if correct:
+                question.correct_tries += 1
+            logger.info(f"Question {question_id} updated.")
+            session.commit()
+        return question
