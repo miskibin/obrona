@@ -224,7 +224,27 @@ typy:
 
 ## 28. Planowanie przebiegu i zasobów projektu. Budżetowanie projektu. Sterowanie przebiegiem projektu. Organizacja zespołu projektowego.
 
+## 1. Metody maszynowego uczenia się
 
+1. **Definicja**: Zbiór technik pozwalających komputerom na uczenie się bez wyraźnego programowania.
+2. Uczenie nadzorowane: regresje, sieci neuronowe, klasyfikacja, drzewa decyzyjne, algorytmy genetyczne.
+3. Uczenie nienadzorowane: klasteryzacja, analiza skupień, metoda k średnich, PCA
+4. Uczenie ze wzmocnieniem: uczenie przez interakcję z otoczeniem i otrzymywanie nagród.
+
+## 2. Systemy wizyjne, metody przetwarzania obrazów. 
+
+- podstawowe problemy: klasyfikacja, segmentacja, detekcja obieków, generowanie obrazów, redukcja wymiarów.
+- metody:
+  -  klasyfikacja (KNN, regresja logistyczna, HOG)
+  - sieci głębokie (CNN, RNN, GAN)
+
+## 3. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne. 
+
+- typy: czasowa, pamieciowa
+- pesymistyczna, oczeiwana, optymistyczna
+- klasy: stała, liniowa, logarytmiczna, liniowo-logarytmiczna, kwadratowa, wykładnicza, silnia
+- klasy złożoności: łatwe(P), trudne(NP)
+ 
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
