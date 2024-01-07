@@ -1,6 +1,6 @@
 # streszczenie
 
-## Pojęcie algorytmu; typy, własności i przykłady algorytmów.
+## Pojęcie algorytmu; typy, własności i przykłady algorytmów. ✅
 
 1. Algorytm: Skończony zestaw czynności do rozwiązania problemu.
 1. Warunki algorytmu: Dane wejściowe/wyjściowe, określoność, skuteczność, skończoność.
@@ -217,7 +217,7 @@ typy:
 2. spółki kapitałowe: spółka z ograniczoną odpowiedzialnością, spółka akcyjna
 3. Koncesja, zezwolenie
 4. prawa: pracy, konsumenckie, handlowe
-5. podatatki pośrednie (vat, akcyza), pośrednie (dochodowy, od czynności cywilnoprawnych, od spadków i darowizn)
+5. podatki pośrednie (vat, akcyza), pośrednie (dochodowy, od czynności cywilnoprawnych, od spadków i darowizn)
 
 
 ## 27. Inicjowanie i definiowanie projektów. Ocena wykonalności projektów. Analiza ryzyka projektów. Określanie struktury projektów. 
@@ -241,10 +241,38 @@ typy:
 ## 3. Złożoność obliczeniowa. Algorytmy dokładne, aproksymacyjne i heurystyczne. 
 
 - typy: czasowa, pamieciowa
-- pesymistyczna, oczeiwana, optymistyczna
+- pesymistyczna, oczekiwana, optymistyczna
 - klasy: stała, liniowa, logarytmiczna, liniowo-logarytmiczna, kwadratowa, wykładnicza, silnia
 - klasy złożoności: łatwe(P), trudne(NP)
- 
+- algorytmy: dokładne, aproksymacyjne, heurystyczne
+- jednostka czasowa: 1 operacja dominujaca.
+
+## 4. [Niestacjonarność w strumieniach danych. Algorytmy detekcji zmian w strumieniach danych.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.hm8e9r8ywjjh)
+
+
+## [5. Koncepcja i zastosowania próbkowania oszczędnego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.vnoevyj8d0wk)
+
+- metoda redukcji danych, która wybiera podzbiór danych do analizy, aby zmniejszyć rozmiar danych.
+- częstotliwość nyquista: maksymalna częstotliwość składowych widmowych sygnału poddawanego procesowi próbkowania, które mogą zostać odtworzone z ciągu próbek bez zniekształceń
+- zastosowania: - przetwarzanie obrazów, Internet Rzeczy, przetwarzanie video
+
+## 6. Metody fuzji i asymilacji danych. (slabe opracowanie)
+
+- poziomy: czujników, cech, decyzji, przestrzeni i czasu
+- techniki: Komplementarne, redundantne, kooperatywne
+- asymilacja danych: asymilacja zmiennej stanu, kalmana, danych wielkoskalowych
+- procesy: sprawdzenie danych, uzgodnienie danych
+
+## 7. Modelowanie i analiza sieci złożonych.
+- Sieć = graf + dynamika = graf agentów   
+
+## 8. Systemy autonomiczne. Problemy alokacji i sterowania w systemach wielorobotowych. Podejście scentralizowane i rozproszone. 
+
+- alokacja zasobów w systemach wielorobotowych: rozkładanie zadań, rozkładanie energii.
+- sterowanie wielorobotowe: koordynacja ruchu, komunikacja między robotami, rozpoznawanie zadań
+- podejście scentralizowane: (jeden robot steruje wszystkimi) / rozproszone
+-  
+
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
 1. zbior rozmyty, funkcja przynaleznosci, operacje na zbiorach rozmytych    
