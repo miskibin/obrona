@@ -156,7 +156,7 @@ typy:
 - bezposredniej manipulacji, np upuszczanie plikow w eksploratorze (graficznie)
 - lingwistyczny np siri
 - NUI - naturalny interfejs użytkownika, np gesty, mowa, mimika
-- wirtualna rzeczywistosc
+- continuum miligrama(srodowisko rzeczywiste, rozszerzona rzeczywistosc, rozszerzona wirtualnosc, wirtualnosc)
 
 ## 18. Typy testów oprogramowania. Definicja i metody badania użyteczności. 
 
