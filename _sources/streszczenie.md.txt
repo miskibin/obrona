@@ -124,15 +124,20 @@ typy:
 
 ## 15. Sieci usług, sieci sensorowe, systemy Internetu rzeczy ? analiza wydajności, zarządzanie, bezpieczeństwo i zastosowania
 
-1. Sys internetu rzeczy analiza wydajności
-- prędkość internetu (5g)
-- w 2020 25-50 mld urządzeń w sieci
-- domy ze smart iot zuzywaja 14-22% mniej energii
+1. Sys internetu rzeczy 
+- system urządzeń fizycznych, które są połączone i komunikują się za pomocą sieci (np. mqqt), aby zbierać i wymieniać dane.
+- zastosowania: apka mobilna i kamery na parkingu na pwr., stacje meteorologiczne
+- analiza wydajności: przepustowość, opóźnienie, zużycie energii
+- zarządzanie: konfiguracja, aktualizacja, monitorowanie
+2. sieci sensorowe
+- sieć urządzeń, które zbierają dane z otoczenia i przekazują je do węzła centralnego. np. czujniki temperatury
+- zastosowania: monitorowanie środowiska, monitorowanie ruchu, monitorowanie budynków
+- zarządzanie: komunikacja (warstwa aplikacji, transportowa, sieciowa, fizyczna)
 
-2. Procesy zarządzania Iot: instalacja, konfiguracja, monitorowanie, aktualizacja, naprawa, utylizacja
-3. technologie: Prot komunikacjyne eg. (mqqt), platforma zarządzania (AWS), narzędzia do analiz danych, firewalle/szyfrowanie danych.
-4. Zastosowania: wearables, smart houses, pompy insulinowe, stacje metorologiczne etc.
-
+3. sieci usług
+- sieci telekomunikacyjne dostarczajace polaczenia glosowe, transmisje danych
+- analiza wydajności: przepustowość, opóźnienie, odpornosc na awarie
+- zastosowania: telefonia, internet, telewizja
 
 ## [16. Modele cyklu życia oprogramowania. Metody zbierania wymagań w projektowaniu systemów informatycznych.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.knhu879ppg9x) 
 
