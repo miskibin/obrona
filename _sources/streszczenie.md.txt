@@ -26,6 +26,7 @@
 ## 4 Metody modelowania systemów dyskretnych. 
 1. Rownania stanu, wektor stanu
 2. rownania roznicowe 
+  - metoda równań stanu skupia się na wewnętrznym stanie systemu i jego ewolucji w czasie. równania różnicowe koncentruje się na relacji bezpośredniej między wejściem a wyjściem systemu, pomijając analizę wewnętrznego stanu.
 3. transmitancja
 
 ## 5. Statystyczna analiza wyników symulacji. 
@@ -33,6 +34,7 @@
 2. Dla 2 uruchomień sym. Zmienne $y_p$ są niezależne, ale pochodzą z tego samego rozkładu. ( $y_{p1}$ i $y_{p2}$) możemy określić średnią, wariancję i przedział ufności dla średniej.
 3. trudność: *określenie kiedy model jest "rozgrzany"* 
 4. Testy statystyczne, wizualizacje etc.
+- anova: Jak bardzo różnią się średnie wartości między grupami?
 
 ## [6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs)
 
@@ -67,22 +69,12 @@
 
 
 ## 9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami. 
-1. analityczne:  met. lagrangea, met. karusha-kahna-tuckera, met. podzialu i ograniczen
+1. analityczne:  met. lagrangea(znalezienia wielomianu, który dokładnie przechodzi przez dany zestaw punktów danych), met. karusha-kahna-tuckera, met. podzialu i ograniczen
 1. numeryczne:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
+
 2. metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek
 
-## [10. Zastosowania programowania liniowego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.9uges9gkw738) 
 
-...
-
-
-## [9. Systemy wieloagentowe. Architektura agenta. Komunikacja, koordynacja, kooperacja i konkurencja.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.e4a6x4j90auy) 
-
-- sklad systemu: srodowisko, agent, obiekty, relacje
-- cechyy: autonomiczni agenci, otwartosc, srodowisko okresla rodzaj komunikacji
-- typy agentow: logiczny, reakcyjny BDI, warstwowy
-- architektura: sensory, modul percepcji, modul planowania, modul komunikacji, modul wykonawczy
-- srodowiska: dostepne/niedostepne, statyczne/dynamiczne, deterministyczne/niedeterministyczne, epizodyczne/nieepizodyczne 
 
 ## [10. Zastosowania programowania liniowego.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.9uges9gkw738) 
 
@@ -272,6 +264,15 @@ typy:
 - sterowanie wielorobotowe: koordynacja ruchu, komunikacja między robotami, rozpoznawanie zadań
 - podejście scentralizowane: (jeden robot steruje wszystkimi) / rozproszone
 -  
+
+## [9. Systemy wieloagentowe. Architektura agenta. Komunikacja, koordynacja, kooperacja i konkurencja.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.e4a6x4j90auy) 
+
+- sklad systemu: srodowisko, agent, obiekty, relacje
+- cechyy: autonomiczni agenci, otwartosc, srodowisko okresla rodzaj komunikacji
+- typy agentow: logiczny, reakcyjny BDI, warstwowy
+- architektura: sensory, modul percepcji, modul planowania, modul komunikacji, modul wykonawczy
+- srodowiska: dostepne/niedostepne, statyczne/dynamiczne, deterministyczne/niedeterministyczne, epizodyczne/nieepizodyczne 
+
 
 ## [10. Obliczenia miękkie, systemy niepewne. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.u0218rc8n0r1)
 
