@@ -1,0 +1,21 @@
+# 40. Nowoczesne systemy kryptograficzne stosowane w rozproszonych systemach transakcyjnych.
+
+Rozproszone systemy transakcyjne, takie jak blockchain, są coraz częściej wykorzystywane do przeprowadzania bezpiecznych transakcji w różnych dziedzinach, od finansów po opiekę zdrowotną. Kluczowym elementem tych systemów jest kryptografia, która zapewnia bezpieczeństwo i prywatność transakcji.
+
+## Kryptografia asymetryczna
+
+Jednym z najważniejszych systemów kryptograficznych stosowanych w rozproszonych systemach transakcyjnych jest kryptografia asymetryczna, znana również jako kryptografia z kluczem publicznym. W tym systemie, każdy użytkownik ma parę kluczy: publiczny, który jest dostępny dla wszystkich, i prywatny, który jest utrzymywany w tajemnicy. Klucz publiczny jest używany do szyfrowania danych, a klucz prywatny do ich deszyfrowania. 
+
+## Kryptografia z użyciem funkcji skrótu
+
+Innym ważnym elementem jest kryptografia z użyciem funkcji skrótu. Funkcje skrótu, takie jak SHA-256 stosowane w Bitcoinie, przekształcają dane wejściowe w skrócony, stały zestaw danych wyjściowych. Funkcje te są jednokierunkowe, co oznacza, że nie można z nich odzyskać oryginalnych danych. Są one używane do tworzenia cyfrowych podpisów, które są niezbędne do weryfikacji tożsamości i integralności transakcji.
+
+## Protokół konsensusu
+
+W rozproszonych systemach transakcyjnych, takich jak blockchain, ważne jest również osiągnięcie konsensusu między różnymi węzłami sieci. Istnieje wiele protokołów konsensusu, takich jak Proof of Work (PoW) i Proof of Stake (PoS), które wykorzystują kryptografię do zapewnienia, że wszystkie węzły zgadzają się co do stanu systemu.
+
+## Bezpieczeństwo kwantowe
+
+Wraz z rozwojem komputerów kwantowych, kryptografia kwantowa staje się coraz bardziej istotna. Algorytmy kwantowe, takie jak algorytm Shora, mogą potencjalnie złamać kryptografię asymetryczną, co stanowi zagrożenie dla bezpieczeństwa rozproszonych systemów transakcyjnych. Dlatego badane są techniki kryptografii kwantowej, które mogą przetrwać ataki kwantowe.
+
+Podsumowując, nowoczesne systemy kryptograficzne są kluczowe dla bezpieczeństwa i skuteczności rozproszonych systemów transakcyjnych. Dzięki nim możliwe jest przeprowadzanie bezpiecznych, prywatnych i niezawodnych transakcji w skali globalnej.

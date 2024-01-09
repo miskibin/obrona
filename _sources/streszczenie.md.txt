@@ -1,6 +1,6 @@
 # streszczenie
 
-## Pojęcie algorytmu; typy, własności i przykłady algorytmów. ✅
+## 1. Pojęcie algorytmu; typy, własności i przykłady algorytmów. ✅
 
 1. Algorytm: Skończony zestaw czynności do rozwiązania problemu.
 1. Warunki algorytmu: Dane wejściowe/wyjściowe, określoność, skuteczność, skończoność.
@@ -12,18 +12,24 @@
 
 1. SysML to język modelowania systemów z różnymi typami diagramów.
 2. Diagramy SysML służą do projektowania i komunikacji w zespole.
-3. Przykłady diagramów SysML: sekwencji, przypadków użycia, definicji bloków.
+3. Przykłady diagramów SysML: sekwencji, przypadków użycia, wymagan systemowych.
 4. SysML, rozszerzenie UML, skupia się na szerokim zakresie systemów.
 5. SysML obejmuje więcej niż UML, w tym aspekty mechaniczne i elektryczne.
 
 ## 3. Modele w przestrzeni stanów. Ocena jakości i porównanie modeli
 
 1. Modele w przestrzeni stanów: Reprezentacja systemu przez stany i zmienne stanu, umożliwiająca przewidywanie przyszłości systemu.
-2. Rodzaje modeli: dynamiczne/ciągłe (równania różniczkowe) i dyskretne (równania różnicowe).
-3. Stan równowagi: System pozostający stabilny lub wracający do pierwotnego stanu po zaburzeniu.
-4. Ocena modeli: różne metody, w tym najmniejsze kwadraty, maksymalna wiarygodność, i metoda Bayesa, służące do oceny jakości i dopasowania modelu.
+2. Rodzaje modeli: ciągłe (równania różniczkowe) i dyskretne (równania różnicowe).
+3. model statyczny (zalezy tylko od parametrow modelu w chwili t), dynamiczny (zalezy od parametrow modelu w chwili t i stanu w chwili t-1)
+4. model deterministyczny (zawsze daje ten sam wynik) i niedeterministyczny 
+5. Stan równowagi: System pozostający stabilny lub wracający do pierwotnego stanu po zaburzeniu.
+6. Ocena modeli: różne metody(bezwzgledne (wzgledem danych rzeczywistych)), w tym najmniejsze kwadraty, maksymalna wiarygodność, testy statystyczne (chi-kwadrat)
 
-## 4 Metody modelowania systemów dyskretnych. 
+```{note}
+[chi-kwadrat](https://chat.openai.com/share/dbb69779-6697-4d90-8a75-7428aa649d66): stawiamy np H0 ze wyjscie modelu jest podobne do wyjscia rzeczywistego, i sprawdzamy czy jest to prawda.
+```
+
+## 4. Metody modelowania systemów dyskretnych. 
 1. Rownania stanu, wektor stanu
 2. rownania roznicowe 
   - metoda równań stanu skupia się na wewnętrznym stanie systemu i jego ewolucji w czasie. równania różnicowe koncentruje się na relacji bezpośredniej między wejściem a wyjściem systemu, pomijając analizę wewnętrznego stanu.
@@ -32,8 +38,9 @@
 ## 5. Statystyczna analiza wyników symulacji. 
 1. Każde odpalenie symulacji odbywa się dla innych realizacji zmiennych losowych.
 2. Dla 2 uruchomień sym. Zmienne $y_p$ są niezależne, ale pochodzą z tego samego rozkładu. ( $y_{p1}$ i $y_{p2}$) możemy określić średnią, wariancję i przedział ufności dla średniej.
-3. trudność: *określenie kiedy model jest "rozgrzany"* 
 4. Testy statystyczne, wizualizacje etc.
+- t-test: porównywania średnich dwóch grup. czy istnieje znacząca różnica między średnimi dwóch grup, czy też obserwowane różnice  powstaly przypadkowo.
+
 - anova: Jak bardzo różnią się średnie wartości między grupami?
 
 ## [6 Pojęcie fuzji danych oraz główne obszary jej wykorzystania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qq5zh8o6wqzs)
@@ -48,31 +55,30 @@
 
 
 ## 7. Metody estymacji parametrów systemów dynamicznych Estymacja zmiennych stanu. Liniowy i rozszerzony filtr Kalmana. 
-
-1. Techniki wykorzystywane do oceny i przewidywania stanu dynamicznych systemów w czasie rzeczywistym.
-2. zalozenia: wejscie i wyjscie dostepne pomiarowo, zaklucenia maja rozklad normalny, wektroy szumow i pomiarow sa niezalezne
-3. filtr kalmana: Etapy: predykcja, korekcja
-4. Typy: Liniowy i Rozszerzony dla systemów nieliniowych.
-5. Obszary wykorzystania:
+1. przyklady systemo dynamicznych, pojazdy autonomiczne, roboty, organizmy żywe.
+2. Estymacja zmiennych stanu: określenie stanu systemu na podstawie pomiarów i modelu matematycznego.
+   - MMW, metoda najmniejszych kwadratow, metoda bayesa, gradientu prostego
+3. Techniki wykorzystywane do oceny i przewidywania stanu dynamicznych systemów w czasie rzeczywistym.
+4. filtr kalmana: Etapy: predykcja, korekcja
+5. Typy: Liniowy i Rozszerzony dla systemów nieliniowych.
+6. Obszary wykorzystania:
     - nawigacja i śledzenie: precyzyjne śledzenie pozycji i orientacji w przestrzeni,
     - robotyka: estymacja trajektorii ruchu robotów,
     - finanse: prognozowanie trendów rynkowych i ocena ryzyka.
 
 
 ## [8. Metody identyfikacji obiektów statycznych w warunkach probabilistycznych. Identyfikacja parametryczna i nieparametryczna.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.qei58dcu7gr7) 
-
-1. Monte carlo (losowo)
-2. bayes
-3. metody regresji (liniowa, wielomianowa, wykladnicza, logarytmiczna)
-4. identyfikacja parametryczna: modele zdefiniowane przez określone parametry, np. model liniowy
-5. id. nieparametryczna: modele niezdefiniowane przez parametry, np. sieci neuronowe. bardziej elastyczne, ale trudniejsze do interpretacji.
+1. obiekt statyczny: obiekt, którego parametry nie zmieniają się w czasie. np budynki.
+2. Identyfikacja obiektów statycznych - okreslenie parametrow lub modelu na podstawie danych pomiarowych.
+4. identyfikacja parametryczna: modele zdefiniowane przez określone parametry, np. model liniowy, metoda najwiekszej wiarygodnosci
+5. id. nieparametryczna: modele niezdefiniowane przez parametry, np. sieci neuronowe, Monte carlo (losowo). bardziej elastyczne, ale trudniejsze do interpretacji.
 
 
 ## 9. Analityczne metody optymalizacji z ograniczeniami. Numeryczne metody optymalizacji bez i z ograniczeniami. 
-1. analityczne:  met. lagrangea(znalezienia wielomianu, który dokładnie przechodzi przez dany zestaw punktów danych), met. karusha-kahna-tuckera, met. podzialu i ograniczen
-1. numeryczne:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
 
-2. metody numeryczne:  algorytm genetyczny, algorytm wspinaczkowy – stochastyczny, symulowane wyżarzanie, algorytm mrówkowy, algorytm pszczeli, algorytm roju cząstek
+1. analityczne:  met. lagrangea (ograniczenia rownosciowe)(znalezienia wielomianu, który dokładnie przechodzi przez dany zestaw punktów danych), met. karusha-kahna-tuckera(ograniczenia nierownosciowe)
+2. numeryczne:  Obliczeniowe podejście do problemu optymalizacji. Działają iteracyjnie
+3. metody numeryczne:  algorytm genetyczny (mozna dodac kare za wyjscie za ograniczenia), symulowane wyżarzanie, tabu search , gradientu prostego (nie dziala z ograniczeniami)
 
 
 
@@ -87,7 +93,7 @@
 
 ## [11. Systemy podejmowania i wspomagania decyzji ? definicje, metody i algorytmy wyznaczania decyzji, zastosowania.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.oqirun7nbv2q) 
 
-...
+
 
 ## 12. Reprezentacje wiedzy i wnioskowanie w warunkach niepewności.
 
@@ -102,7 +108,7 @@
 9. teoria bayesa, logika rozmyta
 
 
-## algorytmy sztucznej inteligencji
+## 13. algorytmy sztucznej inteligencji
 modele, algorytmy i narzędzia służące do formułowania i rozwiązywania trudnych problemów, wymagających wiedzy i inteligencji
 
 Algorytmy sztucznej inteligencji:
@@ -120,7 +126,14 @@ typy:
 4. Sieci neuronowe: Symulacja procesów mózgu, stosowana w głębokim uczeniu.
 5. Algorytmy ewolucyjne: Naśladują procesy ewolucyjne do optymalizacji i rozwiązywania problemów.
 
-## 14. ...
+## 14. Hierarchiczna struktura i informatyczne narzędzia systemów informatyki przemysłowej.
+
+- Sys informatyki przemysłowej: sys informatyczny, który integruje i automatyzuje procesy produkcyjne.
+- poziomy:
+1. czujniki i urządzenia pomiarowe
+2. programy sterujące, panele operatorskie, sterowniki PLC
+3. systemy wizuazlizacji glownie SCADA
+- sterownik PLC (programowalny sterownik logiczny): urządzenie elektroniczne, które steruje maszynami przemysłowymi i procesami produkcyjnymi.
 
 ## 15. Sieci usług, sieci sensorowe, systemy Internetu rzeczy ? analiza wydajności, zarządzanie, bezpieczeństwo i zastosowania
 
@@ -217,9 +230,35 @@ typy:
 5. podatki pośrednie (vat, akcyza), pośrednie (dochodowy, od czynności cywilnoprawnych, od spadków i darowizn)
 
 
-## 27. Inicjowanie i definiowanie projektów. Ocena wykonalności projektów. Analiza ryzyka projektów. Określanie struktury projektów. 
+## 27. [Inicjowanie i definiowanie projektów. Ocena wykonalności projektów. Analiza ryzyka projektów. Określanie struktury projektów.](https://docs.google.com/document/d/1LTFWI13MDL7g889wN53RUUo88OM_TBckEfJ_EOdGJww/edit#heading=h.62o3vgseukk9) 
 
-## 28. Planowanie przebiegu i zasobów projektu. Budżetowanie projektu. Sterowanie przebiegiem projektu. Organizacja zespołu projektowego.
+- pierwszy etap: ustalenie wspolnej wizji projektu i jego celow (metoda **SMART**)
+  - **S**pecific - konkretny (konkretne zadania)
+  - **M**easurable - mierzalny (kryteria sukcesu)
+  - **A**chievable - osiagalny (realistyczne)
+  - **R**elevant - istotny (wazny dla organizacji)
+  - **T**ime-bound - okreslony czasowo (terminy)
+- ocena wykonalnosci projektu: TELOS
+  - **T**echnical - techniczna (czy mozna zrealizowac)
+  - **E**conomic - ekonomiczna (czy jest opłacalny)
+  - **L**egal - prawna (czy jest zgodny z prawem)
+  - **O**perational - operacyjna (czy mozna go wdrozyc)
+  - **S**cheduling - czasowa (czy mozna go zrealizowac w terminie)
+- analiza ryzyka projektu: identyfikacja, analiza, ocena, zarzadzanie
+- SWOT: Strengths, Weaknesses, Opportunities, Threats
+- Określenie struktury projektu:   jak zadania i cele projektu będą ze sobą powiązane i jak będą one realizowane przez zespół projektowy.
+
+## [28. Planowanie przebiegu i zasobów projektu. Budżetowanie projektu. Sterowanie przebiegiem projektu. Organizacja zespołu projektowego.](https://docs.google.com/document/d/1LTFWI13MDL7g889wN53RUUo88OM_TBckEfJ_EOdGJww/edit#heading=h.9dk9i51bsryc)
+
+- planowanie polaga na zdefiniowaniu wszystkich porac i zasobow potrzebnych do realizacji projektu.  w tym:
+  - identyfikację zadań
+  - określenie kolejności wykonywania zadań
+  - określenie czasu trwania zadań
+  - przydział niezbędnych zasobów
+  - określenie terminów realizacji
+  - obliczenie rezerw czasu i krytycznych elementów projektu
+  - weryfikacja przebiegu projektu i zatwierdzenie przez kierownictwo
+- planowanie zasobów:
 
 ## 1. Metody maszynowego uczenia się
 
@@ -243,6 +282,7 @@ typy:
 - klasy złożoności: łatwe(P), trudne(NP)
 - algorytmy: dokładne, aproksymacyjne, heurystyczne
 - jednostka czasowa: 1 operacja dominujaca.
+- P (testowanie pierwszości liczby) NP(kolorowanie grafu)
 
 ## 4. [Niestacjonarność w strumieniach danych. Algorytmy detekcji zmian w strumieniach danych.](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.hm8e9r8ywjjh)
 
@@ -287,21 +327,27 @@ typy:
 4. niepewnosc Epistemiczna, Stochastyczna
 5. metody radzenia z niepewnoscia
 
-### [11. Modele chmur i mgieł obliczeniowych. Rozwiązania hybrydowe. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.kistf3nqciy0)
+## [11. Modele chmur i mgieł obliczeniowych. Rozwiązania hybrydowe. ](https://docs.google.com/document/d/1rC8y8PmERfAr4ZLPY1JeiOymnQPmSi06ohv6GTbu5rE/edit#heading=h.kistf3nqciy0)
 
 1. Definicja, zastosowania
 2. Infrastructure as a Service (IaaS), Platform as a Service (PaaS), Software as a Service (SaaS), Function as a Service (FaaS)
 3. mgła obliczeniowa: charakterystyka, zastosowania
 4. Mist Computing, Fog Computing, Edge Computing
 
-### 13. Systemy rozproszone i wirtualne. 
+
+
+## 12. Nowoczesne systemy kryptograficzne stosowane w rozproszonych systemach transakcyjnych.
+...
+
+## 13. Systemy rozproszone i wirtualne. 
 
 1. system rozproszony: Współdzielenie zasobów , Przetwarzanie równoczesne, Skalowalność, Transparentność
 2.  system scentralizowany a system rozproszonego
 3. rodzaje: Klient-serwer,Architektura wielopoziomowa, architektura peer-to-peer, System wirtualny
 4. systemy wirtualne:  Hypervisor, VM
 5. Wirtualizacja pelna, na poziomie systemu operacyjnego
-###  Definicje i własności grafów. Modele grafowe.
+
+## 14. Definicje i własności grafów. Modele grafowe.
 
 1. wierzchołek (węzeł), krawędź, stopień wierzchołka, bliskość, droga, droga prosta, ścieżka, cykl, droga acykliczna, najkrótsza ścieżka, drzewo
 2. las, drzewo rozpinające, droga zamknięta, most, pętla, rząd (stopien) grafu, rozmiar grafu, srednica grafu, spójna składowa, k-spojny, graf r-regularny, macierz sąsiedztwa, macierz incydencji
